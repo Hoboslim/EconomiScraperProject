@@ -1,0 +1,51 @@
+Headline,Link,Model_Category,Sentiment,Model_Summary,Time (s)
+"Trump’s $100,000 Visa Targets a $280 Billion India Success Story",https://www.bloomberg.com/news/articles/2025-09-21/trump-s-100-000-visa-threatens-business-model-of-india-it-firms?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""New visa policy changes are impacting relations between India and the United States. These changes are also contributing to",1.47
+Trump’s Pricey H-1B Visas Alarm Prospects Aiming for US Jobs,https://www.bloomberg.com/news/articles/2025-09-21/trump-s-pricey-h-1b-visas-rattle-prospects-seeking-to-work-in-us?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Increased H-1B visa costs proposed by the Trump administration are raising concerns among foreign workers hoping to secure ",1.4
+Indian Tech Stocks Decline on US Changes to H-1B Visa Program,https://www.bloomberg.com/news/articles/2025-09-22/indian-tech-stocks-may-drop-on-us-changes-to-h-1b-visa-program?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Indian technology stocks are experiencing a decline following changes to the US H-1B visa program. The changes are impactin",1.21
+Tech Companies Warn H-1B Visa Holders to Avoid Foreign Travel,https://www.bloomberg.com/news/articles/2025-09-20/microsoft-others-warn-h-1b-visa-holders-to-avoid-foreign-travel?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Tech companies are advising H-1B visa holders to refrain from international travel due to potential difficulties re-enter",1.35
+Revealed: Putin’s Secret Plan to Hack Moldova’s Pivotal Election,https://www.bloomberg.com/news/articles/2025-09-22/moldova-elections-russia-s-plan-to-hack-the-vote?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Documents reveal a coordinated effort involving voter recruitment, protests, and disinformation targeting Moldovan voters a",1.19
+BBVA Boosts Sabadell Bid by 10% in Effort to Sway Investors,https://www.bloomberg.com/news/articles/2025-09-22/bbva-boosts-offer-for-sabadell-with-17-billion-all-share-bid?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""BBVA has revised its acquisition proposal after previously stating no changes were needed. This marks a change in strategy f",1.15
+France Is Replacing Italy as Europe’s Poster Child of Fiscal Woe,https://www.bloomberg.com/news/articles/2025-09-22/france-is-replacing-italy-as-europe-s-poster-child-of-fiscal-woe?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""France is now facing significant concerns regarding its fiscal health, surpassing Italy as the primary example of economic ",1.27
+French Voodoo Economics Is Sticking Pins in the Rich,https://www.bloomberg.com/opinion/articles/2025-09-22/french-wealth-tax-voodoo-economics-is-sticking-pins-in-the-rich?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""This article satirically suggests France's strength isn't in technological innovation (AI) but rather in creating new taxes",1.27
+Trump Mourns ‘Martyr’ Kirk as GOP Seeks to Energize Young Voters,https://www.bloomberg.com/news/articles/2025-09-22/trump-mourns-martyr-kirk-as-gop-seeks-to-energize-young-voters?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Former President Trump expressed grief over the death of Steve Cortes and labeled him a 'martyr,' while Republicans attempt ",1.14
+A 50-Pound Book Holds the Keys to Citadel Securities,https://www.bloomberg.com/news/features/2025-09-21/citadel-securities-50-pound-goal-book-guides-its-global-expansion?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""The firm experienced a successful $10 billion year and is now focusing on future goals. This indicates positive financial p",1.18
