@@ -1,51 +1,102 @@
 Headline,Link,Model_Category,Sentiment,Model_Summary,Time (s)
-"Trump’s $100,000 Visa Targets a $280 Billion India Success Story",https://www.bloomberg.com/news/articles/2025-09-21/trump-s-100-000-visa-threatens-business-model-of-india-it-firms?srnd=homepage-europe,ParseError,ParseError,"```json
+"Build-A-Bear Workshop is a bright spot in retail even with tariffs, dwindling mall traffic",https://www.cnbc.com/2025/09/22/build-a-bear-workshop-stock-revenue.html,ParseError,ParseError,"```json
 {
-  ""category"": ""Politics"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""New visa policy changes are impacting relations between India and the United States. These changes are also contributing to",1.47
-Trump’s Pricey H-1B Visas Alarm Prospects Aiming for US Jobs,https://www.bloomberg.com/news/articles/2025-09-21/trump-s-pricey-h-1b-visas-rattle-prospects-seeking-to-work-in-us?srnd=homepage-europe,ParseError,ParseError,"```json
-{
-  ""category"": ""Politics"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""Increased H-1B visa costs proposed by the Trump administration are raising concerns among foreign workers hoping to secure ",1.4
-Indian Tech Stocks Decline on US Changes to H-1B Visa Program,https://www.bloomberg.com/news/articles/2025-09-22/indian-tech-stocks-may-drop-on-us-changes-to-h-1b-visa-program?srnd=homepage-europe,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""Indian technology stocks are experiencing a decline following changes to the US H-1B visa program. The changes are impactin",1.21
-Tech Companies Warn H-1B Visa Holders to Avoid Foreign Travel,https://www.bloomberg.com/news/articles/2025-09-20/microsoft-others-warn-h-1b-visa-holders-to-avoid-foreign-travel?srnd=homepage-europe,ParseError,ParseError,"```json
-{
-  ""category"": ""Technology"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""Tech companies are advising H-1B visa holders to refrain from international travel due to potential difficulties re-enter",1.35
-Revealed: Putin’s Secret Plan to Hack Moldova’s Pivotal Election,https://www.bloomberg.com/news/articles/2025-09-22/moldova-elections-russia-s-plan-to-hack-the-vote?srnd=homepage-europe,ParseError,ParseError,"```json
-{
-  ""category"": ""Politics"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""Documents reveal a coordinated effort involving voter recruitment, protests, and disinformation targeting Moldovan voters a",1.19
-BBVA Boosts Sabadell Bid by 10% in Effort to Sway Investors,https://www.bloomberg.com/news/articles/2025-09-22/bbva-boosts-offer-for-sabadell-with-17-billion-all-share-bid?srnd=homepage-europe,ParseError,ParseError,"```json
+  ""category"": ""Culture"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""A group of friends planned a fun birthday activity for their friend by taking her to Build-A-Bear Workshop. It was described",7.65
+"Why Costco, Sam’s Club and BJ’s are opening new stores and gaining members",https://www.cnbc.com/2025/09/20/costco-sams-club-and-bjs-open-new-stores-and-gain-members-.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""BBVA has revised its acquisition proposal after previously stating no changes were needed. This marks a change in strategy f",1.15
-France Is Replacing Italy as Europe’s Poster Child of Fiscal Woe,https://www.bloomberg.com/news/articles/2025-09-22/france-is-replacing-italy-as-europe-s-poster-child-of-fiscal-woe?srnd=homepage-europe,ParseError,ParseError,"```json
+  ""summary"": ""Costco executives faced questions on their last earnings call regarding challenges related to crowded stores and parking lot",3.08
+Luxury face cream from a pizza parlor: Inside fraud on Walmart.com,https://www.cnbc.com/2025/09/19/walmart-marketplace-fakes-scams-investigation.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""France is now facing significant concerns regarding its fiscal health, surpassing Italy as the primary example of economic ",1.27
-French Voodoo Economics Is Sticking Pins in the Rich,https://www.bloomberg.com/opinion/articles/2025-09-22/french-wealth-tax-voodoo-economics-is-sticking-pins-in-the-rich?srnd=homepage-europe,ParseError,ParseError,"```json
-{
-  ""category"": ""Politics"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""This article satirically suggests France's strength isn't in technological innovation (AI) but rather in creating new taxes",1.27
-Trump Mourns ‘Martyr’ Kirk as GOP Seeks to Energize Young Voters,https://www.bloomberg.com/news/articles/2025-09-22/trump-mourns-martyr-kirk-as-gop-seeks-to-energize-young-voters?srnd=homepage-europe,ParseError,ParseError,"```json
-{
-  ""category"": ""Politics"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Former President Trump expressed grief over the death of Steve Cortes and labeled him a 'martyr,' while Republicans attempt ",1.14
-A 50-Pound Book Holds the Keys to Citadel Securities,https://www.bloomberg.com/news/features/2025-09-21/citadel-securities-50-pound-goal-book-guides-its-global-expansion?srnd=homepage-europe,ParseError,ParseError,"```json
+  ""summary"": ""A Walmart customer, Mary May, was surprised to find that products purchased from third-party sellers on Walmart's online mar",3.5
+5 takeaways from CNBC’s investigation into Walmart Marketplace,https://www.cnbc.com/2025/09/19/walmart-marketplace-fakes-scams-investigation-takeaways.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Positive"",
-  ""summary"": ""The firm experienced a successful $10 billion year and is now focusing on future goals. This indicates positive financial p",1.18
+  ""summary"": ""Walmart is leveraging its online marketplace to accelerate profit growth and challenge Amazon's dominance. This strategy is",2.63
+Trump is threatening broadcast station licenses. Here’s what that means,https://www.cnbc.com/2025/09/19/trump-threatening-broadcast-station-licenses-explained.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Disney has decided to stop broadcasting \""Jimmy Kimmel Live!\"" on ABC, highlighting government control over media. This move",2.67
+RFK Jr.’s vaccine panel weakens Covid shot recommendations,https://www.cnbc.com/2025/09/19/rfk-jr-vaccine-panel-covid-shot-recommendations.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Health"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Robert F. Kennedy Jr.'s vaccine panel advised all Americans to consult with a healthcare provider before getting vaccinated ag",3.57
+"How to avoid buying fakes on Walmart, Amazon and other online marketplaces",https://www.cnbc.com/2025/09/19/avoid-buying-fake-products-online-marketplaces.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Consumers are increasingly turning to online marketplaces for convenience and value. This shift raises concerns about the po",2.76
+RFK Jr.‘s vaccine panel postpones vote on babies’ first hepatitis B shot,https://www.cnbc.com/2025/09/19/rfk-jrs-vaccine-panel-postpones-vote-on-hepatitis-b-shot-for-babies.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Health"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""A vaccine panel convened by HHS Secretary Robert F. Kennedy Jr. has postponed a vote on delaying the first hepatitis B shot fo",3.86
+Family offices still keen on direct deals but dial back early-stage investing,https://www.cnbc.com/2025/09/22/family-offices-direct-investing-private-equity-citi-survey.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article is an excerpt from CNBC's Inside Wealth newsletter focusing on high-net-worth investors. It promotes subscripti",2.96
+Comcast’s Versant reports declining annual profit as it prepares to go public,https://www.cnbc.com/2025/09/18/comcast-versant-annual-profit-public.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Versant, a spinoff of Comcast's NBCUniversal cable network portfolio, is preparing for an initial public offering. This move",2.92
+FedEx stock rises on better-than-expected earnings,https://www.cnbc.com/2025/09/18/fedex-fdx-q1-2026-earnings.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""FedEx exceeded expectations in its fiscal first-quarter earnings report. The company reported positive results on both reve",2.44
+"Trump’s pressure on the media is mounting, with Kimmel sidelined ‘indefinitely’",https://www.cnbc.com/2025/09/18/jimmy-kimmel-trump-pressure-on-the-media-mounting.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""The article discusses increasing pressure from President Trump on media companies. It suggests a potentially concerning tre",2.3
+"AmEx unveils refreshed Platinum card with $895 annual fee, $3,500 in perks",https://www.cnbc.com/2025/09/18/american-express-platinum-card-refresh-895-fee-3500-perks.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""American Express announced updates to its credit card offerings. This move comes as the company faces increased competition ",2.32
+Darden Restaurants disappoints on earnings but hikes sales outlook,https://www.cnbc.com/2025/09/18/darden-restaurants-dri-q1-2026-earnings.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Darden Restaurants reported mixed quarterly results with Olive Garden and LongHorn Steakhouse performing well while the fine",3.21
+Larry Ellison’s $365 billion fortune breaks every rule of wealth management,https://www.cnbc.com/2025/09/18/larry-ellison-365-billion-fortune-wealth-management.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The article announces the launch of a new newsletter focused on alternative investments. The newsletter's purpose is not det",2.62
+Covid shot access at stake as RFK Jr.’s hand-picked vaccine panel convenes,https://www.cnbc.com/2025/09/18/covid-shot-access-coverage-at-stake-as-rfk-jrs-vaccine-panel-meets-.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Health"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""A government vaccine advisory panel, newly appointed by Robert F. Kennedy Jr., is expected to vote on COVID-19 and childhood ",3.42
+Hyundai outlines U.S. growth plans weeks after ICE immigration raid,https://www.cnbc.com/2025/09/18/2025-hyundai-investor-event.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Hyundai revised its growth plans for the end of the decade, setting new revenue and profit targets. The adjustments come des",3.04
+"Spirit CEO says airline will slash flights, could cut jobs",https://www.cnbc.com/2025/09/17/spirit-ceo-flight-cuts.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Spirit Airlines CEO announced further job cuts and schedule reductions for November, following the airline's second bankrup",3.16
+Cracker Barrel says company is focusing on ‘guest experience’ after backlash,https://www.cnbc.com/2025/09/17/cracker-barrel-q4-2025-earnings.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Cracker Barrel is focusing on improving guest experiences following criticism of a recent rebranding attempt. The company ai",2.73
+Frontier CEO fires back at United CEO’s criticism of discount airlines,https://www.cnbc.com/2025/09/17/frontier-united-discount-airlines-barry-biffle.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Frontier Airlines CEO Barry Biffle responded to United Airlines' assertion that the deep-discount airline model is no longer",3.03
+Economic Overview,,Overview,N/A,"Based on the provided summaries, the current economic situation appears mixed, suggesting a potential slowdown rather than a clear growth or stability. While some companies like FedEx and Walmart are showing positive signs through online marketplace growth and profit acceleration, others, such as Spirit Airlines, are implementing job cuts and schedule reductions, indicating financial distress. Furthermore, revisions to growth plans from companies like Hyundai and concerns about crowded stores at Costco hint at challenges impacting broader economic activity. The overall trend suggests a cautious outlook, with potential for continued volatility and possible worsening conditions in specific sectors.",0.0

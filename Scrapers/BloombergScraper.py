@@ -32,7 +32,7 @@ def scrape_bloomberg():
    
     story_blocks = soup.find_all("a", class_="StoryBlock_storyLink__5nXw8")
     print(f"Found {len(story_blocks)} story blocks")
-    for i, block in enumerate(story_blocks[:10]):
+    for i, block in enumerate(story_blocks[:50]):
         
         headline_tag = block.find("div", attrs={"data-component": "headline"})
         headline = headline_tag.get_text(strip=True) if headline_tag else "No headline"
