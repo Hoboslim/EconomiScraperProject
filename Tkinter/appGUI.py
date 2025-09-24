@@ -1,9 +1,24 @@
 import tkinter as tk
 from tkinter import ttk
 import os
+import subprocess
 
-folder = "Scrapers"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+root_dir = os.path.abspath(os.path.join(current_dir, ".."))
+folder = os.path.join(root_dir, "Scrapers")
+
+#folder = "Scrapers"
 options = [fname for fname in os.listdir(folder) if fname.endswith(".py")]
+
+def run_scraper():
+    selected_scraper = dropdown.get()
+    if selected_scraper:
+        filepath = os.path.join(folder, selected_scraper)
+        try:
+            subprocess.run(["python", filepath], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Error running this file: {e}")
+
 
 root = tk.Tk()
 root.title("Webscraper")
@@ -18,5 +33,8 @@ label2.pack(padx=10, pady=10)
 dropdown = ttk.Combobox(root, values=options, state="readonly")
 dropdown.current(0)
 dropdown.pack(pady=10)
+
+run_btn = tk.Button(root,text="Run scraper", command=run_scraper)
+run_btn.pack(padx=10, pady=10)
 
 root.mainloop()
