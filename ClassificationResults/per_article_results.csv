@@ -1,102 +1,252 @@
 Headline,Link,Model_Category,Sentiment,Model_Summary,Time (s)
-"Build-A-Bear Workshop is a bright spot in retail even with tariffs, dwindling mall traffic",https://www.cnbc.com/2025/09/22/build-a-bear-workshop-stock-revenue.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Culture"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""A group of friends planned a fun birthday activity for their friend by taking her to Build-A-Bear Workshop. It was described",7.65
-"Why Costco, Sam’s Club and BJ’s are opening new stores and gaining members",https://www.cnbc.com/2025/09/20/costco-sams-club-and-bjs-open-new-stores-and-gain-members-.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Costco executives faced questions on their last earnings call regarding challenges related to crowded stores and parking lot",3.08
-Luxury face cream from a pizza parlor: Inside fraud on Walmart.com,https://www.cnbc.com/2025/09/19/walmart-marketplace-fakes-scams-investigation.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""A Walmart customer, Mary May, was surprised to find that products purchased from third-party sellers on Walmart's online mar",3.5
-5 takeaways from CNBC’s investigation into Walmart Marketplace,https://www.cnbc.com/2025/09/19/walmart-marketplace-fakes-scams-investigation-takeaways.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Walmart is leveraging its online marketplace to accelerate profit growth and challenge Amazon's dominance. This strategy is",2.63
-Trump is threatening broadcast station licenses. Here’s what that means,https://www.cnbc.com/2025/09/19/trump-threatening-broadcast-station-licenses-explained.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Disney has decided to stop broadcasting \""Jimmy Kimmel Live!\"" on ABC, highlighting government control over media. This move",2.67
-RFK Jr.’s vaccine panel weakens Covid shot recommendations,https://www.cnbc.com/2025/09/19/rfk-jr-vaccine-panel-covid-shot-recommendations.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Health"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Robert F. Kennedy Jr.'s vaccine panel advised all Americans to consult with a healthcare provider before getting vaccinated ag",3.57
-"How to avoid buying fakes on Walmart, Amazon and other online marketplaces",https://www.cnbc.com/2025/09/19/avoid-buying-fake-products-online-marketplaces.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Consumers are increasingly turning to online marketplaces for convenience and value. This shift raises concerns about the po",2.76
-RFK Jr.‘s vaccine panel postpones vote on babies’ first hepatitis B shot,https://www.cnbc.com/2025/09/19/rfk-jrs-vaccine-panel-postpones-vote-on-hepatitis-b-shot-for-babies.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Health"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""A vaccine panel convened by HHS Secretary Robert F. Kennedy Jr. has postponed a vote on delaying the first hepatitis B shot fo",3.86
-Family offices still keen on direct deals but dial back early-stage investing,https://www.cnbc.com/2025/09/22/family-offices-direct-investing-private-equity-citi-survey.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article is an excerpt from CNBC's Inside Wealth newsletter focusing on high-net-worth investors. It promotes subscripti",2.96
-Comcast’s Versant reports declining annual profit as it prepares to go public,https://www.cnbc.com/2025/09/18/comcast-versant-annual-profit-public.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Versant, a spinoff of Comcast's NBCUniversal cable network portfolio, is preparing for an initial public offering. This move",2.92
-FedEx stock rises on better-than-expected earnings,https://www.cnbc.com/2025/09/18/fedex-fdx-q1-2026-earnings.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""FedEx exceeded expectations in its fiscal first-quarter earnings report. The company reported positive results on both reve",2.44
-"Trump’s pressure on the media is mounting, with Kimmel sidelined ‘indefinitely’",https://www.cnbc.com/2025/09/18/jimmy-kimmel-trump-pressure-on-the-media-mounting.html,ParseError,ParseError,"```json
+"Trump’s $100,000 Visa Targets a $280 Billion India Success Story",https://www.bloomberg.com/news/articles/2025-09-21/trump-s-100-000-visa-threatens-business-model-of-india-it-firms?srnd=homepage-europe,ParseError,ParseError,"```json
 {
   ""category"": ""Politics"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""The article discusses increasing pressure from President Trump on media companies. It suggests a potentially concerning tre",2.3
-"AmEx unveils refreshed Platinum card with $895 annual fee, $3,500 in perks",https://www.cnbc.com/2025/09/18/american-express-platinum-card-refresh-895-fee-3500-perks.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""American Express announced updates to its credit card offerings. This move comes as the company faces increased competition ",2.32
-Darden Restaurants disappoints on earnings but hikes sales outlook,https://www.cnbc.com/2025/09/18/darden-restaurants-dri-q1-2026-earnings.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Darden Restaurants reported mixed quarterly results with Olive Garden and LongHorn Steakhouse performing well while the fine",3.21
-Larry Ellison’s $365 billion fortune breaks every rule of wealth management,https://www.cnbc.com/2025/09/18/larry-ellison-365-billion-fortune-wealth-management.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""The article announces the launch of a new newsletter focused on alternative investments. The newsletter's purpose is not det",2.62
-Covid shot access at stake as RFK Jr.’s hand-picked vaccine panel convenes,https://www.cnbc.com/2025/09/18/covid-shot-access-coverage-at-stake-as-rfk-jrs-vaccine-panel-meets-.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Health"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""A government vaccine advisory panel, newly appointed by Robert F. Kennedy Jr., is expected to vote on COVID-19 and childhood ",3.42
-Hyundai outlines U.S. growth plans weeks after ICE immigration raid,https://www.cnbc.com/2025/09/18/2025-hyundai-investor-event.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Hyundai revised its growth plans for the end of the decade, setting new revenue and profit targets. The adjustments come des",3.04
-"Spirit CEO says airline will slash flights, could cut jobs",https://www.cnbc.com/2025/09/17/spirit-ceo-flight-cuts.html,ParseError,ParseError,"```json
+  ""summary"": ""New visa policy changes are causing friction in India-US relations. This development also reflects a broader global trend o",5.16
+Trump’s Pricey H-1B Visas Alarm Prospects Aiming for US Jobs,https://www.bloomberg.com/news/articles/2025-09-21/trump-s-pricey-h-1b-visas-rattle-prospects-seeking-to-work-in-us?srnd=homepage-europe,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""Spirit Airlines CEO announced further job cuts and schedule reductions for November, following the airline's second bankrup",3.16
-Cracker Barrel says company is focusing on ‘guest experience’ after backlash,https://www.cnbc.com/2025/09/17/cracker-barrel-q4-2025-earnings.html,ParseError,ParseError,"```json
+  ""summary"": ""Proposed changes to H-1B visa requirements under the Trump administration, potentially increasing costs, are concerning for",1.37
+Indian Tech Stocks Decline on US Changes to H-1B Visa Program,https://www.bloomberg.com/news/articles/2025-09-22/indian-tech-stocks-may-drop-on-us-changes-to-h-1b-visa-program?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Indian technology stocks are experiencing a decline following changes to the US H-1B visa program. The alterations are crea",1.15
+Tech Companies Warn H-1B Visa Holders to Avoid Foreign Travel,https://www.bloomberg.com/news/articles/2025-09-20/microsoft-others-warn-h-1b-visa-holders-to-avoid-foreign-travel?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Tech companies are advising H-1B visa holders to avoid international travel due to potential complications and delays in ",1.33
+Revealed: Putin’s Secret Plan to Hack Moldova’s Pivotal Election,https://www.bloomberg.com/news/articles/2025-09-22/moldova-elections-russia-s-plan-to-hack-the-vote?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Documents reveal a campaign utilizing tactics like voter recruitment, protests, and disinformation. The campaign appears ai",1.06
+BBVA Boosts Sabadell Bid by 10% in Effort to Sway Investors,https://www.bloomberg.com/news/articles/2025-09-22/bbva-boosts-offer-for-sabadell-with-17-billion-all-share-bid?srnd=homepage-europe,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Cracker Barrel is focusing on improving guest experiences following criticism of a recent rebranding attempt. The company ai",2.73
-Frontier CEO fires back at United CEO’s criticism of discount airlines,https://www.cnbc.com/2025/09/17/frontier-united-discount-airlines-barry-biffle.html,ParseError,ParseError,"```json
+  ""summary"": ""BBVA has revised its proposal after previously stating no changes were needed. This shift marks a change in strategy after m",1.09
+France Is Replacing Italy as Europe’s Poster Child of Fiscal Woe,https://www.bloomberg.com/news/articles/2025-09-22/france-is-replacing-italy-as-europe-s-poster-child-of-fiscal-woe?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""France is now facing increased scrutiny regarding its fiscal health, surpassing Italy as a primary concern for European mar",1.18
+French Voodoo Economics Is Sticking Pins in the Rich,https://www.bloomberg.com/opinion/articles/2025-09-22/french-wealth-tax-voodoo-economics-is-sticking-pins-in-the-rich?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""This article satirically claims France's strength isn't in innovation but in creating new taxes. It presents a critical and",1.15
+Trump Mourns ‘Martyr’ Kirk as GOP Seeks to Energize Young Voters,https://www.bloomberg.com/news/articles/2025-09-22/trump-mourns-martyr-kirk-as-gop-seeks-to-energize-young-voters?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Former President Trump expressed condolences for the late Republican strategist, praising him as a 'martyr.' The Republican ",1.16
+A 50-Pound Book Holds the Keys to Citadel Securities,https://www.bloomberg.com/news/features/2025-09-21/citadel-securities-50-pound-goal-book-guides-its-global-expansion?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""The firm celebrated a successful $10 billion year and is now focusing on future goals. This indicates growth and a promisin",1.11
+Porsche’s EV Pullback Highlights Cracks in German Auto Empire,https://www.bloomberg.com/news/articles/2025-09-21/porsche-s-ev-pullback-highlights-cracks-in-german-auto-empire?srnd=homepage-europe,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Frontier Airlines CEO Barry Biffle responded to United Airlines' assertion that the deep-discount airline model is no longer",3.03
-Economic Overview,,Overview,N/A,"Based on the provided summaries, the current economic situation appears mixed, suggesting a potential slowdown rather than a clear growth or stability. While some companies like FedEx and Walmart are showing positive signs through online marketplace growth and profit acceleration, others, such as Spirit Airlines, are implementing job cuts and schedule reductions, indicating financial distress. Furthermore, revisions to growth plans from companies like Hyundai and concerns about crowded stores at Costco hint at challenges impacting broader economic activity. The overall trend suggests a cautious outlook, with potential for continued volatility and possible worsening conditions in specific sectors.",0.0
+  ""summary"": ""Porsche's recent adjustment of its electric vehicle production targets reveals challenges within Germany's automotive indust",1.26
+BYD’s Stock Falls After Report Buffett Sold His Entire Stake,https://www.bloomberg.com/news/articles/2025-09-22/byd-s-stock-falls-after-report-buffett-has-sold-all-his-stake?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""BYD's stock price declined following a report that Warren Buffett has completely sold his stake in the company. This news s",1.25
+Porsche and VW Lower Forecasts Due to Pullback From EVs,https://www.bloomberg.com/news/articles/2025-09-19/porsche-cuts-outlook-and-sees-1-8-billion-hit-from-ev-pullback?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Porsche and Volkswagen have revised their electric vehicle sales forecasts downward, citing a slowdown in demand. This adju",1.23
+Cryptocurrencies Sink as $1.5 Billion in Bullish Bets Wiped Out,https://www.bloomberg.com/news/articles/2025-09-22/cryptocurrencies-sink-as-1-5-billion-in-bullish-bets-wiped-out?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Cryptocurrencies experienced a significant downturn after approximately $1.5 billion in bullish bets were lost. This declin",1.15
+"Pfizer Near Potential $7.3 Billion Metsera Takeover, FT Says",https://www.bloomberg.com/news/articles/2025-09-22/pfizer-nears-potential-7-3-billion-takeover-of-metsera-ft-says?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The Financial Times reports that Pfizer is considering a potential acquisition of Metsera, a biopharmaceutical company, for ",1.29
+"UK, Canada Recognize Palestinian State in Break With Trump",https://www.bloomberg.com/news/articles/2025-09-21/canada-s-carney-formally-recognizes-palestine-in-historic-shift?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The UK and Canada have formally recognized the State of Palestine, marking a departure from the previous policy under the Tr",1.33
+Hong Kong Airport Cuts Flights From Tuesday Due to Super Typhoon,https://www.bloomberg.com/news/articles/2025-09-22/hong-kong-airport-weighs-36-hour-closure-as-super-typhoon-nears?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Hong Kong International Airport will be reducing flights starting Tuesday due to the anticipated impact of Super Typhoon Sa",1.18
+Challenges Facing Business School Leaders—and What’s Next,https://www.bloomberg.com/news/articles/2025-09-21/business-school-deans-say-they-re-facing-these-big-challenges?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Panelists cite AI advancements, geopolitical instability, and potential divergence as contributors to increased uncertainty.",1.13
+Paramount’s New Boss Faces a Media Industry Under Assault,https://www.bloomberg.com/news/features/2025-09-19/david-ellison-got-his-paramount-skydance-deal-now-what?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""David Ellison's company merger has been approved, but integrating the businesses will present financial and political challe",1.23
+It’s Never Been Harder to Get a Job in Hollywood,https://www.bloomberg.com/news/features/2025-09-19/getting-a-job-in-hollywood-has-never-been-harder?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Culture"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The article discusses the challenges and uncertainties faced by those working in the entertainment industry. It explores pers",1.12
+‘I Was a Weird Kid’: Jailhouse Confessions of a Teen Hacker,https://www.bloomberg.com/news/features/2025-09-19/multimillion-dollar-hacking-spree-scattered-spider-teen-s-jailhouse-confessions?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Noah Urban played a key role in the Scattered Spider hacking group by social engineering victims into granting access to ",1.19
+Kazakhstan Plans up to $2 Billion Yuan Bonds to Grow China Ties,https://www.bloomberg.com/news/articles/2025-09-22/kazakhstan-plans-up-to-2-billion-yuan-bonds-to-grow-china-ties?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Kazakhstan intends to issue up to $2 billion in yuan-denominated bonds. This move is aimed at strengthening economic ties wi",1.12
+Angola’s Oil Output Rises Back Above Million-Barrel-a-Day Mark,https://www.bloomberg.com/news/articles/2025-09-22/angola-s-oil-output-rises-back-above-million-barrel-a-day-mark?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Angola's oil production has rebounded, exceeding one million barrels per day. This signals a positive trend for the country",1.17
+Jim Cramer on the Retail Trading Revolution,https://www.bloomberg.com/news/articles/2025-09-22/jim-cramer-on-the-retail-trading-revolution?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article discusses the impact of retail trading on the market, featuring commentary from Jim Cramer. It examines the evo",1.18
+India Finds Out How Hard It Is to Build a Finance Hub From Scratch,https://www.bloomberg.com/news/articles/2025-09-12/building-a-smart-city-from-scratch-is-easier-said-than-done?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""India is facing challenges in its efforts to establish a major financial hub. The article details the difficulties and hurdl",1.2
+The AI Doomers Are Losing the Argument,https://www.bloomberg.com/news/articles/2025-09-12/the-ai-doomers-are-losing-the-argument?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article argues that the concerns of the 'AI doomers,' who predict catastrophic outcomes from advanced AI, are losing ",1.28
+Jung Chang: ‘China Is at a Turning Point’,https://www.bloomberg.com/features/2025-jung-chang-weekend-interview/?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Jung Chang, author of 'Wild Swans,' believes China is at a significant turning point, though the specifics of that shift are",1.4
+‘I Want My Inheritance Now’: Older People are Losing Their Life Savings to Family Members,https://www.bloomberg.com/news/articles/2025-09-18/elder-financial-abuse-is-on-the-rise-as-cost-of-living-crisis-grows?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""The article reports a concerning trend of elderly individuals losing their life savings to family members, often through un",1.22
+US Bravado Won’t Win Space Race with China,https://www.bloomberg.com/news/newsletters/2025-09-17/china-is-advancing-its-space-capabilities-while-america-brags?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The article argues that the United States' current approach to space exploration isn't sufficient to compete with China. I",1.31
+"Musk Says SpaceX to Fly Bigger, Fully Reusable Starship in 2026",https://www.bloomberg.com/news/articles/2025-09-10/musk-says-spacex-to-fly-bigger-fully-reusable-starship-in-2026?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Elon Musk announced SpaceX plans to launch a larger, fully reusable Starship in 2026. This development signifies continue",1.22
+Rocket Maker Avio May Consider €300 Million Capital Raise,https://www.bloomberg.com/news/articles/2025-09-10/rocket-maker-avio-may-consider-up-to-300-million-capital-raise?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Italian rocket maker Avio is reportedly considering a €300 million capital raise. The move suggests a potential need for add",1.25
+NASA Rover Finds Mars Rocks That May Signal Ancient Life,https://www.bloomberg.com/news/articles/2025-09-10/nasa-rover-finds-mars-rocks-that-may-be-signs-of-ancient-life?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Science"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""NASA's rover has discovered Martian rocks that could potentially indicate the existence of ancient life. This discovery repr",1.17
+Canal+ Aims to Be a Top Five Entertainment Firm With Africa Bet,https://www.bloomberg.com/news/articles/2025-09-22/canal-aims-to-be-a-top-five-entertainment-firm-with-africa-bet?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Canal+ is pursuing an ambitious plan to become a leading entertainment company, particularly focusing on growth within the ",1.37
+Sony Financial Spinoff Reference Price Set at 150 Yen Per Share,https://www.bloomberg.com/news/articles/2025-09-22/sony-financial-spinoff-reference-price-set-at-150-yen-per-share?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Sony has set a reference price of 150 yen per share for its upcoming financial spinoff. This sets the initial valuation for ",1.17
+MediaTek Launches Improved AI Processor to Compete with Qualcomm,https://www.bloomberg.com/news/articles/2025-09-22/mediatek-launches-improved-ai-processor-to-compete-with-qualcomm?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""MediaTek has announced a new AI processor aimed at challenging Qualcomm's dominance in the mobile chip market. The launch ",1.18
+Switzerland Holds Vote on Abolishing $2.1 Billion Property Tax,https://www.bloomberg.com/news/articles/2025-09-22/switzerland-holds-vote-on-abolishing-2-1-billion-property-tax?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Switzerland is holding a referendum to decide whether to abolish a property tax estimated at $2.1 billion. The outcome of th",1.13
+Don Don Donki Billionaire Primes 24-Year-Old Heir for Retail Empire,https://www.bloomberg.com/news/articles/2025-09-21/don-don-donki-s-gen-z-heir-in-focus-as-21-billion-empire-s-succession-looms?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Japanese retailer Don Quijote is preparing its 24-year-old heir, Takuto Ueno, to take over the company's leadership. This su",1.47
+Vancouver Sports Billionaires Sued by Family Member in Feud Over Fortune,https://www.bloomberg.com/news/articles/2025-09-20/vancouver-sports-billionaires-sued-by-family-member-in-feud-over-fortune?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Sports"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Vancouver sports billionaires are facing a lawsuit from a family member. The legal action stems from a dispute over a family ",1.04
+Putting a Price on UK Tax Compliance Hell,https://www.bloomberg.com/news/newsletters/2025-09-20/putting-a-price-on-uk-tax-compliance-hell-merryn-talks-money?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article discusses the challenges and costs associated with UK tax compliance for businesses. It appears to explore the ",1.08
+Turkey Scraps Retaliatory US Tariffs Before Key Trump Summit,https://www.bloomberg.com/news/articles/2025-09-22/turkey-scraps-retaliatory-us-tariffs-before-key-trump-meeting?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Turkey has canceled retaliatory tariffs on US goods ahead of a planned meeting between President Erdogan and Donald Trump. T",1.21
+Singapore to Sanction ‘Radical’ West Bank Settlers Over Violence,https://www.bloomberg.com/news/articles/2025-09-22/singapore-to-sanction-radical-west-bank-settlers-over-violence?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Singapore announced it will sanction individuals it deems 'radical' West Bank settlers due to escalating violence. This move",1.2
+UK Stats Body Launches Fresh Push to Fix Data Quality Crisis,https://www.bloomberg.com/news/articles/2025-09-22/uk-stats-body-launches-fresh-push-to-fix-data-quality-crisis?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The UK's statistics body is initiating a new effort to improve the quality of its data. This initiative aims to address a gr",1.23
+The Top Polluting Nations Are Revising Their Emissions Targets. Is It Enough?,https://www.bloomberg.com/news/articles/2025-09-22/carbon-emissions-and-cop30-can-china-india-others-meet-paris-climate-goals?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Environment"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Several countries with high pollution rates are adjusting their emissions reduction goals. The article questions whether ",1.13
+Can Trump Pull TV Licenses Over Political Speech? How FCC’s Powers Loomed Over Kimmel Affair,https://www.bloomberg.com/news/articles/2025-09-19/jimmy-kimmel-suspended-how-fcc-s-tv-license-powers-loomed-over-abc-s-decision?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Politics"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The article discusses the potential for former President Trump to revoke television licenses due to political speech, follow",1.33
+Why Google Faces a Court Reckoning on Its Advertising Tech,https://www.bloomberg.com/news/articles/2025-09-19/google-s-monopoly-in-advertising-tech-faces-court-reckoning?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Google is facing a significant antitrust lawsuit regarding its advertising technology practices. The case could have major i",1.16
+Why UK Tax Hikes Loom as Reeves Looks to Plug Fiscal Black Hole,https://www.bloomberg.com/news/articles/2025-09-19/uk-autumn-budget-2025-why-rachel-reeves-is-likely-to-raise-taxes?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The UK faces potential tax increases as the Labour party, led by Rachel Reeves, seeks to address a significant fiscal defici",1.23
+BBVA’s Torres Digs In on Sabadell Bid as 5-Year Chase Nears End,https://www.bloomberg.com/news/articles/2025-09-22/bbva-s-torres-digs-in-on-sabadell-bid-as-5-year-chase-nears-end?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""BBVA is continuing its pursuit of Banco Sabadell after a five-year effort, despite ongoing challenges. The bank's CEO is rep",1.22
+"China’s Steel Work Plan Vows to Ban New Capacity, Promote Demand",https://www.bloomberg.com/news/articles/2025-09-22/china-s-steel-work-plan-vows-to-ban-new-capacity-promote-demand?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""China's steel industry plan aims to prevent new capacity expansion and bolster demand within the sector. The initiative seek",1.21
+Copper Holds Gain as Production Halt at Indonesia Mine Persists,https://www.bloomberg.com/news/articles/2025-09-22/copper-holds-gain-as-production-halt-at-indonesia-mine-persists?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Copper prices are maintaining their recent gains due to an ongoing production halt at a mine in Indonesia. The disruption is",1.13
+Nissan Revamps ProPilot to Rival Tesla Driver-Assist Technology,https://www.bloomberg.com/news/articles/2025-09-22/nissan-revamps-propilot-to-rival-tesla-driver-assist-technology?srnd=homepage-europe,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Nissan is updating its ProPilot driver-assist technology to compete with Tesla's offerings. The enhancements aim to improv",1.09
+Economic Overview,,Overview,N/A,"The current economic situation appears quite uncertain and facing headwinds. Numerous articles point to a slowdown, particularly within the technology and automotive sectors, with revised production targets and declining stock prices being reported. Geopolitical tensions, regulatory changes impacting visa programs (specifically impacting Indian tech firms), and concerns about fiscal health in Europe are contributing to this cautious outlook. While there are some positive signals like Angola’s oil production rebound and a successful year for one firm, the overall sentiment leans negative, with increased market uncertainty and potential for tax increases on the horizon.",0.0
