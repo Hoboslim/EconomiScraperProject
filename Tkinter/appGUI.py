@@ -7,7 +7,6 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.abspath(os.path.join(current_dir, ".."))
 folder = os.path.join(root_dir, "Scrapers")
 
-#folder = "Scrapers"
 options = [fname for fname in os.listdir(folder) if fname.endswith(".py")]
 
 def run_scraper():
