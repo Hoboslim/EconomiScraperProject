@@ -4,9 +4,9 @@ import time
 import os
 import json
 
-def run_classification():
+def run_classification(file_path):
     try:
-        df = pd.read_csv(os.path.join("Articles", "cnbc_articles.csv"))
+        df = pd.read_csv(file_path)
     except Exception as e:
         print(f"Error: Could not read CSV file.\n{e}")
         return

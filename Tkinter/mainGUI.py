@@ -1,13 +1,27 @@
-import tkinter as tk
-from tkinter import ttk, messagebox, filedialog
+import sys
 import os
-import subprocess
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.abspath(os.path.join(current_dir, ".."))
-folder = os.path.join(root_dir, "Scrapers")
+sys.path.insert(0, root_dir)
 
+from Classification.ArticleClassifier import run_classification
+
+import tkinter as tk
+from tkinter import ttk, messagebox, filedialog
+import subprocess
+
+folder = os.path.join(root_dir, "Scrapers")
+articles = os.path.join(root_dir, "Articles")
+
+
+#folder = "Scrapers"
 options = [fname for fname in os.listdir(folder) if fname.endswith(".py")]
+
+
+
+def get_csv_files():
+    return [f for f in os.listdir(articles) if f.endswith(".csv")]
 
 def run_scraper():
     selected_scraper = dropdown.get()
@@ -34,8 +48,11 @@ def choose_file():
         filetypes = [("CSV files", "*.csv"), ("All files", "*.*")]
     )
 
-def run_classification():
-    try:
+def run_selected_classification():
+    selected_csv = csv_dropdown.get()
+    if selected_csv:
+        file_path = os.path.join(articles, selected_csv)
+        run_classification(file_path)
 
 
 
@@ -71,10 +88,12 @@ run_scraper_btn.pack(padx=10, pady=10)
 label3 = tk.Label(root, text="Välj en fil för klassifikation:  ", font=("Arial", 15))
 label3.pack(padx=10, pady=10)
 
-choosefile_btn = tk.Button(root, text="Välj fil", font=("Arial", 15), command=choose_file)
-choosefile_btn.pack(padx=10, pady=10)
+csv_dropdown = ttk.Combobox(root, values=get_csv_files(), state="readonly")
+if get_csv_files():
+    csv_dropdown.current(0)
+csv_dropdown.pack(pady=10)
 
-run_classification_btn = tk.Button(root, text="Run Classification", font=("Arial", 15), command=run_classification)
-
+run_classification_btn = tk.Button(root, text="Run Classification", font=("Arial", 15), command=run_selected_classification)
+run_classification_btn.pack(padx=10, pady=10)
 
 root.mainloop()
