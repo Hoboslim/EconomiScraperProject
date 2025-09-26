@@ -7,7 +7,7 @@ import os
 
 def get_article_summary(url, driver):
     driver.get(url)
-    time.sleep(2)  # short wait
+    time.sleep(2)
     soup = BeautifulSoup(driver.page_source, "html.parser")
     paragraphs = soup.find_all("p")
     summary = " ".join(p.get_text(strip=True) for p in paragraphs[:3])
@@ -26,23 +26,23 @@ def scrape_cnbc():
 
     driver = webdriver.Chrome(options=options)
     driver.get(url)
-    time.sleep(5)  # wait for page to load
+    time.sleep(5)  
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
     articles = []
 
-    # Find both standard cards and featured cards
+   
     headline_tags = soup.find_all("a", class_=["Card-title", "FeaturedCard-packagedCardTitle"])
 
     print(f"Found {len(headline_tags)} headline links")
 
-    for tag in headline_tags[:20]:  # limit for testing
+    for tag in headline_tags[:20]: 
         headline = tag.get_text(strip=True)
         link = tag.get("href")
         if link and not link.startswith("http"):
             link = "https://www.cnbc.com" + link
 
-        # Optional: fetch summary from article page
+     
         summary = get_article_summary(link, driver)
 
         articles.append({
@@ -53,7 +53,7 @@ def scrape_cnbc():
 
     driver.quit()
 
-    # Save CSV
+  
     df = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
     df.to_csv("Articles/cnbc_articles.csv", index=False, encoding="utf-8")

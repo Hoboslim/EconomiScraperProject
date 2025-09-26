@@ -1,107 +1,254 @@
 Headline,Link,Model_Category,Sentiment,Model_Summary,Time (s)
-"YouTube TV, NBCUniversal warn of impending carriage dispute that could lead to network blackout",https://www.cnbc.com/2025/09/25/youtube-tv-nbcuniversal-impending-carriage-dispute.html,ParseError,ParseError,"```json
+How to get a mortgage preapproval,https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-pre-approval-182545770.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article provides guidance on obtaining mortgage preapproval. It outlines the process and steps involved in securing pre",1.41
+Best mortgage lenders for first-time home buyers of September 2025,https://finance.yahoo.com/personal-finance/mortgages/article/best-mortgage-lenders-first-time-buyers-202829998.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article reviews the best mortgage lenders specifically targeted towards first-time home buyers. It provides information",1.13
+Historical mortgage rates: See how rates have changed over time,https://finance.yahoo.com/personal-finance/mortgages/article/historical-mortgage-rates-164750874.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article examines the historical trends in mortgage rates. It provides context and data on how these rates have fluctuat",1.09
+Want to refinance your mortgage? Here are 7 home refinance options.,https://finance.yahoo.com/personal-finance/mortgages/article/home-refinance-options-173007768.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article discusses various options for homeowners looking to refinance their mortgages. It aims to provide guidance and ",1.06
+Financial Services Roundup: Market Talk,https://www.wsj.com/articles/financial-services-roundup-market-talk-0ea3d484?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article is a roundup of market talk related to financial services. It provides a brief overview of developments within ",1.08
+Analyst Report: Public Serv Enterprise Grp Inc,https://finance.yahoo.com/research/reports/ARGUS_3301_AnalystReport_1758820877000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article concerns an analyst report on Public Serv Enterprise Grp Inc. The report's specific details and conclusions are",1.1
+Why Marvell Technology Stock Trounced the Market Today,https://finance.yahoo.com/news/why-marvell-technology-stock-trounced-212014572.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Marvell Technology stock significantly outperformed the market today. This surge is likely due to positive developments or ",1.08
+Freeport-McMoRan Says Its Gold and Copper Sales Will Drop. The Stock Plunged.,https://www.barrons.com/articles/gold-copper-freeport-mcmoran-stock-price-mud-rush-ea5bdde5?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""YouTube TV subscribers face potential loss of NBCUniversal programming like \""Sunday Night Football\"" due to an upcoming ca",3.4
-"Costco tops earnings, revenue estimates as warehouse club gains more members",https://www.cnbc.com/2025/09/25/costco-cost-q4-2025-earnings.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Costcoon exceeded Wall Street's expectations for quarterly earnings and revenue, driven by strong membership income and e-c",1.29
-Antonoff slams Live Nation CEO claims of ‘underpriced’ concert tickets,https://www.cnbc.com/2025/09/25/antonoff-slams-live-nation-ceos-underpriced-concert-claim.html,ParseError,ParseError,"```json
+  ""summary"": ""Freeport-McMoRan announced a decline in gold and copper sales, causing a significant drop in the company's stock price. Thi",1.36
+Basic Materials Roundup: Market Talk,https://www.wsj.com/articles/basic-materials-roundup-market-talk-442e802e?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Music producer Jack Antonoff is disputing Live Nation CEO Michael Rapino's assertion that concert tickets are currently unde",1.31
-"New car sales see boost, for now, as consumers fear tariffs and higher prices",https://www.cnbc.com/2025/09/25/new-car-sales-see-boost-as-consumers-fear-tariffs-higher-prices.html,ParseError,ParseError,"```json
+  ""summary"": ""This article provides a roundup of market talk related to basic materials. It appears to be a brief overview of market activ",1.11
+Auto & Transport Roundup: Market Talk,https://www.wsj.com/articles/auto-transport-roundup-market-talk-79a4e412?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article is a market talk roundup focused on the auto and transport sectors. It provides a brief overview of current mar",1.13
+Energy & Utilities Roundup: Market Talk,https://www.wsj.com/articles/energy-utilities-roundup-market-talk-3bf8721f?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article is a market talk roundup focusing on the energy and utilities sectors. It provides a brief overview of recent d",1.15
+Analyst Report: Chewy Inc,https://finance.yahoo.com/research/reports/ARGUS_6119_AnalystReport_1758820877000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article discusses Chewy Inc. and is based on an analyst report. The content likely focuses on the company's financial p",1.15
+RWA Tokenization: Preview Of A Bubble Or The Next Big Thing?,https://finance.yahoo.com/news/rwa-tokenization-preview-bubble-next-213000103.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The article explores the emerging trend of Real World Asset (RWA) tokenization and questions whether it represents a signifi",1.38
+Cheapest car insurance in California 2025,https://finance.yahoo.com/personal-finance/insurance/article/cheapest-car-insurance-california-214150358.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article discusses the most affordable car insurance options available in California for the year 2025. It likely provid",1.3
+Real Estate Broker Douglas Elliman’s Stock Looks Cheap Amid Takeover Interest,https://www.barrons.com/articles/douglas-elliman-stock-anywhere-compass-63d09092?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Positive"",
-  ""summary"": ""Cox Automotive raised its 2025 U.S. new vehicle sales forecast due to surprisingly strong demand. This boost is attributed ",1.36
-"Starbucks to close stores, lay off workers in $1 billion restructuring plan",https://www.cnbc.com/2025/09/25/starbucks-restructuring-store-closures-layoffs.html,ParseError,ParseError,"```json
+  ""summary"": ""Shares of Douglas Elliman are appearing undervalued due to speculation surrounding potential takeover interest. This sugges",1.15
+"Tariffs Create Opportunities, Says Ports Leader",https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-24-2025/card/tariffs-create-opportunities-says-ports-leader-YpuBqnPKRN9RHVsiCiDD?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""A ports leader argues that tariffs, while often viewed negatively, can also create new opportunities. The statement suggests",1.18
+Trump Places Direct Bet on Thacker Pass Lithium,https://finance.yahoo.com/news/trump-places-direct-bet-thacker-220000913.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Donald Trump has invested directly in Thacker Pass Lithium, a Nevada lithium mine. This marks a significant personal bet on ",1.15
+Daily Spotlight: Fed's Favorite Inflation Indicator,https://finance.yahoo.com/research/reports/ARGUS_44810_MarketOutlook_1758800077000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article focuses on a key inflation indicator closely watched by the Federal Reserve. It likely discusses the indicator'",1.2
+"Day trading on the New York Stock Exchange, Nasdaq, and more could get easier, thanks to this rule change—here’s how",https://finance.yahoo.com/news/day-trading-york-stock-exchange-213000312.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""A rule change may simplify day trading on major stock exchanges like the NYSE and Nasdaq. The article details how this chang",1.14
+Cotton Falls Back on Wednesday,https://finance.yahoo.com/news/cotton-falls-back-wednesday-220858810.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""Starbucks announced a $1 billion restructuring plan, including store closures and layoffs. This move is part of CEO Brian N",1.26
-Existing home sales stall in August amid higher mortgage rates,https://www.cnbc.com/2025/09/25/august-existing-home-sales-stall.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Existing home sales were nearly unchanged in August, experiencing a slight decrease from July but an increase from the previ",1.31
-CarMax stock plummets 20% following ‘challenging’ quarter,https://www.cnbc.com/2025/09/25/carmax-stock-plummets-after-missed-wall-streets-expectations.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""CarMax shares plummeted 20% after the company reported lower-than-expected quarterly earnings and revenue. This resulted in",1.27
-U.S. startup airline Breeze Airways plans first international flights,https://www.cnbc.com/2025/09/25/breeze-airways-mexico-jamaica-dominican-republic.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Breeze Airways, a U.S. startup airline, is expanding its operations by launching its first international flights to Cancun,",1.52
-"Office investor demand was way up in the first half of 2025, says new JLL data",https://www.cnbc.com/2025/09/25/office-investor-demand-first-half-of-2025-jll.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""The U.S. office market recovery is gaining momentum, potentially accelerating based on capital market interest. This sugges",1.35
-"Walmart teams up with Spain’s La Liga, furthering the retailer’s soccer push",https://www.cnbc.com/2025/09/25/walmart-la-liga-presenting-partner-el-clasico.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Sports"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article promotes a new CNBC Sports Newsletter. It is an announcement and does not present any specific news or opinion.""
-",1.05
-NFL Commissioner Roger Goodell weighs potential for an international team,https://www.cnbc.com/2025/09/24/nfl-commissioner-roger-goodell-international-team.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Sports"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article announces the launch of a new CNBC Sports Newsletter. It encourages readers to sign up.""
+  ""summary"": ""Cotton prices declined on Wednesday. This indicates a downturn in the cotton market.""
 }
-```",0.97
-"‘Jimmy Kimmel Live!’ return draws 6.26 million viewers, ABC parent Disney says",https://www.cnbc.com/2025/09/24/jimmy-kimmel-return-ratings-abc-disney.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Entertainment"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""“Jimmy Kimmel Live!” returned to air Tuesday night, attracting 6.26 million viewers. The return happened despite preemp",1.31
-"U.S. Latino immigrants generate $1.6 trillion in GDP, report says",https://www.cnbc.com/2025/09/24/us-latino-immigrants-gdp-report-says.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""A new report reveals that U.S. Latino immigrants contributed $1.6 trillion to the GDP in 2023, demonstrating significant ec",1.61
-Nexstar evaluating status of ‘Jimmy Kimmel Live’ for ABC stations,https://www.cnbc.com/2025/09/24/jimmy-kimmel-live-nexstar-show-status-abc-stations.html,ParseError,ParseError,"```json
+```",0.91
+Corn Closes Lower Despite More Export Business,https://finance.yahoo.com/news/corn-closes-lower-despite-more-220857452.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Nexstar Media Group is assessing whether to resume airing \""Jimmy Kimmel Live!\"" after the show returned to Disney-owned net",1.34
-New home sales soar 20% in August to a three-year high,https://www.cnbc.com/2025/09/24/august-new-home-sales-soar.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""New home sales surged in August, reaching the highest level since January 2022. The significant increase is attributed to s",1.38
-Ford offers special financing to riskier F-150 buyers with lower credit scores,https://www.cnbc.com/2025/09/24/ford-truck-financing-credit-score.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Ford is offering special financing to consumers with lower credit scores in an effort to increase sales of its F-150 pickup ",1.36
-"Seasonal retail hiring to fall to lowest level since 2009, signaling holiday trouble",https://www.cnbc.com/2025/09/24/seasonal-hiring-2025-to-fall-to-lowest-level-since-2009-recession.html,ParseError,ParseError,"```json
+  ""summary"": ""Corn prices decreased despite increased export activity. The market's performance suggests complex underlying factors are at",1.01
+Soybeans Slip Lower into the Wednesday Close,https://finance.yahoo.com/news/soybeans-slip-lower-wednesday-close-220857374.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""Seasonal hiring in the retail sector is expected to be the lowest since 2009, signaling a potentially weaker holiday shoppi",1.57
-"What to know about new Covid, childhood shot guidance from Trump administration",https://www.cnbc.com/2025/09/24/how-to-get-covid-mmrv-hepatitisb-vaccines.html,ParseError,ParseError,"```json
+  ""summary"": ""Soybean prices decreased during Wednesday's market close. This indicates a downturn in the agricultural commodities market.",1.01
+Oracle's $18 Billion Bond Sale Meets Strong Investor Demand,https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-24-2025/card/oracle-s-18-billion-bond-sale-meets-strong-investor-demand-ZMb3Cw8BsUQ9Vm0rO3My?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
 {
-  ""category"": ""Health"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""A vaccine advisory panel recommended changes to U.S. Covid and childhood immunization policies, deviating from established pre",1.27
-Luxury brands are embracing Labubu to court younger shoppers,https://www.cnbc.com/2025/09/24/luxury-labubu-moynat-loewe-tiffany-omega.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Culture"",
+  ""category"": ""Business"",
   ""sentiment"": ""Positive"",
-  ""summary"": ""Labubu dolls are becoming a trendy fashion accessory, particularly among celebrities. They are frequently seen paired with h",1.21
-"NFL TV rights could enter renegotiations next year, Roger Goodell says",https://www.cnbc.com/2025/09/24/nfl-tv-rights-renegotiations-accelerated-roger-goodell.html,ParseError,ParseError,"```json
+  ""summary"": ""Oracle successfully sold an $18 billion bond, demonstrating strong investor interest. This large offering signals confidenc",1.13
+Technical Assessment: Bullish in the Intermediate-Term,https://finance.yahoo.com/research/reports/ARGUS_44809_TechnicalAnalysis_1758799977000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
 {
-  ""category"": ""Sports"",
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""This article presents a technical assessment indicating a bullish outlook for the intermediate term. It suggests a positive",1.08
+Disney Gears Up for Legal Fight With Trump Over Kimmel’s Return,https://finance.yahoo.com/news/disney-gears-legal-fight-trump-214429610.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""This article promotes the new CNBC Sports Newsletter. It is an advertisement for a subscription service.""
-}
-```",0.96
-Economic Overview,,Overview,N/A,"The current economic situation appears mixed, suggesting a slowdown but with pockets of surprising strength. While some indicators like retail seasonal hiring and Starbucks' restructuring point to challenges and potential weakness, others such as Cox Automotive’s sales forecast, new home sales, and Costco’s earnings reveal unexpected resilience and demand. Overall, the trends are volatile and indicate a potential for continued instability in the near future, with some sectors demonstrating surprising growth while others face headwinds. The labor market appears to be experiencing some softening, as evidenced by the anticipated lower retail hiring.",0.0
+  ""summary"": ""Disney is preparing for a legal battle with Donald Trump's organization following a dispute over Jimmy Kimmel's return to ho",1.58
+I was fired from my job just 1 year before I was set to retire at 70. What happens to my retirement plan now?,https://finance.yahoo.com/news/fired-job-just-1-set-221300970.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""The author was unexpectedly fired a year before planned retirement, prompting concern about the status of their retirement ",1.22
+Macquarie to repay Australian investors $211 million after pension fund collapse,https://finance.yahoo.com/news/macquarie-unit-pay-australians-investing-222530772.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Macquarie will repay Australian investors $211 million following the collapse of a pension fund. The repayment addresses lo",1.2
+Air Canada Reinstates Full-Year Outlook at Lower Level Due to Labor Disruptions,https://www.wsj.com/business/airlines/air-canada-reinstates-full-year-outlook-at-lower-level-due-to-labor-disruptions-20d8aa8b?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Air Canada has revised its full-year outlook downwards, citing ongoing labor disruptions. The airline is facing challenges ",1.15
+Watch: IMF Director Doubts U.S. Will Pull Out of Fund,https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-24-2025/card/watch-imf-director-doesn-t-expect-u-s-to-pull-out-of-fund-rpIugEk48CRjVhDAuNz3?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The article reports on comments from the IMF director expressing doubt about the United States withdrawing from the internat",1.26
+Analyst Report: Lennar Corp.,https://finance.yahoo.com/research/reports/ARGUS_3141_AnalystReport_1758798875000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article focuses on an analyst report concerning Lennar Corp. The report's content and implications are not detailed, ma",1.27
+"Crypto Millionaires Surge 40%, Led by Bitcoin's Rise, as Market Hits $3.3 Trillion",https://finance.yahoo.com/news/crypto-millionaires-surge-40-led-214520909.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""The number of cryptocurrency millionaires has increased by 40%, driven largely by the rise of Bitcoin. The overall cryptocu",1.3
+"Reagan Air Crash Victim’s Family Sues American Airlines, FAA and Army",https://www.wsj.com/us-news/reagan-air-crash-victims-family-sues-american-airlines-faa-and-army-3f0740c3?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+{
+  ""category"": ""Legal"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""A family of a victim from the 1983 Reagan Air Crash has filed a lawsuit against American Airlines, the FAA, and the Army. The ",1.35
+Why Africa’s Largest Untapped Oil Field Has Yet to Flow,https://finance.yahoo.com/news/why-africa-largest-untapped-oil-230000535.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article examines the reasons why the Twiga South oil field, Africa's largest untapped oil reserve, has not yet begun pr",1.37
+HSBC says quantum computing trial helps bond trading,https://finance.yahoo.com/news/hsbc-says-quantum-computing-trial-230522622.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""HSBC conducted a trial using quantum computing to explore its potential for bond trading. The experiment aimed to assess t",1.22
+Are high-yield savings accounts worth it for small balances?,https://finance.yahoo.com/personal-finance/banking/article/are-high-yield-savings-accounts-worth-it-small-balances-130058034.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article explores the value of high-yield savings accounts for individuals with smaller savings balances. It likely exam",1.23
+Analyst Report: Micron Technology Inc.,https://finance.yahoo.com/research/reports/ARGUS_3614_AnalystReport_1758798875000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article reports on an analyst report concerning Micron Technology Inc. The content likely details the analyst's assessm",1.17
+Willy Woo revamps Bitcoin price target after 4 years,https://finance.yahoo.com/news/willy-woo-revamps-bitcoin-price-215330504.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Bitcoin analyst Willy Woo has revised his price target for Bitcoin after four years, suggesting a new potential valuation. T",1.27
+Why This Dividend King Still Stands Tall,https://finance.yahoo.com/news/why-dividend-king-still-stands-233002848.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""This article discusses a company known as a \""Dividend King,\"" highlighting its continued strength and reliability in provi",1.28
+Stitch Fix Expects Revenue Growth After Market-Share Gains,https://www.wsj.com/business/earnings/stitch-fix-guides-for-revenue-growth-as-results-beat-estimates-0a55b7ac?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Stitch Fix anticipates revenue growth due to recent market-share gains. The company is projecting positive financial perfor",1.11
+KB Home Lowers Outlook as Slow Housing Market Continues to Bite,https://www.wsj.com/business/earnings/kb-home-lowers-outlook-as-slow-housing-market-continues-to-bite-c28c3da4?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""KB Home has reduced its financial outlook due to a persistent slowdown in the housing market. This indicates weaker-than-ex",1.16
+"Noble Corporation Plc (NE)’s Denton Blake Sells 29,729 Class A Ordinary Shares at a Weighted Average Price of $29.78",https://finance.yahoo.com/news/noble-corporation-plc-ne-denton-001236639.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Noble Corporation Plc executive Denton Blake sold a significant number of company shares. The transaction occurred at a weig",1.2
+Analyst Report: Linde Plc.,https://finance.yahoo.com/research/reports/ARGUS_4859_AnalystReport_1758798875000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article discusses an analyst report concerning Linde Plc. The report's contents are not specified within the provided t",1.06
+Avalanche’s First Nasdaq Firm Debuts With $550M Raise And A Plan for Staking AVAX – What to Expect?,https://finance.yahoo.com/news/avalanche-first-nasdaq-firm-debuts-220624648.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Avalanche's first Nasdaq-listed company, Blockbark, has launched with a $550 million funding round and plans to utilize AVA",1.46
+"Morgan Stanley Upgrades PG&E Corporation (PCG) from ‘Underweight’ to ‘Equal Weight’, Raises Price Target to $20",https://finance.yahoo.com/news/morgan-stanley-upgrades-pg-e-001302035.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Morgan Stanley upgraded PG&E's rating from 'Underweight' to 'Equal Weight' and increased its price target to $20. This sign",1.37
+"Goldman Sachs Initiates Coverage on Cameco Corporation (CCJ) with a ‘Buy’ Rating, Share Price Rises",https://finance.yahoo.com/news/goldman-sachs-initiates-coverage-cameco-001324805.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Goldman Sachs began coverage of Cameco Corporation with a 'Buy' rating, which has led to an increase in the company's share",1.18
+UBS Reaffirms Its ‘Buy’ Rating on Six Flags Entertainment Corporation (FUN) with a $34 Price Target,https://finance.yahoo.com/news/ubs-reaffirms-buy-rating-six-001353466.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""UBS has reaffirmed its 'Buy' rating on Six Flags Entertainment, setting a $34 price target. This indicates a positive outlo",1.23
+"TransDigm Group Incorporated (TDG)’s Wholly Owned Subsidiary, TransDigm Inc., Amends Its Existing Credit Agreement to Reprice and Extend Certain Term Loans",https://finance.yahoo.com/news/transdigm-group-incorporated-tdg-wholly-001415579.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""TransDigm Group's subsidiary, TransDigm Inc., has amended its credit agreement to reprice and extend certain term loans. Thi",1.28
+"Market Digest: EAT, LEN, MU, WWW, ULTA, LIN",https://finance.yahoo.com/research/reports/ARGUS_44807_MarketSummary_1758797975000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article is a market digest highlighting the performance of several companies (EAT, LEN, MU, WWW, ULTA, LIN). It provide",1.3
+"Solstice Taps Chainlink, Ceffu for Solana-Based USX Stablecoin Launch",https://finance.yahoo.com/news/solstice-taps-chainlink-ceffu-solana-221024270.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Solstice is launching a Solana-based stablecoin, USX, utilizing Chainlink and Ceffu for its operations. This collaboration",1.32
+"Target Corporation (TGT) Announces It Will Feature 20,000 New Items for the 2025 Holiday Season",https://finance.yahoo.com/news/target-corporation-tgt-announces-feature-001439076.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Target Corporation announced plans to offer 20,000 new items for the 2025 holiday season. This initiative suggests a continu",1.3
+Economic Overview,,Overview,N/A,"The current economic situation appears mixed, with a general sense of stability but also signs of both potential improvements and downturns. Several articles highlight analyst reports and market talk across various sectors like financials, basic materials, energy, and technology, suggesting ongoing evaluation and adjustments within the market. While some companies like Marvell Technology, Douglas Elliman, and Stitch Fix are experiencing positive developments, others like Freeport-McMoRan, Air Canada, and KB Home are facing challenges and downward revisions. Commodity prices (cotton, corn, soybeans) are generally trending downwards, while Oracle's successful bond sale and Morgan Stanley's upgrade of PG&E offer a more optimistic view. Overall, the near future is likely to be characterized by continued volatility and sector-specific performance.",0.0
