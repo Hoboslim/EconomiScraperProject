@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-import os, subprocess
+import os, subprocess, threading
 from .classificationPage import ClassificationPage
 
 
@@ -23,15 +23,35 @@ class ScraperPage(tk.Frame):
         tk.Button(self, text="Run Scraper", command=self.run_scraper).pack(pady=10)
         tk.Button(self, text="Back to Home", command=lambda: controller.show_frame("StartPage")).pack(pady=10)
         
+        self.progress = ttk.Progressbar(self, mode="indeterminate", length=250)
+        self.progress.pack(pady=10)
+        
+        
+        
     def run_scraper(self):
         selected_scraper = self.dropdown.get()
-        if selected_scraper:
-            filepath = os.path.join(self.folder, selected_scraper)
+        if not selected_scraper:
+            messagebox.showwarning("No Selection", "Please select a scraper first.")
+            return
+          
+            
+            
+        filepath = os.path.join(self.folder, selected_scraper)
+            
+
+        self.progress.start(10)
+        
+        threading.Thread(target=self._run_scraper_task, args=(filepath,), daemon=True).start()
+        
+    def _run_scraper_task(self, filepath):
         try:
             subprocess.run(["python", filepath], check=True)
         except subprocess.CalledProcessError as e:
             print(f"Error running this file: {e}")
-
-        
+            messagebox.showerror("Error" f"scraper failed: {e}")
+        finally:
+            
+            self.after(0, self.progress.stop)
+            self.after(0, lambda: messagebox.showinfo("Done", "Scraper Finished!"))
         
         

@@ -1,106 +1,107 @@
 Headline,Link,Model_Category,Sentiment,Model_Summary,Time (s)
-NFL Commissioner Roger Goodell weighs potential for an international team,https://www.cnbc.com/2025/09/24/nfl-commissioner-roger-goodell-international-team.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Sports"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article promotes a new CNBC Sports Newsletter. It encourages readers to sign up for updates.""
-}
-```",3.01
-"‘Jimmy Kimmel Live!’ return draws 6.26 million viewers, ABC parent Disney says",https://www.cnbc.com/2025/09/24/jimmy-kimmel-return-ratings-abc-disney.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Entertainment"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""“Jimmy Kimmel Live!” returned Tuesday night, attracting 6.26 million viewers. The show aired despite preemptions affect",1.24
-"U.S. Latino immigrants generate $1.6 trillion in GDP, report says",https://www.cnbc.com/2025/09/24/us-latino-immigrants-gdp-report-says.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""A new report reveals that U.S. Latino immigrants contributed $1.6 trillion to the GDP in 2023, showcasing a substantial eco",1.57
-Nexstar evaluating status of ‘Jimmy Kimmel Live’ for ABC stations,https://www.cnbc.com/2025/09/24/jimmy-kimmel-live-nexstar-show-status-abc-stations.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Nexstar Media Group is assessing whether to resume airing \""Jimmy Kimmel Live!\"" after the show returned to Disney-owned net",1.19
-New home sales soar 20% in August to a three-year high,https://www.cnbc.com/2025/09/24/august-new-home-sales-soar.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""New home sales surged unexpectedly in August, reaching the highest level since January 2022. The significant increase is at",1.3
-Ford offers special financing to riskier F-150 buyers with lower credit scores,https://www.cnbc.com/2025/09/24/ford-truck-financing-credit-score.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Ford is offering special financing options to consumers with lower credit scores to stimulate sales of its F-150 pickup truc",1.29
-"Seasonal retail hiring to fall to lowest level since 2009, signaling holiday trouble",https://www.cnbc.com/2025/09/24/seasonal-hiring-2025-to-fall-to-lowest-level-since-2009-recession.html,ParseError,ParseError,"```json
+"YouTube TV, NBCUniversal warn of impending carriage dispute that could lead to network blackout",https://www.cnbc.com/2025/09/25/youtube-tv-nbcuniversal-impending-carriage-dispute.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""Seasonal retail hiring is expected to be the lowest since 2009, signaling a potentially weaker holiday shopping season. Cha",1.35
-"What to know about new Covid, childhood shot guidance from Trump administration",https://www.cnbc.com/2025/09/24/how-to-get-covid-mmrv-hepatitisb-vaccines.html,ParseError,ParseError,"```json
+  ""summary"": ""YouTube TV subscribers face potential loss of NBCUniversal programming like \""Sunday Night Football\"" due to an upcoming ca",3.4
+"Costco tops earnings, revenue estimates as warehouse club gains more members",https://www.cnbc.com/2025/09/25/costco-cost-q4-2025-earnings.html,ParseError,ParseError,"```json
 {
-  ""category"": ""Health"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""A vaccine advisory panel, appointed by Robert F. Kennedy Jr., issued recommendations that deviate from standard U.S. practices",1.36
-Luxury brands are embracing Labubu to court younger shoppers,https://www.cnbc.com/2025/09/24/luxury-labubu-moynat-loewe-tiffany-omega.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Culture"",
+  ""category"": ""Business"",
   ""sentiment"": ""Positive"",
-  ""summary"": ""Labubu dolls are becoming a trendy accessory in the luxury fashion world. Celebrities are increasingly incorporating the toy",1.1
-"NFL TV rights could enter renegotiations next year, Roger Goodell says",https://www.cnbc.com/2025/09/24/nfl-tv-rights-renegotiations-accelerated-roger-goodell.html,ParseError,ParseError,"```json
+  ""summary"": ""Costcoon exceeded Wall Street's expectations for quarterly earnings and revenue, driven by strong membership income and e-c",1.29
+Antonoff slams Live Nation CEO claims of ‘underpriced’ concert tickets,https://www.cnbc.com/2025/09/25/antonoff-slams-live-nation-ceos-underpriced-concert-claim.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Music producer Jack Antonoff is disputing Live Nation CEO Michael Rapino's assertion that concert tickets are currently unde",1.31
+"New car sales see boost, for now, as consumers fear tariffs and higher prices",https://www.cnbc.com/2025/09/25/new-car-sales-see-boost-as-consumers-fear-tariffs-higher-prices.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Cox Automotive raised its 2025 U.S. new vehicle sales forecast due to surprisingly strong demand. This boost is attributed ",1.36
+"Starbucks to close stores, lay off workers in $1 billion restructuring plan",https://www.cnbc.com/2025/09/25/starbucks-restructuring-store-closures-layoffs.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Starbucks announced a $1 billion restructuring plan, including store closures and layoffs. This move is part of CEO Brian N",1.26
+Existing home sales stall in August amid higher mortgage rates,https://www.cnbc.com/2025/09/25/august-existing-home-sales-stall.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Existing home sales were nearly unchanged in August, experiencing a slight decrease from July but an increase from the previ",1.31
+CarMax stock plummets 20% following ‘challenging’ quarter,https://www.cnbc.com/2025/09/25/carmax-stock-plummets-after-missed-wall-streets-expectations.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""CarMax shares plummeted 20% after the company reported lower-than-expected quarterly earnings and revenue. This resulted in",1.27
+U.S. startup airline Breeze Airways plans first international flights,https://www.cnbc.com/2025/09/25/breeze-airways-mexico-jamaica-dominican-republic.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Breeze Airways, a U.S. startup airline, is expanding its operations by launching its first international flights to Cancun,",1.52
+"Office investor demand was way up in the first half of 2025, says new JLL data",https://www.cnbc.com/2025/09/25/office-investor-demand-first-half-of-2025-jll.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""The U.S. office market recovery is gaining momentum, potentially accelerating based on capital market interest. This sugges",1.35
+"Walmart teams up with Spain’s La Liga, furthering the retailer’s soccer push",https://www.cnbc.com/2025/09/25/walmart-la-liga-presenting-partner-el-clasico.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Sports"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article promotes a new CNBC Sports Newsletter. It is an announcement and does not present any specific news or opinion.""
+",1.05
+NFL Commissioner Roger Goodell weighs potential for an international team,https://www.cnbc.com/2025/09/24/nfl-commissioner-roger-goodell-international-team.html,ParseError,ParseError,"```json
 {
   ""category"": ""Sports"",
   ""sentiment"": ""Neutral"",
   ""summary"": ""This article announces the launch of a new CNBC Sports Newsletter. It encourages readers to sign up.""
 }
 ```",0.97
-Jimmy Kimmel returns: ‘Never my intention to make light’ of Charlie Kirk’s murder,https://www.cnbc.com/2025/09/23/jimmy-kimmel-returns-abc-disney-kirk.html,ParseError,ParseError,"```json
+"‘Jimmy Kimmel Live!’ return draws 6.26 million viewers, ABC parent Disney says",https://www.cnbc.com/2025/09/24/jimmy-kimmel-return-ratings-abc-disney.html,ParseError,ParseError,"```json
 {
   ""category"": ""Entertainment"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""“Jimmy Kimmel Live!” resumed broadcasting Tuesday night following a week-long suspension by ABC. The return was marked ",1.12
-Disney raises prices for streaming packages,https://www.cnbc.com/2025/09/23/disney-plus-new-pricing-streaming-kimmel.html,ParseError,ParseError,"```json
+  ""summary"": ""“Jimmy Kimmel Live!” returned to air Tuesday night, attracting 6.26 million viewers. The return happened despite preemp",1.31
+"U.S. Latino immigrants generate $1.6 trillion in GDP, report says",https://www.cnbc.com/2025/09/24/us-latino-immigrants-gdp-report-says.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""A new report reveals that U.S. Latino immigrants contributed $1.6 trillion to the GDP in 2023, demonstrating significant ec",1.61
+Nexstar evaluating status of ‘Jimmy Kimmel Live’ for ABC stations,https://www.cnbc.com/2025/09/24/jimmy-kimmel-live-nexstar-show-status-abc-stations.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Disney announced price increases for its streaming subscription packages, set to take effect on October 21st. This change im",1.12
-"Eli Lilly plans $6.5 billion Texas manufacturing plant for obesity pill, others",https://www.cnbc.com/2025/09/23/eli-lilly-plans-6point5-billion-texas-manufacturing-plant-for-obesity-pill.html,ParseError,ParseError,"```json
+  ""summary"": ""Nexstar Media Group is assessing whether to resume airing \""Jimmy Kimmel Live!\"" after the show returned to Disney-owned net",1.34
+New home sales soar 20% in August to a three-year high,https://www.cnbc.com/2025/09/24/august-new-home-sales-soar.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Positive"",
-  ""summary"": ""Eli Lilly announced a $6.5 billion investment to build a new manufacturing facility in Houston, Texas. The facility will in",1.29
-"Nexstar-owned ABC affiliates won’t show Kimmel’s return, joining Sinclair",https://www.cnbc.com/2025/09/23/kimmel-abc-nexstar-sinclair-fcc.html,ParseError,ParseError,"```json
+  ""summary"": ""New home sales surged in August, reaching the highest level since January 2022. The significant increase is attributed to s",1.38
+Ford offers special financing to riskier F-150 buyers with lower credit scores,https://www.cnbc.com/2025/09/24/ford-truck-financing-credit-score.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Nexstar Media Group announced it will not broadcast the return of \""Jimmy Kimmel Live!\"" on Tuesday. This decision impacts t",1.19
-Morgan Stanley close to offering crypto trading through E-Trade,https://www.cnbc.com/2025/09/23/morgan-stanley-crypto-trading-e-trade-next-year.html,ParseError,ParseError,"```json
+  ""summary"": ""Ford is offering special financing to consumers with lower credit scores in an effort to increase sales of its F-150 pickup ",1.36
+"Seasonal retail hiring to fall to lowest level since 2009, signaling holiday trouble",https://www.cnbc.com/2025/09/24/seasonal-hiring-2025-to-fall-to-lowest-level-since-2009-recession.html,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Morgan Stanley is preparing to offer cryptocurrency trading to retail customers via its E-Trade platform. This move is bein",1.19
-Single-family rent growth is starting to show new weakness,https://www.cnbc.com/2025/09/23/single-family-rent-growth-is-starting-to-show-new-weakness.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Single-family home rents are beginning to slow after gains in the first half of the year. This shift may indicate landlords ",1.24
-"Crypto startup zerohash raises $104 million from Morgan Stanley, SoFi, others",https://www.cnbc.com/2025/09/23/startup-zerohash-raises-104million-morgan-stanley-sofi-apollo.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Crypto infrastructure startup Zerohash has secured $104 million in funding. The round was backed by financial firms Morgan ",1.13
-Tom Brady joins robotics massage company Aescape,https://www.cnbc.com/2025/09/23/tom-brady-robotics-massage-company-aescape.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Tom Brady has partnered with Aescape, a robotic massage device maker, to provide exclusive access to his recovery and longe",1.23
-Trump administration ties autism to use of Tylenol ingredient during pregnancy,https://www.cnbc.com/2025/09/22/trump-autism-tylenol-acetaminophen-pregnancy.html,ParseError,ParseError,"```json
+  ""sentiment"": ""Negative"",
+  ""summary"": ""Seasonal hiring in the retail sector is expected to be the lowest since 2009, signaling a potentially weaker holiday shoppi",1.57
+"What to know about new Covid, childhood shot guidance from Trump administration",https://www.cnbc.com/2025/09/24/how-to-get-covid-mmrv-hepatitisb-vaccines.html,ParseError,ParseError,"```json
 {
   ""category"": ""Health"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""The Trump administration suggested a possible link between acetaminophen use during pregnancy and autism, a connection that h",1.26
-Disney says ‘Jimmy Kimmel Live’ will return to ABC on Tuesday,https://www.cnbc.com/2025/09/22/disney-abc-jimmy-kimmel-return.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Disney is bringing \""Jimmy Kimmel Live!\"" back to ABC's broadcast network starting Tuesday. The decision was announced in a ",1.11
-Economic Overview,,Overview,N/A,"The U.S. economy presents a mixed picture. While new home sales surged and Latino immigrants contributed significantly to GDP, and Eli Lilly is making a substantial investment, there are also signs of potential weakness, including lower-than-usual seasonal retail hiring and slowing rent increases. Several factors, such as Disney’s decision to reinstate and then Nexstar’s decision to not broadcast ""Jimmy Kimmel Live,"" create uncertainty. Overall, the near future likely holds continued volatility, with potential for both positive and negative economic developments.",0.0
+  ""summary"": ""A vaccine advisory panel recommended changes to U.S. Covid and childhood immunization policies, deviating from established pre",1.27
+Luxury brands are embracing Labubu to court younger shoppers,https://www.cnbc.com/2025/09/24/luxury-labubu-moynat-loewe-tiffany-omega.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Culture"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Labubu dolls are becoming a trendy fashion accessory, particularly among celebrities. They are frequently seen paired with h",1.21
+"NFL TV rights could enter renegotiations next year, Roger Goodell says",https://www.cnbc.com/2025/09/24/nfl-tv-rights-renegotiations-accelerated-roger-goodell.html,ParseError,ParseError,"```json
+{
+  ""category"": ""Sports"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article promotes the new CNBC Sports Newsletter. It is an advertisement for a subscription service.""
+}
+```",0.96
+Economic Overview,,Overview,N/A,"The current economic situation appears mixed, suggesting a slowdown but with pockets of surprising strength. While some indicators like retail seasonal hiring and Starbucks' restructuring point to challenges and potential weakness, others such as Cox Automotive’s sales forecast, new home sales, and Costco’s earnings reveal unexpected resilience and demand. Overall, the trends are volatile and indicate a potential for continued instability in the near future, with some sectors demonstrating surprising growth while others face headwinds. The labor market appears to be experiencing some softening, as evidenced by the anticipated lower retail hiring.",0.0

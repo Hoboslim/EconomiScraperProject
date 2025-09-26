@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import os
+import threading
 from Classification.ArticleClassifier import run_classification
 from .startPage import StartPage
 
@@ -21,7 +22,8 @@ class ClassificationPage(tk.Frame):
         tk.Button(self, text="Refresh Articles", command=self.refresh_csv_dropdown).pack(pady=5)
         tk.Button(self, text="Back To Home", command=lambda: controller.show_frame("StartPage")).pack(pady=10)
         
-        
+        self.progress = ttk.Progressbar(self, mode="indeterminate", length=250)
+        self.progress.pack(pady=10)
         
         
     def get_csv_files(self):
@@ -34,12 +36,27 @@ class ClassificationPage(tk.Frame):
         if files:
             self.csv_dropdown.current(0)
             
-            
+              
     def run_selected_classification(self):
         selected_csv = self.csv_dropdown.get()
-        if selected_csv:
-            file_path = os.path.join(self.articles_folder, selected_csv)
+        if not selected_csv:
+            messagebox.showwarning("No Selection", "Please select a csv file first.")
+            return
+        
+        file_path = os.path.join(self.articles_folder, selected_csv)
+        
+        self.progress.start(10)
+        
+        threading.Thread(target=self._run_classification_task, args=(file_path,), daemon=True).start()
+    def _run_classification_task(self, file_path):
+        try:
             run_classification(file_path)
-            messagebox.showinfo("Done")
+        except Exception as e:
+            print(f"Error running classification {e}")
+            messagebox.showerror("Error", "Classification failed: {e}")
+        finally:
+            
+            self.after(0, self.progress.stop)
+            self.after(0, lambda: messagebox.showinfo("Done", "Classification finished!"))
      
         
