@@ -1,7 +1,7 @@
 import tkinter as tk
-from Pages.startPage import StartPage
-from Pages.scraperPage import ScraperPage
-from Pages.classificationPage import ClassificationPage
+from .startPage import StartPage
+from .scraperPage import ScraperPage
+from .classificationPage import ClassificationPage
 
 class App(tk.Tk):
     def __init__(self):

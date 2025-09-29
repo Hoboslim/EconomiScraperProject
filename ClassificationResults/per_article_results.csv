@@ -1,254 +1,102 @@
 Headline,Link,Model_Category,Sentiment,Model_Summary,Time (s)
-How to get a mortgage preapproval,https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-pre-approval-182545770.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article provides guidance on obtaining mortgage preapproval. It outlines the process and steps involved in securing pre",1.41
-Best mortgage lenders for first-time home buyers of September 2025,https://finance.yahoo.com/personal-finance/mortgages/article/best-mortgage-lenders-first-time-buyers-202829998.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article reviews the best mortgage lenders specifically targeted towards first-time home buyers. It provides information",1.13
-Historical mortgage rates: See how rates have changed over time,https://finance.yahoo.com/personal-finance/mortgages/article/historical-mortgage-rates-164750874.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article examines the historical trends in mortgage rates. It provides context and data on how these rates have fluctuat",1.09
-Want to refinance your mortgage? Here are 7 home refinance options.,https://finance.yahoo.com/personal-finance/mortgages/article/home-refinance-options-173007768.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article discusses various options for homeowners looking to refinance their mortgages. It aims to provide guidance and ",1.06
-Financial Services Roundup: Market Talk,https://www.wsj.com/articles/financial-services-roundup-market-talk-0ea3d484?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article is a roundup of market talk related to financial services. It provides a brief overview of developments within ",1.08
-Analyst Report: Public Serv Enterprise Grp Inc,https://finance.yahoo.com/research/reports/ARGUS_3301_AnalystReport_1758820877000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article concerns an analyst report on Public Serv Enterprise Grp Inc. The report's specific details and conclusions are",1.1
-Why Marvell Technology Stock Trounced the Market Today,https://finance.yahoo.com/news/why-marvell-technology-stock-trounced-212014572.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Marvell Technology stock significantly outperformed the market today. This surge is likely due to positive developments or ",1.08
-Freeport-McMoRan Says Its Gold and Copper Sales Will Drop. The Stock Plunged.,https://www.barrons.com/articles/gold-copper-freeport-mcmoran-stock-price-mud-rush-ea5bdde5?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+The new rules of workplace loyalty,https://www.businessinsider.com/workplace-loyalty-corporate-america-dysfunction-employers-employees-att-jobs-2025-9,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""Freeport-McMoRan announced a decline in gold and copper sales, causing a significant drop in the company's stock price. Thi",1.36
-Basic Materials Roundup: Market Talk,https://www.wsj.com/articles/basic-materials-roundup-market-talk-442e802e?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article provides a roundup of market talk related to basic materials. It appears to be a brief overview of market activ",1.11
-Auto & Transport Roundup: Market Talk,https://www.wsj.com/articles/auto-transport-roundup-market-talk-79a4e412?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article is a market talk roundup focused on the auto and transport sectors. It provides a brief overview of current mar",1.13
-Energy & Utilities Roundup: Market Talk,https://www.wsj.com/articles/energy-utilities-roundup-market-talk-3bf8721f?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article is a market talk roundup focusing on the energy and utilities sectors. It provides a brief overview of recent d",1.15
-Analyst Report: Chewy Inc,https://finance.yahoo.com/research/reports/ARGUS_6119_AnalystReport_1758820877000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article discusses Chewy Inc. and is based on an analyst report. The content likely focuses on the company's financial p",1.15
-RWA Tokenization: Preview Of A Bubble Or The Next Big Thing?,https://finance.yahoo.com/news/rwa-tokenization-preview-bubble-next-213000103.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""The article explores the emerging trend of Real World Asset (RWA) tokenization and questions whether it represents a signifi",1.38
-Cheapest car insurance in California 2025,https://finance.yahoo.com/personal-finance/insurance/article/cheapest-car-insurance-california-214150358.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article discusses the most affordable car insurance options available in California for the year 2025. It likely provid",1.3
-Real Estate Broker Douglas Elliman’s Stock Looks Cheap Amid Takeover Interest,https://www.barrons.com/articles/douglas-elliman-stock-anywhere-compass-63d09092?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Shares of Douglas Elliman are appearing undervalued due to speculation surrounding potential takeover interest. This sugges",1.15
-"Tariffs Create Opportunities, Says Ports Leader",https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-24-2025/card/tariffs-create-opportunities-says-ports-leader-YpuBqnPKRN9RHVsiCiDD?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""A ports leader argues that tariffs, while often viewed negatively, can also create new opportunities. The statement suggests",1.18
-Trump Places Direct Bet on Thacker Pass Lithium,https://finance.yahoo.com/news/trump-places-direct-bet-thacker-220000913.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Donald Trump has invested directly in Thacker Pass Lithium, a Nevada lithium mine. This marks a significant personal bet on ",1.15
-Daily Spotlight: Fed's Favorite Inflation Indicator,https://finance.yahoo.com/research/reports/ARGUS_44810_MarketOutlook_1758800077000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article focuses on a key inflation indicator closely watched by the Federal Reserve. It likely discusses the indicator'",1.2
-"Day trading on the New York Stock Exchange, Nasdaq, and more could get easier, thanks to this rule change—here’s how",https://finance.yahoo.com/news/day-trading-york-stock-exchange-213000312.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""A rule change may simplify day trading on major stock exchanges like the NYSE and Nasdaq. The article details how this chang",1.14
-Cotton Falls Back on Wednesday,https://finance.yahoo.com/news/cotton-falls-back-wednesday-220858810.html,ParseError,ParseError,"```json
+  ""summary"": ""AT&T's CEO openly acknowledged a shift away from traditional employment loyalty, sparking a widespread discussion about the",4.05
+This is the severance package Starbucks offered to laid-off staff at the stores it's closing,https://www.businessinsider.com/starbucks-severance-package-lay-off-staff-2025-9,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""Cotton prices declined on Wednesday. This indicates a downturn in the cotton market.""
-}
-```",0.91
-Corn Closes Lower Despite More Export Business,https://finance.yahoo.com/news/corn-closes-lower-despite-more-220857452.html,ParseError,ParseError,"```json
+  ""summary"": ""Starbucks announced layoffs of retail and non-retail employees and the closure of over 100 stores across North America. The",1.4
+Harvey's CEO tells BI: Don't sleep on junior lawyers in the age of AI,https://www.businessinsider.com/harvey-ceo-junior-lawyers-legal-tech-winston-weinberg-ai-2025-9,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Corn prices decreased despite increased export activity. The market's performance suggests complex underlying factors are at",1.01
-Soybeans Slip Lower into the Wednesday Close,https://finance.yahoo.com/news/soybeans-slip-lower-wednesday-close-220857374.html,ParseError,ParseError,"```json
+  ""summary"": ""Harvey's CEO, Winston Weinberg, believes law firms shouldn't dismiss junior lawyers despite the increasing use of AI. He emp",1.51
+"I went to an anti-tech rally, where Gen Z dressed as gnomes and smashed iPhones. Here's what I learned.",https://www.businessinsider.com/anti-tech-rally-apple-iphone-elon-musk-tesla-luddite-movement-2025-9,ParseError,ParseError,"```json
 {
-  ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""Soybean prices decreased during Wednesday's market close. This indicates a downturn in the agricultural commodities market.",1.01
-Oracle's $18 Billion Bond Sale Meets Strong Investor Demand,https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-24-2025/card/oracle-s-18-billion-bond-sale-meets-strong-investor-demand-ZMb3Cw8BsUQ9Vm0rO3My?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Oracle successfully sold an $18 billion bond, demonstrating strong investor interest. This large offering signals confidenc",1.13
-Technical Assessment: Bullish in the Intermediate-Term,https://finance.yahoo.com/research/reports/ARGUS_44809_TechnicalAnalysis_1758799977000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""This article presents a technical assessment indicating a bullish outlook for the intermediate term. It suggests a positive",1.08
-Disney Gears Up for Legal Fight With Trump Over Kimmel’s Return,https://finance.yahoo.com/news/disney-gears-legal-fight-trump-214429610.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
+  ""category"": ""Culture"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Disney is preparing for a legal battle with Donald Trump's organization following a dispute over Jimmy Kimmel's return to ho",1.58
-I was fired from my job just 1 year before I was set to retire at 70. What happens to my retirement plan now?,https://finance.yahoo.com/news/fired-job-just-1-set-221300970.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""The author was unexpectedly fired a year before planned retirement, prompting concern about the status of their retirement ",1.22
-Macquarie to repay Australian investors $211 million after pension fund collapse,https://finance.yahoo.com/news/macquarie-unit-pay-australians-investing-222530772.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""Macquarie will repay Australian investors $211 million following the collapse of a pension fund. The repayment addresses lo",1.2
-Air Canada Reinstates Full-Year Outlook at Lower Level Due to Labor Disruptions,https://www.wsj.com/business/airlines/air-canada-reinstates-full-year-outlook-at-lower-level-due-to-labor-disruptions-20d8aa8b?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""Air Canada has revised its full-year outlook downwards, citing ongoing labor disruptions. The airline is facing challenges ",1.15
-Watch: IMF Director Doubts U.S. Will Pull Out of Fund,https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-24-2025/card/watch-imf-director-doesn-t-expect-u-s-to-pull-out-of-fund-rpIugEk48CRjVhDAuNz3?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""The article reports on comments from the IMF director expressing doubt about the United States withdrawing from the internat",1.26
-Analyst Report: Lennar Corp.,https://finance.yahoo.com/research/reports/ARGUS_3141_AnalystReport_1758798875000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article focuses on an analyst report concerning Lennar Corp. The report's content and implications are not detailed, ma",1.27
-"Crypto Millionaires Surge 40%, Led by Bitcoin's Rise, as Market Hits $3.3 Trillion",https://finance.yahoo.com/news/crypto-millionaires-surge-40-led-214520909.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""The number of cryptocurrency millionaires has increased by 40%, driven largely by the rise of Bitcoin. The overall cryptocu",1.3
-"Reagan Air Crash Victim’s Family Sues American Airlines, FAA and Army",https://www.wsj.com/us-news/reagan-air-crash-victims-family-sues-american-airlines-faa-and-army-3f0740c3?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Legal"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""A family of a victim from the 1983 Reagan Air Crash has filed a lawsuit against American Airlines, the FAA, and the Army. The ",1.35
-Why Africa’s Largest Untapped Oil Field Has Yet to Flow,https://finance.yahoo.com/news/why-africa-largest-untapped-oil-230000535.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article examines the reasons why the Twiga South oil field, Africa's largest untapped oil reserve, has not yet begun pr",1.37
-HSBC says quantum computing trial helps bond trading,https://finance.yahoo.com/news/hsbc-says-quantum-computing-trial-230522622.html,ParseError,ParseError,"```json
+  ""summary"": ""The article explores a modern \""Luddite\"" movement, characterized by rejecting technology and social media. A reporter attend",1.48
+OpenAI's newest team is proof that there's a key shift happening in the AI talent wars,https://www.businessinsider.com/openai-new-applied-evals-team-signal-ai-talent-shift-2025-9,ParseError,ParseError,"```json
 {
   ""category"": ""Technology"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""HSBC conducted a trial using quantum computing to explore its potential for bond trading. The experiment aimed to assess t",1.22
-Are high-yield savings accounts worth it for small balances?,https://finance.yahoo.com/personal-finance/banking/article/are-high-yield-savings-accounts-worth-it-small-balances-130058034.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article explores the value of high-yield savings accounts for individuals with smaller savings balances. It likely exam",1.23
-Analyst Report: Micron Technology Inc.,https://finance.yahoo.com/research/reports/ARGUS_3614_AnalystReport_1758798875000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article reports on an analyst report concerning Micron Technology Inc. The content likely details the analyst's assessm",1.17
-Willy Woo revamps Bitcoin price target after 4 years,https://finance.yahoo.com/news/willy-woo-revamps-bitcoin-price-215330504.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Bitcoin analyst Willy Woo has revised his price target for Bitcoin after four years, suggesting a new potential valuation. T",1.27
-Why This Dividend King Still Stands Tall,https://finance.yahoo.com/news/why-dividend-king-still-stands-233002848.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
   ""sentiment"": ""Positive"",
-  ""summary"": ""This article discusses a company known as a \""Dividend King,\"" highlighting its continued strength and reliability in provi",1.28
-Stitch Fix Expects Revenue Growth After Market-Share Gains,https://www.wsj.com/business/earnings/stitch-fix-guides-for-revenue-growth-as-results-beat-estimates-0a55b7ac?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
+  ""summary"": ""OpenAI is creating a new \""Applied Evals\"" team to help businesses optimize processes with AI, focusing on areas like voi",1.64
+Trump is kicking off his major overhaul of student-loan repayment,https://www.businessinsider.com/major-student-loan-debt-repayment-changes-trump-kicks-off-negotiations-2025-9,ParseError,ParseError,"```json
 {
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Stitch Fix anticipates revenue growth due to recent market-share gains. The company is projecting positive financial perfor",1.11
-KB Home Lowers Outlook as Slow Housing Market Continues to Bite,https://www.wsj.com/business/earnings/kb-home-lowers-outlook-as-slow-housing-market-continues-to-bite-c28c3da4?siteid=yhoof2&yptr=yahoo,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""KB Home has reduced its financial outlook due to a persistent slowdown in the housing market. This indicates weaker-than-ex",1.16
-"Noble Corporation Plc (NE)’s Denton Blake Sells 29,729 Class A Ordinary Shares at a Weighted Average Price of $29.78",https://finance.yahoo.com/news/noble-corporation-plc-ne-denton-001236639.html,ParseError,ParseError,"```json
+  ""category"": ""Politics"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The Department of Education has begun negotiations to overhaul student-loan repayment options, following President Trump's s",1.39
+What Walmart's EVP of Global Tech companies looks for when hiring engineers,https://www.businessinsider.com/walmart-evp-global-tech-platforms-looks-for-hiring-engineers-2025-9,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Noble Corporation Plc executive Denton Blake sold a significant number of company shares. The transaction occurred at a weig",1.2
-Analyst Report: Linde Plc.,https://finance.yahoo.com/research/reports/ARGUS_4859_AnalystReport_1758798875000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article discusses an analyst report concerning Linde Plc. The report's contents are not specified within the provided t",1.06
-Avalanche’s First Nasdaq Firm Debuts With $550M Raise And A Plan for Staking AVAX – What to Expect?,https://finance.yahoo.com/news/avalanche-first-nasdaq-firm-debuts-220624648.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Avalanche's first Nasdaq-listed company, Blockbark, has launched with a $550 million funding round and plans to utilize AVA",1.46
-"Morgan Stanley Upgrades PG&E Corporation (PCG) from ‘Underweight’ to ‘Equal Weight’, Raises Price Target to $20",https://finance.yahoo.com/news/morgan-stanley-upgrades-pg-e-001302035.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Morgan Stanley upgraded PG&E's rating from 'Underweight' to 'Equal Weight' and increased its price target to $20. This sign",1.37
-"Goldman Sachs Initiates Coverage on Cameco Corporation (CCJ) with a ‘Buy’ Rating, Share Price Rises",https://finance.yahoo.com/news/goldman-sachs-initiates-coverage-cameco-001324805.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""Goldman Sachs began coverage of Cameco Corporation with a 'Buy' rating, which has led to an increase in the company's share",1.18
-UBS Reaffirms Its ‘Buy’ Rating on Six Flags Entertainment Corporation (FUN) with a $34 Price Target,https://finance.yahoo.com/news/ubs-reaffirms-buy-rating-six-001353466.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""UBS has reaffirmed its 'Buy' rating on Six Flags Entertainment, setting a $34 price target. This indicates a positive outlo",1.23
-"TransDigm Group Incorporated (TDG)’s Wholly Owned Subsidiary, TransDigm Inc., Amends Its Existing Credit Agreement to Reprice and Extend Certain Term Loans",https://finance.yahoo.com/news/transdigm-group-incorporated-tdg-wholly-001415579.html,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""TransDigm Group's subsidiary, TransDigm Inc., has amended its credit agreement to reprice and extend certain term loans. Thi",1.28
-"Market Digest: EAT, LEN, MU, WWW, ULTA, LIN",https://finance.yahoo.com/research/reports/ARGUS_44807_MarketSummary_1758797975000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article is a market digest highlighting the performance of several companies (EAT, LEN, MU, WWW, ULTA, LIN). It provide",1.3
-"Solstice Taps Chainlink, Ceffu for Solana-Based USX Stablecoin Launch",https://finance.yahoo.com/news/solstice-taps-chainlink-ceffu-solana-221024270.html,ParseError,ParseError,"```json
+  ""summary"": ""Walmart executive Sravana Karnati emphasizes the importance of fundamental skills and a willingness to learn when hiring eng",1.38
+Leading computer science professor says 'everybody' is struggling to get jobs,https://www.businessinsider.com/computer-science-students-job-search-ai-hany-farid-2025-9,ParseError,ParseError,"```json
 {
   ""category"": ""Technology"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Solstice is launching a Solana-based stablecoin, USX, utilizing Chainlink and Ceffu for its operations. This collaboration",1.32
-"Target Corporation (TGT) Announces It Will Feature 20,000 New Items for the 2025 Holiday Season",https://finance.yahoo.com/news/target-corporation-tgt-announces-feature-001439076.html,ParseError,ParseError,"```json
+  ""sentiment"": ""Negative"",
+  ""summary"": ""A UC Berkeley professor notes a dramatic shift in the computer science field, where previously guaranteed career security",1.53
+How America's trash fuels toxic tofu in a country across the globe,https://www.businessinsider.com/how-americas-trash-fuels-toxic-tofu-in-indonesia-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Environment"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""The United States continues exporting plastic waste to Indonesia despite a ban, leading to its burning for cooking purpo",1.37
+Welcome to the Great Silencing,https://www.businessinsider.com/great-silencing-ceos-are-staying-quiet-2025-9,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Target Corporation announced plans to offer 20,000 new items for the 2025 holiday season. This initiative suggests a continu",1.3
-Economic Overview,,Overview,N/A,"The current economic situation appears mixed, with a general sense of stability but also signs of both potential improvements and downturns. Several articles highlight analyst reports and market talk across various sectors like financials, basic materials, energy, and technology, suggesting ongoing evaluation and adjustments within the market. While some companies like Marvell Technology, Douglas Elliman, and Stitch Fix are experiencing positive developments, others like Freeport-McMoRan, Air Canada, and KB Home are facing challenges and downward revisions. Commodity prices (cotton, corn, soybeans) are generally trending downwards, while Oracle's successful bond sale and Morgan Stanley's upgrade of PG&E offer a more optimistic view. Overall, the near future is likely to be characterized by continued volatility and sector-specific performance.",0.0
+  ""summary"": ""Company leaders are becoming more cautious about public appearances and communications due to concerns about provoking polit",1.36
+I'm a billionaire CEO who's acquired 9 companies in 8 months. Here's what I look for in an investment.,https://www.businessinsider.com/billionaire-ceo-phil-shaw-investment-tips-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""TransPerfect, a language and translation company, has rapidly acquired nine companies since January, focusing on synergisti",1.46
+Ex-Twitch CEO's advice for leaders: Don't over-delegate or forget you can override your experts,https://www.businessinsider.com/twitch-emmett-shear-leadership-lesson-delegating-big-decisions-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Emmett Shear, former CEO of Twitch, recently discussed a past mistake of over-delegating responsibilities during his tenure.",1.46
+"Emma Watson, 35, says the pressure to get married is 'a violence' against young people",https://www.businessinsider.com/emma-watson-pressure-to-get-married-women-youth-society-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Culture"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Emma Watson discussed societal pressure surrounding marriage during a podcast appearance, stating she's happy to avoid divorc",1.39
+I've interned at IBM since high school. It's taught me 3 key lessons about building a career in tech.,https://www.businessinsider.com/how-ibm-intern-neurofibromatosis-building-career-high-school-college-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Health"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""This article shares the story of a computer science student with neurofibromatosis who, despite his condition, is pursuing a ",1.53
+I often feel lost because I'm not married and have no kids. My 93-year-old great aunt gave me a freeing piece of advice.,https://www.businessinsider.com/great-aunt-superager-words-embrace-life-without-kids-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Culture"",
+  ""sentiment"": ""Negative"",
+  ""summary"": ""This article recounts a prolonged, initially dreamlike, journey of remote work and travel through Europe that ultimately led",1.57
+I thought strength training would protect me from aging. A 3D scan showed me I need to make 1 change.,https://www.businessinsider.com/3d-test-longevity-mobility-stretching-health-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Health"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""The article discusses the struggle many people, particularly millennials and Gen Z, have with maintaining regular flexibility ",1.44
+I've worked in global banking for 25 years. These are the 6 most important pieces of financial advice I tell family and friends.,https://www.businessinsider.com/hsbc-head-of-wealth-personal-banking-shares-most-important-advice-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""A wealth management executive at HSBC shares financial advice given to clients and friends. The core recommendation is to st",1.19
+"Famed Apple designer Jony Ive couldn't find a lantern he liked for his yacht, so he designed his own. It's $4,800.",https://www.businessinsider.com/jony-ive-yacht-lantern-openai-apple-design-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Apple's former designer, Jony Ive, has partnered with Balmuda to create a $4,800 limited-edition lantern designed for yachts",1.67
+A longevity researcher says everyone's too obsessed with living forever. Here are his 2 anti-aging habits instead.,https://www.businessinsider.com/habits-longevity-researcher-follows-for-healthy-aging-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Health"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This article profiles Dr. Steven Austad, a researcher focused on healthy aging, highlighting his unusual background and motiva",1.59
+A Gen Zer explains how he navigated Amazon's 5-hour 'loop' interview and landed a job with no connections,https://www.businessinsider.com/gen-z-landed-amazon-analyst-job-loop-interview-2025-9,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Sooraj Kumar, a recent DePaul University graduate from Pakistan, faced a year-long job search due to visa authorization dela",1.59
+Economic Overview,,Overview,N/A,"The current economic situation appears to be slowing down, marked by layoffs at major companies like AT&T and Starbucks and a general shift away from traditional employment models. While some sectors, like AI optimization, show positive developments, the overall tone is cautious, with company leaders being more circumspect in their communications. The trend of companies reassessing workforce needs and potential visa delays suggests that unemployment may be trending upwards or at least facing increased volatility in the near future. It's likely that caution will persist as businesses navigate these changing dynamics.",0.0
