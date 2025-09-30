@@ -5,13 +5,22 @@ import os
 import json
 
 def run_classification(file_path):
-    
+    # Load input CSV
     try:
         df = pd.read_csv(file_path)
     except Exception as e:
         print(f"Error: Could not read CSV file.\n{e}")
         return
 
+    
+    input_name = os.path.splitext(os.path.basename(file_path))[0]  
+    output_folder = os.path.join("ClassificationResults")
+    os.makedirs(output_folder, exist_ok=True)
+
+
+    timestamp = time.strftime("%Y%m%d_%H%M%S")
+    output_file = os.path.join(output_folder, f"{input_name}_classification_{timestamp}.csv")
+    
     rows = []
     total = min(len(df), 50)
     print(f"Processing {total} articles...\n")
@@ -77,7 +86,7 @@ Return ONLY valid JSON.
             sentiment = "ParseError"
             summary = "Error processing article"
 
-       
+        
         rows.append({
             "Headline": headline,
             "Link": link,
@@ -126,14 +135,13 @@ Return only plain text.
         "Time (s)": 0
     })
 
- 
-    os.makedirs("ClassificationResults", exist_ok=True)
-    output_file = os.path.join("ClassificationResults", "classification_results.csv")
+    
     results_df = pd.DataFrame(rows)
     results_df.to_csv(output_file, index=False, encoding="utf-8")
     print(f"Results saved to {output_file}")
 
 
 if __name__ == "__main__":
-    input_file = "Articles/marketwatch_articles.csv" 
+    
+    input_file = "Articles/bloomberg_articles.csv"  
     run_classification(input_file)
