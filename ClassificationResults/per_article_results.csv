@@ -1,102 +1,102 @@
 Headline,Link,Model_Category,Sentiment,Model_Summary,Time (s)
-The new rules of workplace loyalty,https://www.businessinsider.com/workplace-loyalty-corporate-america-dysfunction-employers-employees-att-jobs-2025-9,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""AT&T's CEO openly acknowledged a shift away from traditional employment loyalty, sparking a widespread discussion about the",4.05
-This is the severance package Starbucks offered to laid-off staff at the stores it's closing,https://www.businessinsider.com/starbucks-severance-package-lay-off-staff-2025-9,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Negative"",
-  ""summary"": ""Starbucks announced layoffs of retail and non-retail employees and the closure of over 100 stores across North America. The",1.4
-Harvey's CEO tells BI: Don't sleep on junior lawyers in the age of AI,https://www.businessinsider.com/harvey-ceo-junior-lawyers-legal-tech-winston-weinberg-ai-2025-9,ParseError,ParseError,"```json
+Chinese woman convicted after 'world's biggest' bitcoin seizure,/news/articles/cy0415kk3rzo,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Harvey's CEO, Winston Weinberg, believes law firms shouldn't dismiss junior lawyers despite the increasing use of AI. He emp",1.51
-"I went to an anti-tech rally, where Gen Z dressed as gnomes and smashed iPhones. Here's what I learned.",https://www.businessinsider.com/anti-tech-rally-apple-iphone-elon-musk-tesla-luddite-movement-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""UK police have confiscated over £5 billion in cryptocurrency from Zhimin Qian, nicknamed 'the goddess of wealth'. This repre",5.1
+YouTube to pay $24.5m to settle Trump lawsuit over Capitol riot,/news/articles/c9dx46qgp1jo,ParseError,ParseError,"```json
 {
-  ""category"": ""Culture"",
+  ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""The article explores a modern \""Luddite\"" movement, characterized by rejecting technology and social media. A reporter attend",1.48
-OpenAI's newest team is proof that there's a key shift happening in the AI talent wars,https://www.businessinsider.com/openai-new-applied-evals-team-signal-ai-talent-shift-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""A major streaming company has reached a settlement with the president, concluding legal action related to a previous account",1.36
+Sign up to World of Business,https://www.bbc.com/businesshttps://cloud.email.bbc.com/WorldofBusiness_Newsletter_Signup?&at_bbc_team=studios&at_medium=emails&at_objective=acquisition&at_ptr_type=&at_ptr_name=bbc.com&at_format=Module&at_link_origin=homepage&at_campaign=wob&at_campaign_type=owned,ParseError,ParseError,"```json
 {
-  ""category"": ""Technology"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""OpenAI is creating a new \""Applied Evals\"" team to help businesses optimize processes with AI, focusing on areas like voi",1.64
-Trump is kicking off his major overhaul of student-loan repayment,https://www.businessinsider.com/major-student-loan-debt-repayment-changes-trump-kicks-off-negotiations-2025-9,ParseError,ParseError,"```json
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""This is an advertisement for a subscription service providing business intelligence reports. It aims to provide valuable ins",1.05
+YouTube to pay $24.5m to settle Trump lawsuit over Capitol riot,/news/articles/c9dx46qgp1jo,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""A major streaming service has settled with a president following a suspension of his account related to the January 6th atta",1.32
+Trump renews threat to impose 100% tariffs on non-US made movies,/news/articles/c4g78e809zqo,ParseError,ParseError,"```json
 {
   ""category"": ""Politics"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""The Department of Education has begun negotiations to overhaul student-loan repayment options, following President Trump's s",1.39
-What Walmart's EVP of Global Tech companies looks for when hiring engineers,https://www.businessinsider.com/walmart-evp-global-tech-platforms-looks-for-hiring-engineers-2025-9,ParseError,ParseError,"```json
-{
-  ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Walmart executive Sravana Karnati emphasizes the importance of fundamental skills and a willingness to learn when hiring eng",1.38
-Leading computer science professor says 'everybody' is struggling to get jobs,https://www.businessinsider.com/computer-science-students-job-search-ai-hany-farid-2025-9,ParseError,ParseError,"```json
+  ""sentiment"": ""Negative"",
+  ""summary"": ""The president has made a controversial statement alleging the American film industry has been taken over by foreign countri",1.16
+Why burnout is a growing problem in cybersecurity,/news/articles/cgqn8e4e700o,ParseError,ParseError,"```json
 {
   ""category"": ""Technology"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""A UC Berkeley professor notes a dramatic shift in the computer science field, where previously guaranteed career security",1.53
-How America's trash fuels toxic tofu in a country across the globe,https://www.businessinsider.com/how-americas-trash-fuels-toxic-tofu-in-indonesia-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""Cybersecurity professionals are leaving their jobs due to rising stress levels. This exodus poses a potential challenge f",1.12
+Nigeria banned shea butter exports to help women profit. But it backfired,/news/articles/c740jzlpd7po,ParseError,ParseError,"```json
 {
-  ""category"": ""Environment"",
+  ""category"": ""Business"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""The United States continues exporting plastic waste to Indonesia despite a ban, leading to its burning for cooking purpo",1.37
-Welcome to the Great Silencing,https://www.businessinsider.com/great-silencing-ceos-are-staying-quiet-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""A ban intended to support local shea butter production has negatively impacted the earnings of many women. The policy's int",1.18
+Sign up to World of Business,https://www.bbc.com/businesshttps://cloud.email.bbc.com/WorldofBusiness_Newsletter_Signup?&at_bbc_team=studios&at_medium=emails&at_objective=acquisition&at_ptr_type=&at_ptr_name=bbc.com&at_format=Module&at_link_origin=homepage&at_campaign=wob&at_campaign_type=owned,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Company leaders are becoming more cautious about public appearances and communications due to concerns about provoking polit",1.36
-I'm a billionaire CEO who's acquired 9 companies in 8 months. Here's what I look for in an investment.,https://www.businessinsider.com/billionaire-ceo-phil-shaw-investment-tips-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""This article promotes a subscription service providing business insights. It aims to offer valuable information for business",1.07
+Japanese brewing giant Asahi hit by cyber-attack,/news/articles/cdjz7l1pxwgo,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
-  ""sentiment"": ""Positive"",
-  ""summary"": ""TransPerfect, a language and translation company, has rapidly acquired nine companies since January, focusing on synergisti",1.46
-Ex-Twitch CEO's advice for leaders: Don't over-delegate or forget you can override your experts,https://www.businessinsider.com/twitch-emmett-shear-leadership-lesson-delegating-big-decisions-2025-9,ParseError,ParseError,"```json
+  ""sentiment"": ""Negative"",
+  ""summary"": ""A beer brewer has reported a cyberattack impacting its shipping and customer service operations. The European business of t",1.08
+Gaming giant Electronic Arts bought in unprecedented $55bn deal,/news/articles/cn4w3jzx807o,ParseError,ParseError,"```json
 {
-  ""category"": ""Business"",
+  ""category"": ""Technology"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Emmett Shear, former CEO of Twitch, recently discussed a past mistake of over-delegating responsibilities during his tenure.",1.46
-"Emma Watson, 35, says the pressure to get married is 'a violence' against young people",https://www.businessinsider.com/emma-watson-pressure-to-get-married-women-youth-society-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""The article identifies Electronic Arts (EA) as a company known for creating popular video game franchises like EA FC, The ",1.15
+The picturesque Dutch village set to charge tourists an entry fee,/news/articles/cn4ly3mr443o,ParseError,ParseError,"```json
 {
   ""category"": ""Culture"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Emma Watson discussed societal pressure surrounding marriage during a podcast appearance, stating she's happy to avoid divorc",1.39
-I've interned at IBM since high school. It's taught me 3 key lessons about building a career in tech.,https://www.businessinsider.com/how-ibm-intern-neurofibromatosis-building-career-high-school-college-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""The Zaanse Schans, a Dutch village known for its windmills, has a tiny population of 100 residents. Despite this, it attracts",1.31
+Global conflicts drive demand for war risk insurance,/news/articles/c15kzjkqpqeo,ParseError,ParseError,"```json
 {
-  ""category"": ""Health"",
+  ""category"": ""Business"",
+  ""sentiment"": ""Neutral"",
+  ""summary"": ""Geopolitical conflicts in Ukraine and the Middle East are increasing demand for insurance coverage. This rise is attributed ",1.19
+The bacteria turning waste plastic into painkillers,/news/articles/c4gvm1kjxxvo,ParseError,ParseError,"```json
+{
+  ""category"": ""Technology"",
   ""sentiment"": ""Positive"",
-  ""summary"": ""This article shares the story of a computer science student with neurofibromatosis who, despite his condition, is pursuing a ",1.53
-I often feel lost because I'm not married and have no kids. My 93-year-old great aunt gave me a freeing piece of advice.,https://www.businessinsider.com/great-aunt-superager-words-embrace-life-without-kids-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""Scientists have discovered bacteria capable of breaking down waste plastic and transforming it into precursors for painki",1.27
+'You'll never need to work again': Criminals offer reporter money to hack BBC,/news/articles/c3w5n903447o,ParseError,ParseError,"```json
 {
-  ""category"": ""Culture"",
+  ""category"": ""Technology"",
   ""sentiment"": ""Negative"",
-  ""summary"": ""This article recounts a prolonged, initially dreamlike, journey of remote work and travel through Europe that ultimately led",1.57
-I thought strength training would protect me from aging. A 3D scan showed me I need to make 1 change.,https://www.businessinsider.com/3d-test-longevity-mobility-stretching-health-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""BBC reporter Joe Tidy was reportedly offered a bribe to help cybercriminals access the broadcaster's systems. This incide",1.24
+JLR to resume some manufacturing in coming days after cyber-attack,/news/articles/cwydxpdgx61o,ParseError,ParseError,"```json
+{
+  ""category"": ""Business"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Production is set to restart at the Wolverhampton engine facility on October 6th. This resumption signals a return to opera",1.22
+How weight-loss injections are turning obesity into a wealth issue,/news/articles/cre5xp83394o,ParseError,ParseError,"```json
 {
   ""category"": ""Health"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""The article discusses the struggle many people, particularly millennials and Gen Z, have with maintaining regular flexibility ",1.44
-I've worked in global banking for 25 years. These are the 6 most important pieces of financial advice I tell family and friends.,https://www.businessinsider.com/hsbc-head-of-wealth-personal-banking-shares-most-important-advice-2025-9,ParseError,ParseError,"```json
+  ""sentiment"": ""Negative"",
+  ""summary"": ""The article raises concerns about potential health inequalities being worsened by certain drugs. It questions whether a 'two-",1.24
+"Move over, Murdochs - a new family dynasty is shaking up US media",/news/articles/cr4qwwk0g0yo,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""A wealth management executive at HSBC shares financial advice given to clients and friends. The core recommendation is to st",1.19
-"Famed Apple designer Jony Ive couldn't find a lantern he liked for his yacht, so he designed his own. It's $4,800.",https://www.businessinsider.com/jony-ive-yacht-lantern-openai-apple-design-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""Larry Ellison and his son are attempting to establish themselves as media moguls, a move that has brought attention to Ellis",1.38
+"Dismissed as a joke, UK's first rice crop ripe for picking after hot summer",/news/articles/c1wgeq702dyo,ParseError,ParseError,"```json
+{
+  ""category"": ""Agriculture"",
+  ""sentiment"": ""Positive"",
+  ""summary"": ""Paddy fields are flourishing in East England, offering a potential future food source for the country. This development ",1.11
+UK government to guarantee £1.5bn JLR loan after cyber shutdown,/news/articles/cgl15ykerlro,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
   ""sentiment"": ""Neutral"",
-  ""summary"": ""Apple's former designer, Jony Ive, has partnered with Balmuda to create a $4,800 limited-edition lantern designed for yachts",1.67
-A longevity researcher says everyone's too obsessed with living forever. Here are his 2 anti-aging habits instead.,https://www.businessinsider.com/habits-longevity-researcher-follows-for-healthy-aging-2025-9,ParseError,ParseError,"```json
-{
-  ""category"": ""Health"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""This article profiles Dr. Steven Austad, a researcher focused on healthy aging, highlighting his unusual background and motiva",1.59
-A Gen Zer explains how he navigated Amazon's 5-hour 'loop' interview and landed a job with no connections,https://www.businessinsider.com/gen-z-landed-amazon-analyst-job-loop-interview-2025-9,ParseError,ParseError,"```json
+  ""summary"": ""The government is providing a loan to Jaguar Land Rover, intended to provide stability for its suppliers. Officials hope thi",1.24
+Playing with FIRE: How to quit work and retire in your 30s,/reel/video/p09qwdp6/playing-with-fire-how-to-quit-work-and-retire-in-your-30s,ParseError,ParseError,"```json
 {
   ""category"": ""Business"",
-  ""sentiment"": ""Neutral"",
-  ""summary"": ""Sooraj Kumar, a recent DePaul University graduate from Pakistan, faced a year-long job search due to visa authorization dela",1.59
-Economic Overview,,Overview,N/A,"The current economic situation appears to be slowing down, marked by layoffs at major companies like AT&T and Starbucks and a general shift away from traditional employment models. While some sectors, like AI optimization, show positive developments, the overall tone is cautious, with company leaders being more circumspect in their communications. The trend of companies reassessing workforce needs and potential visa delays suggests that unemployment may be trending upwards or at least facing increased volatility in the near future. It's likely that caution will persist as businesses navigate these changing dynamics.",0.0
+  ""sentiment"": ""Positive"",
+  ""summary"": ""A financial strategy gaining popularity among millennials is enabling some to retire significantly earlier than traditional",1.12
+Economic Overview,,Overview,N/A,"Based on these summaries, the current economic situation appears to be characterized by a mix of challenges and pockets of positive developments, but with a generally neutral overall sentiment. Several articles highlight negative impacts from policy decisions (shea butter ban), cyberattacks (beer brewer), and concerns about cybersecurity talent shortages, suggesting potential slowdowns in specific sectors. However, there are also positive signs like flourishing paddy fields offering a potential food source and a financial strategy enabling early retirement for some millennials, alongside the restart of production at a Wolverhampton engine facility. It's difficult to definitively predict future improvement or worsening, as the situation seems complex and influenced by factors like geopolitical conflicts and evolving consumer trends, requiring careful monitoring.",0.0

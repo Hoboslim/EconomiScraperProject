@@ -43,7 +43,12 @@ def scrape_bloomberg():
             link = "https://www.bloomberg.com" + link
 
         
-        summary_tag = block.find("section", attrs={"data-component": "summary"})
+        summary_tag = (
+            block.find("section", attrs={"data-component": "summary"}) or
+            block.find("div", attrs={"data-component": "summary"}) or
+            block.find("p")
+            
+        )
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
         articles.append({

@@ -30,22 +30,22 @@ def scrape_bbc():
     soup = BeautifulSoup(html, "html.parser")
     articles = []
 
-    headline_tags = soup.find_all("div",attrs={"datatest-id" : "card-text-wrapper"})
+    headline_tags = soup.find_all("div",attrs={"data-testid" : "card-text-wrapper"})
     print(f"Found {len(headline_tags)} headline links")
 
     for tag in headline_tags[:20]:
 
-        headline_tag = tag.find("h2", attrs={"datatest-id" : "card-headline"})
+        headline_tag = tag.find("h2", attrs={"data-testid" : "card-headline"})
         headline = headline_tag.get_text(strip=True) if headline_tag else "No headline"
 
-        summary_tag = tag.find("p", attrs={"datatest-id": "card-description"})
+        summary_tag = tag.find("p", attrs={"data-testid": "card-description"})
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
         parent_a = tag.find_parent("a")
         link =parent_a.get("href") if parent_a else "No link"
         
         if link and not link.startswith("/"):
-        link= "https://www.bbc.com/business" + link
+            link = "https://www.bbc.com/business" + link
 
         articles.append({
             "Headline": headline,
