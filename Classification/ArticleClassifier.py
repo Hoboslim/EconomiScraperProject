@@ -5,6 +5,7 @@ import os
 import json
 
 def run_classification(file_path):
+    
     try:
         df = pd.read_csv(file_path)
     except Exception as e:
@@ -51,22 +52,32 @@ Return ONLY valid JSON.
             )
             response = result.stdout.strip()
         except Exception as e:
-            response = "{\"category\": \"ERROR\", \"sentiment\": \"ERROR\", \"summary\": \"Error occurred\"}"
             print(f"Error processing article {i+1}: {e}")
+            response = '{"category": "ERROR", "sentiment": "ERROR", "summary": "Error occurred"}'
 
         t1 = time.time()
 
        
+        clean_response = response.strip()
+        if clean_response.startswith("```json"):
+            clean_response = clean_response[len("```json"):].strip()
+        if clean_response.startswith("```"):
+            clean_response = clean_response[len("```"):].strip()
+        if clean_response.endswith("```"):
+            clean_response = clean_response[:-3].strip()
+
+       
         try:
-            parsed = json.loads(response)
+            parsed = json.loads(clean_response)
             category = parsed.get("category", "Unknown")
             sentiment = parsed.get("sentiment", "Unknown")
-            summary = parsed.get("summary", "")
+            summary = parsed.get("summary", "No summary")
         except Exception:
             category = "ParseError"
             sentiment = "ParseError"
-            summary = response[:200]
+            summary = "Error processing article"
 
+       
         rows.append({
             "Headline": headline,
             "Link": link,
@@ -105,7 +116,7 @@ Return only plain text.
     except Exception as e:
         economic_overview = f"Error generating overview: {e}"
 
-    
+   
     rows.append({
         "Headline": "Economic Overview",
         "Link": "",
@@ -115,13 +126,14 @@ Return only plain text.
         "Time (s)": 0
     })
 
-   
-    results_df = pd.DataFrame(rows)
+ 
     os.makedirs("ClassificationResults", exist_ok=True)
-    per_article_file = os.path.join("ClassificationResults", "per_article_results.csv")
-    results_df.to_csv(per_article_file, index=False, encoding="utf-8")
-    print(f"Results saved to {per_article_file}")
+    output_file = os.path.join("ClassificationResults", "classification_results.csv")
+    results_df = pd.DataFrame(rows)
+    results_df.to_csv(output_file, index=False, encoding="utf-8")
+    print(f"Results saved to {output_file}")
 
 
 if __name__ == "__main__":
-    run_classification()
+    input_file = "Articles/marketwatch_articles.csv" 
+    run_classification(input_file)
