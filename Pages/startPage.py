@@ -12,4 +12,6 @@ class StartPage(tk.Frame):
         
         tk.Button(self, text="Go to Scraper Page", command=lambda: controller.show_frame("ScraperPage")).pack(pady=10)
         tk.Button(self, text="Go to Classification Page", command=lambda: controller.show_frame("ClassificationPage")).pack(pady=10)
+        tk.Button(self, text="Go to Result Page", command=lambda: controller.show_frame("ResultPage")).pack(pady=10)
+        
         

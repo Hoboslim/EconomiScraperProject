@@ -2,6 +2,7 @@ import tkinter as tk
 from .startPage import StartPage
 from .scraperPage import ScraperPage
 from .classificationPage import ClassificationPage
+from .resultPage import ResultPage
 
 class App(tk.Tk):
     def __init__(self):
@@ -16,7 +17,7 @@ class App(tk.Tk):
         
         self.frames = {}
         
-        for F in (StartPage, ScraperPage, ClassificationPage):
+        for F in (StartPage, ScraperPage, ClassificationPage, ResultPage):
             page_name = F.__name__
             frame = F(container, self)
             self.frames[page_name] = frame

@@ -8,7 +8,7 @@ import os
 def scrape_business_insider():
     url = "https://www.businessinsider.com/"
 
-    # Selenium Chrome options
+    
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
