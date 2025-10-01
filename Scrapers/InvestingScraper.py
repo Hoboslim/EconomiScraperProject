@@ -5,10 +5,9 @@ from bs4 import BeautifulSoup
 import time
 import os
 
-def scrape_business_insider():
-    url = "https://www.businessinsider.com/"
+def scrape_investing(max_articles=50):
+    url = "https://www.investing.com/news/"
 
-    
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -21,45 +20,45 @@ def scrape_business_insider():
 
     driver = webdriver.Chrome(options=options)
     driver.get(url)
-    time.sleep(5)  
+    time.sleep(5)
 
-    html = driver.page_source
-    driver.quit()
-
-    os.makedirs("Debug", exist_ok=True)
-    with open("Debug/business_insider_debug.html", "w", encoding="utf-8") as f:
-        f.write(html)
-
-    soup = BeautifulSoup(html, "html.parser")
+    soup = BeautifulSoup(driver.page_source, "html.parser")
     articles = []
 
-   
-    headline_tags = soup.find_all(["h2", "h3"])
-    print(f"Found {len(headline_tags)} headline tags")
-
+    headline_tags = soup.find_all("a", class_="title")
+    count = 0
     for tag in headline_tags:
-        a_tag = tag.find("a")
-        if not a_tag:
-            continue
+        if count >= max_articles:
+            break
 
-        link = a_tag.get("href")
-        
-        if not link or not link.startswith("/"):
-            continue
-
-        headline = a_tag.get_text(strip=True)
-        full_link = "https://www.businessinsider.com" + link
+        headline = tag.get_text(strip=True)
+        link = tag.get("href")
+        if not link.startswith("http"):
+            link = "https://www.investing.com" + link
 
         articles.append({
             "Headline": headline,
-            "Link": full_link,
-            "Summary": "No summary"  
+            "Link": link,
+            "Summary": "No summary"
         })
 
-    df = pd.DataFrame(articles)
+        count += 1
+
+    driver.quit()
+
+    df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
-    df.to_csv("Articles/business_insider_articles.csv", index=False, encoding="utf-8")
-    print("Saved Articles/business_insider_articles.csv")
+    csv_path = "Articles/investing_articles.csv"
+
+    if os.path.exists(csv_path):
+        df_existing = pd.read_csv(csv_path)
+        df_combined = pd.concat([df_existing, df_new], ignore_index=True)
+        df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
+    else:
+        df_combined = df_new
+
+    df_combined.to_csv(csv_path, index=False, encoding="utf-8")
+    print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
-    scrape_business_insider()
+    scrape_investing(max_articles=50)

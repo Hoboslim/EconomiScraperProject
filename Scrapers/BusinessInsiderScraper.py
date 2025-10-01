@@ -15,7 +15,6 @@ def get_article_summary(url, driver):
 
 def scrape_business_insider():
     url = "https://www.businessinsider.com/"
-
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -30,10 +29,10 @@ def scrape_business_insider():
     driver.get(url)
     time.sleep(5)
 
-   
+    
     SCROLL_PAUSE_TIME = 2
     last_height = driver.execute_script("return document.body.scrollHeight")
-    for _ in range(5): 
+    for _ in range(5):
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(SCROLL_PAUSE_TIME)
         new_height = driver.execute_script("return document.body.scrollHeight")
@@ -43,6 +42,7 @@ def scrape_business_insider():
 
     html = driver.page_source
 
+    
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/business_insider_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
@@ -50,7 +50,6 @@ def scrape_business_insider():
     soup = BeautifulSoup(html, "html.parser")
     articles = []
 
-   
     headline_tags = soup.find_all(["h2", "h3"])
     print(f"Found {len(headline_tags)} headline tags")
 
@@ -66,7 +65,6 @@ def scrape_business_insider():
         headline = a_tag.get_text(strip=True)
         full_link = "https://www.businessinsider.com" + link
 
-       
         summary = get_article_summary(full_link, driver)
 
         articles.append({
@@ -77,10 +75,19 @@ def scrape_business_insider():
 
     driver.quit()
 
-    df = pd.DataFrame(articles)
+    df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
-    df.to_csv("Articles/business_insider_articles.csv", index=False, encoding="utf-8")
-    print("Saved Articles/business_insider_articles.csv")
+    csv_path = "Articles/business_insider_articles.csv"
+
+    if os.path.exists(csv_path):
+        df_existing = pd.read_csv(csv_path)
+        df_combined = pd.concat([df_existing, df_new], ignore_index=True)
+        df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
+    else:
+        df_combined = df_new
+
+    df_combined.to_csv(csv_path, index=False, encoding="utf-8")
+    print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
     scrape_business_insider()
