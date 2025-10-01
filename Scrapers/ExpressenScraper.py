@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import os
 import time
 
-def scrape_expressen():
+def scrape_expressen(max_articles=20):
     url = "https://www.expressen.se/ekonomi/"
     options = Options()
     options.add_argument("--headless=new")
@@ -29,9 +29,12 @@ def scrape_expressen():
     articles = []
 
     headline_tags = soup.find_all("div", class_="teaser")
-    print(f"Found {len(headline_tags)} headline links")
+    count=0
 
-    for tag in headline_tags[:20]:
+    for tag in headline_tags:
+        if count >= max_articles:
+            break
+
         a_tag = tag.find("a")
         if not a_tag:
             continue
@@ -54,11 +57,23 @@ def scrape_expressen():
             "Summary": summary
         })
 
+        count += 1
+
     driver.quit()
-    df = pd.DataFrame(articles)
+    df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
-    df.to_csv("Articles/expressen_articles.csv", index=False, encoding="utf-8")
-    print("Saved Articles/expressen_articles.csv")
+    csv_path = "Articles/expressen_articles.csv"
+    
+
+    if os.path.exists(csv_path):
+        df_existing = pd.read_csv(csv_path)
+        df_combined = pd.concat([df_existing, df_new], ignore_index=True)
+        df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
+    else:
+        df_combined = df_new
+
+    df_combined.to_csv(csv_path, index=False, encoding="utf-8")
+    print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
-    scrape_expressen()
+    scrape_expressen(max_articles=20)
