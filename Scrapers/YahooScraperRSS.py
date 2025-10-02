@@ -14,7 +14,7 @@ def scrape_yahoo_rss(max_articles=50):
 
         headline = getattr(entry, "title", "No headline")
         link = getattr(entry, "link", "No link")
-        summary = getattr(entry, "summary", None) or getattr(entry, "description", "No summary")
+        summary = getattr(entry, "summary", "No summary")
 
         articles.append({
             "Headline": headline,
