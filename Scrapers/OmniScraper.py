@@ -2,13 +2,12 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
-import time
 import os
+import time
 
-def scrape_aftonbladet(max_articles=50):
-    url = "https://www.aftonbladet.se/minekonomi/"
+def scrape_omni():
+    url = "https://omni.se/ekonomi"
 
-    
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -26,7 +25,7 @@ def scrape_aftonbladet(max_articles=50):
     
     SCROLL_PAUSE_TIME = 2
     last_height = driver.execute_script("return document.body.scrollHeight")
-    for _ in range(5):
+    for _ in range(3):
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(SCROLL_PAUSE_TIME)
         new_height = driver.execute_script("return document.body.scrollHeight")
@@ -37,55 +36,48 @@ def scrape_aftonbladet(max_articles=50):
     html = driver.page_source
     driver.quit()
 
-    
     os.makedirs("Debug", exist_ok=True)
-    with open("Debug/aftonbladet_debug.html", "w", encoding="utf-8") as f:
+    with open("Debug/omni_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
     articles = []
 
    
-    headline_tags = soup.find_all("div", class_="hyperion-css-1ooqwy6")
-    print(f"Found {len(headline_tags)} article blocks")
+    teaser_links = soup.find_all("a", href=True)
+    print(f"Found {len(teaser_links)} <a> tags")
 
-    count = 0
-    for tag in headline_tags:
-        if count >= max_articles:
-            break
-
+    for a_tag in teaser_links:
        
-        link_tag = tag.find("a", attrs={"data-test-tag":"internal-link"})
-        link = link_tag.get("href") if link_tag else None
-        if not link:
+        teaser_div = a_tag.find("div", class_="Teaser_teaserContent__e8paS")
+        if not teaser_div:
             continue
-
-        if not link.startswith("/minekonomi/"):
-            link = "/minekonomi/" + link
-        full_link = "https://www.aftonbladet.se" + link
-
-        headline_tag = tag.find("h2")
-        headline = headline_tag.get_text(strip=True) if headline_tag else "No headline"
-
-        summary_tag = tag.find("p")
-        summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
         
-        if "abplus" in summary.lower():
+        h2_tag = teaser_div.find("h2")
+        if not h2_tag:
             continue
+        headline = h2_tag.get_text(strip=True)
+
+       
+        p_tag = teaser_div.find("p")
+        summary = p_tag.get_text(strip=True) if p_tag else "No summary"
+
+       
+        link = a_tag.get("href")
+        if not link.startswith("http"):
+            link = "https://omni.se" + link
 
         articles.append({
             "Headline": headline,
-            "Link": full_link,
+            "Link": link,
             "Summary": summary
         })
-
-        count += 1
 
     
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
-    csv_path = "Articles/aftonbladet_articles.csv"
+    csv_path = "Articles/omni_articles.csv"
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
@@ -97,6 +89,5 @@ def scrape_aftonbladet(max_articles=50):
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
-
 if __name__ == "__main__":
-    scrape_aftonbladet(max_articles=50)
+    scrape_omni()

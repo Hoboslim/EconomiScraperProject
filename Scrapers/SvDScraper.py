@@ -5,10 +5,9 @@ from bs4 import BeautifulSoup
 import time
 import os
 
-def scrape_aftonbladet(max_articles=50):
-    url = "https://www.aftonbladet.se/minekonomi/"
+def scrape_svd():
+    url = "https://www.svd.se/naringsliv"
 
-    
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -39,53 +38,38 @@ def scrape_aftonbladet(max_articles=50):
 
     
     os.makedirs("Debug", exist_ok=True)
-    with open("Debug/aftonbladet_debug.html", "w", encoding="utf-8") as f:
+    with open("Debug/svd_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
     articles = []
 
-   
-    headline_tags = soup.find_all("div", class_="hyperion-css-1ooqwy6")
-    print(f"Found {len(headline_tags)} article blocks")
+    story_blocks = soup.find_all("div", class_="TeaserBody-www__sc-1maddnp-0")
+    print(f"Found {len(story_blocks)} story blocks")
 
-    count = 0
-    for tag in headline_tags:
-        if count >= max_articles:
-            break
-
-       
-        link_tag = tag.find("a", attrs={"data-test-tag":"internal-link"})
-        link = link_tag.get("href") if link_tag else None
-        if not link:
-            continue
-
-        if not link.startswith("/minekonomi/"):
-            link = "/minekonomi/" + link
-        full_link = "https://www.aftonbladet.se" + link
-
-        headline_tag = tag.find("h2")
+    for block in story_blocks[:50]:
+        headline_tag = block.find("h2")
         headline = headline_tag.get_text(strip=True) if headline_tag else "No headline"
 
-        summary_tag = tag.find("p")
+        summary_tag = block.find("p")
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
-        
-        if "abplus" in summary.lower():
-            continue
+       
+        a_tag = block.find_parent("a")
+        link = a_tag["href"] if a_tag and a_tag.has_attr("href") else None
+        if link and not link.startswith("http"):
+            link = "https://www.svd.se" + link
 
         articles.append({
             "Headline": headline,
-            "Link": full_link,
+            "Link": link if link else "No link",
             "Summary": summary
         })
-
-        count += 1
 
     
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
-    csv_path = "Articles/aftonbladet_articles.csv"
+    csv_path = "Articles/svd_articles.csv"
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
@@ -97,6 +81,5 @@ def scrape_aftonbladet(max_articles=50):
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
-
 if __name__ == "__main__":
-    scrape_aftonbladet(max_articles=50)
+    scrape_svd()
