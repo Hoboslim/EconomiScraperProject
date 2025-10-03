@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 import os
 import time
 
-def scrape_svt(max_articles=20):
-    url = "https://www.svt.se/ekonomi/"
+def scrape_svt(max_articles=50):
+    url = "https://www.svt.se/nyheter/ekonomi/"
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -28,7 +28,7 @@ def scrape_svt(max_articles=20):
     soup = BeautifulSoup(html, "html.parser")
     articles = []
 
-    headline_tags = soup.find_all("div", class_="FeedTeaser__content___ADWwY")
+    headline_tags = soup.find_all("a", class_="FeedTeaser__link___Uqfnt")
     count = 0
 
     for tag in headline_tags:
@@ -36,13 +36,13 @@ def scrape_svt(max_articles=20):
             break
 
         link = tag.get("href")
-        if link and not link.startswith("/ekonomi/"):
-            link = "https://www.svt.se/ekonomi/" + link
+        if link and not link.startswith("/"):
+            link = "https://www.svt.se" + link
 
-        headline_tag = tag.find("h1", class_="TeaserHeadline__root__h28FM")
+        headline_tag = tag.find("h1")
         headline = headline_tag.get_text(strip=True) if headline_tag else "No Headline"
 
-        summary_tag = tag.find("div", class_="FeedTeaser__textContent__RLNUu")
+        summary_tag = tag.find("div", class_="FeedTeaser__textContent___RLNUu")
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
         articles.append({
@@ -69,6 +69,7 @@ def scrape_svt(max_articles=20):
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
-    scrape_svt(max_articles=20)
+    scrape_svt(max_articles=50)
+
 
 
