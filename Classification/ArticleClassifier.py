@@ -4,6 +4,7 @@ import time
 import os
 import json
 import re
+from datetime import datetime
 
 def run_classification(file_path):
     try:
@@ -38,6 +39,10 @@ def run_classification(file_path):
         headline = row.get("Headline", "")
         link = row.get("Link", "")
 
+        # Get scrape date from CSV if available, else use today
+        date_str = row.get("Date") or row.get("Published") or datetime.now().strftime("%Y-%m-%d")
+        text_with_date = f"[{date_str}] {text}"
+
         print(f"Processing article {i+1}/{total}...")
 
         prompt = f"""
@@ -47,7 +52,7 @@ You are a news classifier. Analyze the following article and return results in J
 - summary: A very short 1–2 sentence summary in English
 
 Article:
-{text}
+{text_with_date}
 
 Return ONLY valid JSON.
 """
@@ -86,12 +91,15 @@ Return ONLY valid JSON.
             sentiment = "ParseError"
             summary = "Error processing article"
 
+        # Include scrape date in the summary for easy tracking
+        summary_with_date = f"[{date_str}] {summary}"
+
         rows.append({
             "Headline": headline,
             "Link": link,
             "Model_Category": category,
             "Sentiment": sentiment,
-            "Model_Summary": summary,
+            "Model_Summary": summary_with_date,
             "Time (s)": round(t1 - t0, 2)
         })
 
