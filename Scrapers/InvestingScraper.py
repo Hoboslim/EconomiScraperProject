@@ -36,10 +36,13 @@ def scrape_investing(max_articles=50):
         if not link.startswith("http"):
             link = "https://www.investing.com" + link
 
+        date = time.strftime("%Y-%m-%d")
+
         articles.append({
             "Headline": headline,
             "Link": link,
-            "Summary": "No summary"
+            "Summary": "No summary",
+            "Date": date
         })
 
         count += 1

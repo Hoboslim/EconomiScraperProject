@@ -5,26 +5,24 @@ from bs4 import BeautifulSoup
 import time
 import os
 
-def get_article_summary(url, driver):
-    """Get the first few paragraphs of the article as a summary."""
+def get_article_summary_and_date(url, driver):
     try:
         driver.get(url)
         time.sleep(2)
         soup = BeautifulSoup(driver.page_source, "html.parser")
         paragraphs = soup.find_all("p")
         summary = " ".join(p.get_text(strip=True) for p in paragraphs[:3])
-        return summary if summary else "No summary"
+        time_tag = soup.find("time")
+        if time_tag and time_tag.has_attr("datetime"):
+            date = time_tag["datetime"]
+        else:
+            date = time.strftime("%Y-%m-%d")
+        return summary if summary else "No summary", date
     except Exception as e:
         print(f"Error fetching summary for {url}: {e}")
-        return "No summary"
+        return "No summary", time.strftime("%Y-%m-%d")
 
 def scrape_cnbc(max_articles=20):
-    """
-    Scrape CNBC business articles.
-
-    Parameters:
-    max_articles (int): Maximum number of articles to scrape. Default is 20.
-    """
     url = "https://www.cnbc.com/business/"
     options = Options()
     options.add_argument("--headless=new")
@@ -37,7 +35,7 @@ def scrape_cnbc(max_articles=20):
 
     driver = webdriver.Chrome(options=options)
     driver.get(url)
-    time.sleep(5)  
+    time.sleep(5)
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
     articles = []
@@ -57,12 +55,13 @@ def scrape_cnbc(max_articles=20):
         if not link.startswith("http"):
             link = "https://www.cnbc.com" + link
 
-        summary = get_article_summary(link, driver)
+        summary, date = get_article_summary_and_date(link, driver)
 
         articles.append({
             "Headline": headline,
             "Link": link,
-            "Summary": summary
+            "Summary": summary,
+            "Date": date
         })
 
         count += 1
@@ -73,7 +72,6 @@ def scrape_cnbc(max_articles=20):
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/cnbc_articles.csv"
 
-    
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
@@ -85,4 +83,4 @@ def scrape_cnbc(max_articles=20):
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
-    scrape_cnbc(max_articles=20)  
+    scrape_cnbc(max_articles=20)

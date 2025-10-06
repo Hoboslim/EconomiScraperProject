@@ -4,8 +4,9 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import time
 import os
+from datetime import datetime
 
-def scrape_svd():
+def scrape_svd(max_articles=50):
     url = "https://www.svd.se/naringsliv"
 
     options = Options()
@@ -22,7 +23,6 @@ def scrape_svd():
     driver.get(url)
     time.sleep(5)
 
-    
     SCROLL_PAUSE_TIME = 2
     last_height = driver.execute_script("return document.body.scrollHeight")
     for _ in range(5):
@@ -36,7 +36,6 @@ def scrape_svd():
     html = driver.page_source
     driver.quit()
 
-    
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/svd_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
@@ -47,14 +46,15 @@ def scrape_svd():
     story_blocks = soup.find_all("div", class_="TeaserBody-www__sc-1maddnp-0")
     print(f"Found {len(story_blocks)} story blocks")
 
-    for block in story_blocks[:50]:
+    scraped_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    for block in story_blocks[:max_articles]:
         headline_tag = block.find("h2")
         headline = headline_tag.get_text(strip=True) if headline_tag else "No headline"
 
         summary_tag = block.find("p")
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
-       
         a_tag = block.find_parent("a")
         link = a_tag["href"] if a_tag and a_tag.has_attr("href") else None
         if link and not link.startswith("http"):
@@ -63,10 +63,10 @@ def scrape_svd():
         articles.append({
             "Headline": headline,
             "Link": link if link else "No link",
-            "Summary": summary
+            "Summary": summary,
+            "Scraped_Date": scraped_date
         })
 
-    
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/svd_articles.csv"

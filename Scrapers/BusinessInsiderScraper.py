@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import time
 import os
+from datetime import datetime
 
 def get_article_summary(url, driver):
     driver.get(url)
@@ -29,7 +30,6 @@ def scrape_business_insider():
     driver.get(url)
     time.sleep(5)
 
-    
     SCROLL_PAUSE_TIME = 2
     last_height = driver.execute_script("return document.body.scrollHeight")
     for _ in range(5):
@@ -42,13 +42,13 @@ def scrape_business_insider():
 
     html = driver.page_source
 
-    
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/business_insider_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
     articles = []
+    scrape_date = datetime.now().strftime("%Y-%m-%d")
 
     headline_tags = soup.find_all(["h2", "h3"])
     print(f"Found {len(headline_tags)} headline tags")
@@ -70,7 +70,8 @@ def scrape_business_insider():
         articles.append({
             "Headline": headline,
             "Link": full_link,
-            "Summary": summary
+            "Summary": summary,
+            "Scraped_Date": scrape_date
         })
 
     driver.quit()

@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
+from datetime import datetime
 import os
 
 def scrape_bloomberg():
@@ -17,7 +18,6 @@ def scrape_bloomberg():
     driver = webdriver.Chrome(options=options)
     driver.get(url)
 
-   
     WebDriverWait(driver, 10).until(
         EC.presence_of_all_elements_located((By.CSS_SELECTOR, "a.StoryBlock_storyLink__5nXw8"))
     )
@@ -25,13 +25,13 @@ def scrape_bloomberg():
     html = driver.page_source
     driver.quit()
 
-    
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/bloomberg_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
     articles = []
+    scrape_date = datetime.now().strftime("%Y-%m-%d")
 
     story_blocks = soup.find_all("a", class_="StoryBlock_storyLink__5nXw8")
     print(f"Found {len(story_blocks)} story blocks")
@@ -54,7 +54,8 @@ def scrape_bloomberg():
         articles.append({
             "Headline": headline,
             "Link": link,
-            "Summary": summary
+            "Summary": summary,
+            "Scraped_Date": scrape_date
         })
 
     df_new = pd.DataFrame(articles)
@@ -62,12 +63,9 @@ def scrape_bloomberg():
     csv_path = "Articles/bloomberg_articles.csv"
 
     if os.path.exists(csv_path):
-        
         df_existing = pd.read_csv(csv_path)
-        
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-        
-        df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
+        df_combined.drop_duplicates(subset="Link", keep="first", inplace=True)
     else:
         df_combined = df_new
 

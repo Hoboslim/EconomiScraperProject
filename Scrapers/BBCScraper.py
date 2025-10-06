@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import time
 import os
+from datetime import datetime
 
 def scrape_bbc():
     url = "https://www.bbc.com/business"
@@ -18,17 +19,16 @@ def scrape_bbc():
 
     driver = webdriver.Chrome(options=options)
     driver.get(url)
-    time.sleep(5)  
-
+    time.sleep(5)
     html = driver.page_source
 
-    
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/bbc_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
     articles = []
+    scrape_date = datetime.now().strftime("%Y-%m-%d")
 
     headline_tags = soup.find_all("div", attrs={"data-testid": "card-text-wrapper"})
     print(f"Found {len(headline_tags)} headline tags")
@@ -41,14 +41,15 @@ def scrape_bbc():
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
         parent_a = tag.find_parent("a")
-        link = parent_a.get("href") if parent_a else "No link"
-        if link and not link.startswith("/"):
-            link = "https://www.bbc.com/business" + link
+        link = parent_a.get("href") if parent_a else None
+        if link and not link.startswith("http"):
+            link = "https://www.bbc.com" + link
 
         articles.append({
             "Headline": headline,
             "Link": link or "No link",
-            "Summary": summary
+            "Summary": summary,
+            "Scraped_Date": scrape_date
         })
 
     driver.quit()
@@ -58,12 +59,9 @@ def scrape_bbc():
     csv_path = "Articles/bbc_articles.csv"
 
     if os.path.exists(csv_path):
-       
         df_existing = pd.read_csv(csv_path)
-        
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-        
-        df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
+        df_combined.drop_duplicates(subset="Link", keep="first", inplace=True)
     else:
         df_combined = df_new
 

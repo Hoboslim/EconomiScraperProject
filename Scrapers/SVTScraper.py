@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import os
 import time
+from datetime import datetime
 
 def scrape_svt(max_articles=50):
     url = "https://www.svt.se/nyheter/ekonomi/"
@@ -22,13 +23,14 @@ def scrape_svt(max_articles=50):
 
     html = driver.page_source
     os.makedirs("Debug", exist_ok=True)
-    with open ("Debug/svt_debug.html", "w", encoding="utf-8") as f:
+    with open("Debug/svt_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
     articles = []
 
     headline_tags = soup.find_all("a", class_="FeedTeaser__link___Uqfnt")
+    scraped_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     count = 0
 
     for tag in headline_tags:
@@ -46,30 +48,29 @@ def scrape_svt(max_articles=50):
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
         articles.append({
-            "Headline" : headline,
+            "Headline": headline,
             "Link": link,
-            "Summary": summary
+            "Summary": summary,
+            "Scraped_Date": scraped_date
         })
 
-    driver.quit()
-    df_new = pd.DataFrame(articles)
-    os.makedirs("Articles",exist_ok=True )
-    csv_path = "Articles/svt_articles.csv"
+        count += 1
 
-    count += 1
+    driver.quit()
+
+    df_new = pd.DataFrame(articles)
+    os.makedirs("Articles", exist_ok=True)
+    csv_path = "Articles/svt_articles.csv"
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
         df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
     else:
-         df_combined = df_new
-         
+        df_combined = df_new
+
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
     scrape_svt(max_articles=50)
-
-
-

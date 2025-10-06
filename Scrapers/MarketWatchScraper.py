@@ -1,6 +1,7 @@
 import feedparser
 import pandas as pd
 import os
+import time
 
 def scrape_marketwatch_rss(max_articles=50):
     rss_url = "https://www.marketwatch.com/rss/topstories"
@@ -16,10 +17,20 @@ def scrape_marketwatch_rss(max_articles=50):
         link = entry.get("link", "No link")
         summary = entry.get("summary", headline)
 
+        if "published" in entry:
+            try:
+                published_time = entry.published_parsed
+                date = time.strftime("%Y-%m-%d", published_time)
+            except Exception:
+                date = time.strftime("%Y-%m-%d")
+        else:
+            date = time.strftime("%Y-%m-%d")
+
         articles.append({
             "Headline": headline,
             "Link": link,
-            "Summary": summary
+            "Summary": summary,
+            "Date": date
         })
 
         count += 1

@@ -29,7 +29,7 @@ def scrape_expressen(max_articles=20):
     articles = []
 
     headline_tags = soup.find_all("div", class_="teaser")
-    count=0
+    count = 0
 
     for tag in headline_tags:
         if count >= max_articles:
@@ -43,18 +43,23 @@ def scrape_expressen(max_articles=20):
         if not link or not link.startswith("/ekonomi/"):
             link = "https://www.expressen.se/ekonomi/" + link
 
-
         headline_tag = tag.find("h2")
         headline = headline_tag.get_text(strip=True) if headline_tag else "No headline"
 
         summary_tag = tag.find("p")
-        summary = summary_tag.get_text(strip= True) if summary_tag else "No headline"
+        summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
+        time_tag = tag.find("time")
+        if time_tag and time_tag.has_attr("datetime"):
+            date = time_tag["datetime"]
+        else:
+            date = time.strftime("%Y-%m-%d")
 
         articles.append({
             "Headline": headline,
             "Link": link,
-            "Summary": summary
+            "Summary": summary,
+            "Date": date
         })
 
         count += 1
@@ -64,7 +69,6 @@ def scrape_expressen(max_articles=20):
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/expressen_articles.csv"
     
-
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)

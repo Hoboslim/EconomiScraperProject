@@ -1,13 +1,16 @@
 import feedparser
 import pandas as pd
 import os
+from datetime import datetime
 
 def scrape_yahoo_rss(max_articles=50):
     url = "https://finance.yahoo.com/rss/topstories"
     feed = feedparser.parse(url)
     articles = []
 
+    scraped_date = datetime.now().strftime("%Y-%m-%d")
     count = 0
+
     for entry in feed.entries:
         if count >= max_articles:
             break
@@ -19,7 +22,8 @@ def scrape_yahoo_rss(max_articles=50):
         articles.append({
             "Headline": headline,
             "Link": link,
-            "Summary": summary
+            "Summary": summary,
+            "Scraped_Date": scraped_date
         })
 
         count += 1

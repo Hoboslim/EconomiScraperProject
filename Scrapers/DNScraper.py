@@ -22,15 +22,16 @@ def scrape_dn(max_articles=20):
 
     html = driver.page_source
     os.makedirs("Debug", exist_ok=True)
-    with open ("Debug/dn_debug.html", "w", encoding="utf-8") as f:
+    with open("Debug/dn_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
-    articles =[]
+    articles = []
 
     headline_tags = soup.find_all("a", class_="ds-teaser")
-    count=0
+    print(f"Found {len(headline_tags)} headline tags")
 
+    count = 0
     for tag in headline_tags:
         if count >= max_articles:
             break
@@ -45,22 +46,28 @@ def scrape_dn(max_articles=20):
         summary_tag = tag.find("p", class_="ds-teaser__text")
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
-       
+        time_tag = tag.find("time")
+        if time_tag and time_tag.has_attr("datetime"):
+            date = time_tag["datetime"]
+        else:
+            date = time.strftime("%Y-%m-%d")
+
         articles.append({
             "Headline": headline,
             "Link": link,
-            "Summary": summary
+            "Summary": summary,
+            "Date": date
         })
 
+        count += 1
+
     driver.quit()
+
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/dn_articles.csv"
 
-    count += 1
-
     if os.path.exists(csv_path):
-        
         df_existing = pd.read_csv(csv_path)
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
         df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
