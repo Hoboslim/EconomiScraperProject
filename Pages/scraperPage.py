@@ -1,29 +1,31 @@
-import tkinter as tk
+import customtkinter as ctk
 from tkinter import ttk, messagebox
 import os, subprocess, threading
 from .classificationPage import ClassificationPage
 
 
-class ScraperPage(tk.Frame):
+class ScraperPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
         
-        tk.Label(self, text="Scraper Page", font=("Arial", 18, "bold")).pack(pady=20)
+        ctk.CTkLabel(self, text="Scraper Page", font=("Arial", 18, "bold")).pack(pady=20)
         
         folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), "Scrapers")
         self.folder = folder
         options = [fname for fname in os.listdir(folder) if fname.endswith(".py")]
         
-        self.dropdown = ttk.Combobox(self, values=options, state="readonly")
+        self.dropdown_var = ctk.StringVar()
+        self.dropdown = ctk.CTkOptionMenu(self, values=options, variable=self.dropdown_var)
         if options:
-            self.dropdown.current(0)
+            self.dropdown_var.set(options[0])
         self.dropdown.pack(pady=10)
         
-        tk.Button(self, text="Run Scraper", command=self.run_scraper).pack(pady=10)
-        tk.Button(self, text="Back to Home", command=lambda: controller.show_frame("StartPage")).pack(pady=10)
+        ctk.CTkButton(self, text="Run Scraper", command=self.run_scraper).pack(pady=10)
+        ctk.CTkButton(self, text="Back to Home", command=lambda: controller.show_frame("StartPage")).pack(pady=10)
         
-        self.progress = ttk.Progressbar(self, mode="indeterminate", length=250)
+        self.progress = ctk.CTkProgressBar(self, mode="indeterminate", width=250)
+        self.progress.set(0)
         self.progress.pack(pady=10)
         
         
@@ -39,7 +41,7 @@ class ScraperPage(tk.Frame):
         filepath = os.path.join(self.folder, selected_scraper)
             
 
-        self.progress.start(10)
+        self.progress.start()
         
         threading.Thread(target=self._run_scraper_task, args=(filepath,), daemon=True).start()
         
