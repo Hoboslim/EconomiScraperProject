@@ -24,7 +24,8 @@ class ClassificationPage(ctk.CTkFrame):
         
         ctk.CTkButton(self, text="Back To Home", command=lambda: controller.show_frame("StartPage")).pack(pady=10)
         
-        self.progress = ttk.Progressbar(self, mode="indeterminate", length=250)
+        self.progress = ctk.CTkProgressBar(self, mode="indeterminate", width=250)
+        self.progress.set(0)
         self.progress.pack(pady=10)
         
         
@@ -47,7 +48,7 @@ class ClassificationPage(ctk.CTkFrame):
         
         file_path = os.path.join(self.articles_folder, selected_csv)
         
-        self.progress.start(10)
+        self.progress.start()
         
         threading.Thread(target=self._run_classification_task, args=(file_path,), daemon=True).start()
     def _run_classification_task(self, file_path):
