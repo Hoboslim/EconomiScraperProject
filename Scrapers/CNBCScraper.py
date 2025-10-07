@@ -61,7 +61,7 @@ def scrape_cnbc(max_articles=20):
             "Headline": headline,
             "Link": link,
             "Summary": summary,
-            "Date": date
+            "Scraped_Date": date
         })
 
         count += 1

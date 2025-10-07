@@ -30,7 +30,7 @@ def scrape_svt(max_articles=50):
     articles = []
 
     headline_tags = soup.find_all("a", class_="FeedTeaser__link___Uqfnt")
-    scraped_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    scraped_date = datetime.now().strftime("%Y-%m-%d")
     count = 0
 
     for tag in headline_tags:

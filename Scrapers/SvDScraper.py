@@ -46,7 +46,7 @@ def scrape_svd(max_articles=50):
     story_blocks = soup.find_all("div", class_="TeaserBody-www__sc-1maddnp-0")
     print(f"Found {len(story_blocks)} story blocks")
 
-    scraped_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    scraped_date = datetime.now().strftime("%Y-%m-%d")
 
     for block in story_blocks[:max_articles]:
         headline_tag = block.find("h2")

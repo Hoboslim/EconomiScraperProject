@@ -2,10 +2,11 @@ import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
-import os
 import time
+import os
+from datetime import datetime
 
-def scrape_omni():
+def scrape_omni(max_articles=50):
     url = "https://omni.se/ekonomi"
 
     options = Options()
@@ -22,7 +23,6 @@ def scrape_omni():
     driver.get(url)
     time.sleep(5)
 
-    
     SCROLL_PAUSE_TIME = 2
     last_height = driver.execute_script("return document.body.scrollHeight")
     for _ in range(3):
@@ -41,40 +41,39 @@ def scrape_omni():
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
+    teaser_blocks = soup.find_all("a", href=True)
+    print(f"Found {len(teaser_blocks)} teaser blocks")
+
     articles = []
+    count = 0
+    scrape_date = datetime.now().strftime("%Y-%m-%d")
 
-   
-    teaser_links = soup.find_all("a", href=True)
-    print(f"Found {len(teaser_links)} <a> tags")
+    for tag in teaser_blocks:
+        if count >= max_articles:
+            break
 
-    for a_tag in teaser_links:
-       
-        teaser_div = a_tag.find("div", class_="Teaser_teaserContent__e8paS")
-        if not teaser_div:
+        href = tag.get("href", "")
+        if not href or not href.startswith("/"):
             continue
 
-        
-        h2_tag = teaser_div.find("h2")
-        if not h2_tag:
+        full_link = "https://omni.se" + href
+        title_tag = tag.find("h2")
+        summary_tag = tag.find("p")
+        headline = title_tag.get_text(strip=True) if title_tag else None
+        summary = summary_tag.get_text(strip=True) if summary_tag else None
+
+        if not headline or not summary:
             continue
-        headline = h2_tag.get_text(strip=True)
-
-       
-        p_tag = teaser_div.find("p")
-        summary = p_tag.get_text(strip=True) if p_tag else "No summary"
-
-       
-        link = a_tag.get("href")
-        if not link.startswith("http"):
-            link = "https://omni.se" + link
 
         articles.append({
             "Headline": headline,
-            "Link": link,
-            "Summary": summary
+            "Link": full_link,
+            "Summary": summary,
+            "Scraped_Date": scrape_date
         })
 
-    
+        count += 1
+
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/omni_articles.csv"
@@ -82,7 +81,7 @@ def scrape_omni():
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-        df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
+        df_combined.drop_duplicates(subset="Link", keep="first", inplace=True)
     else:
         df_combined = df_new
 
@@ -90,4 +89,4 @@ def scrape_omni():
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
-    scrape_omni()
+    scrape_omni(max_articles=50)

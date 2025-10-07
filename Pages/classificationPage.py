@@ -1,16 +1,16 @@
-import tkinter as tk
+import customtkinter as ctk
 from tkinter import ttk, messagebox
 import os
 import threading
 from Classification.ArticleClassifier import run_classification
 from .startPage import StartPage
 
-class ClassificationPage(tk.Frame):
+class ClassificationPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
         
-        tk.Label(self, text="Classification Page", font=("Arial", 18, "bold")).pack(pady=20)
+        ctk.CTkLabel(self, text="Classification Page", font=ctk.CTkFont(size=20, weight="bold")).pack(pady=20)
         
         self.articles_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), "Articles")
         self.csv_dropdown = ttk.Combobox(self, values=self.get_csv_files(), state="readonly")
@@ -18,9 +18,11 @@ class ClassificationPage(tk.Frame):
             self.csv_dropdown.current(0)
         self.csv_dropdown.pack(pady=10)
         
-        tk.Button(self, text="Run Classification", command=self.run_selected_classification).pack(pady=10)
-        tk.Button(self, text="Refresh Articles", command=self.refresh_csv_dropdown).pack(pady=5)
-        tk.Button(self, text="Back To Home", command=lambda: controller.show_frame("StartPage")).pack(pady=10)
+        ctk.CTkButton(self, text="Run Classification", command=self.run_selected_classification).pack(pady=10)
+        
+        ctk.CTkButton(self, text="Refresh Articles", command=self.refresh_csv_dropdown).pack(pady=5)
+        
+        ctk.CTkButton(self, text="Back To Home", command=lambda: controller.show_frame("StartPage")).pack(pady=10)
         
         self.progress = ttk.Progressbar(self, mode="indeterminate", length=250)
         self.progress.pack(pady=10)
