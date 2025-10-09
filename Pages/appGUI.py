@@ -3,6 +3,7 @@ from .startPage import StartPage
 from .scraperPage import ScraperPage
 from .classificationPage import ClassificationPage
 from .resultPage import ResultPage
+from .analysisPage import AnalysisPage
 
 class App(ctk.CTk):
     def __init__(self):
@@ -23,7 +24,7 @@ class App(ctk.CTk):
         
         self.frames = {}
         
-        for F in (StartPage, ScraperPage, ClassificationPage, ResultPage):
+        for F in (StartPage, ScraperPage, ClassificationPage, ResultPage, AnalysisPage):
             page_name = F.__name__
             frame = F(container, self)
             self.frames[page_name] = frame

@@ -12,6 +12,7 @@ class StartPage(ctk.CTkFrame):
         
         ctk.CTkButton(self, text="Go to Scraper Page", command=lambda: controller.show_frame("ScraperPage")).pack(pady=10)
         ctk.CTkButton(self, text="Go to Classification Page", command=lambda: controller.show_frame("ClassificationPage")).pack(pady=10)
+        ctk.CTkButton(self, text="Go To Analysis Page", command=lambda: controller.show_frame("AnalysisPage")).pack(pady=10)
         ctk.CTkButton(self, text="Go to Result Page", command=lambda: controller.show_frame("ResultPage")).pack(pady=10)
         
         
