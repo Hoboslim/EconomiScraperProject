@@ -1,4 +1,5 @@
 import customtkinter as ctk
+from tkinter import Menu
 from .startPage import StartPage
 from .scraperPage import ScraperPage
 from .classificationPage import ClassificationPage
@@ -16,6 +17,17 @@ class App(ctk.CTk):
         self.geometry("600x500")
         self.minsize(600, 500)
         
+        menubar = Menu(self)
+        self.config(menu=menubar)
+        
+        pages_menu = Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="Pages", menu=pages_menu)
+        
+        pages_menu.add_command(label="Start Page", command=lambda: self.show_frame("StartPage"))
+        pages_menu.add_command(label="Scraper Page", command=lambda: self.show_frame("ScraperPage"))
+        pages_menu.add_command(label="Classification Page", command=lambda: self.show_frame("ClassificationPage"))
+        pages_menu.add_command(label="Result Page", command=lambda: self.show_frame("ResultPage"))
+        pages_menu.add_command(label="Analysis Page", command=lambda: self.show_frame("AnalysisPage"))
         
         container = ctk.CTkFrame(self)
         container.pack(side="top", fill="both", expand=True, padx=10, pady=10)
