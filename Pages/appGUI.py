@@ -5,6 +5,7 @@ from .scraperPage import ScraperPage
 from .classificationPage import ClassificationPage
 from .resultPage import ResultPage
 from .analysisPage import AnalysisPage
+from .readMePage import ReadMePage
 
 class App(ctk.CTk):
     def __init__(self):
@@ -16,7 +17,7 @@ class App(ctk.CTk):
         self.title("Webscraper")
         self.geometry("600x500")
         self.minsize(600, 500)
-        
+
         menubar = Menu(self)
         self.config(menu=menubar)
         
@@ -28,15 +29,16 @@ class App(ctk.CTk):
         pages_menu.add_command(label="Classification Page", command=lambda: self.show_frame("ClassificationPage"))
         pages_menu.add_command(label="Result Page", command=lambda: self.show_frame("ResultPage"))
         pages_menu.add_command(label="Analysis Page", command=lambda: self.show_frame("AnalysisPage"))
+        pages_menu.add_command(label="Read Me Page", command=lambda: self.show_frame("ReadMePage"))
         
         container = ctk.CTkFrame(self)
         container.pack(side="top", fill="both", expand=True, padx=10, pady=10)
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
-        
+
         self.frames = {}
         
-        for F in (StartPage, ScraperPage, ClassificationPage, ResultPage, AnalysisPage):
+        for F in (StartPage, ScraperPage, ClassificationPage, ResultPage, AnalysisPage, ReadMePage):
             page_name = F.__name__
             frame = F(container, self)
             self.frames[page_name] = frame
