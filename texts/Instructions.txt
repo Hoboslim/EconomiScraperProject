@@ -1,0 +1,43 @@
+How to use Webscraper:
+
+Step 1: Downloading and installing Ollama
+
+You need to download a program called Ollama to get acess to different AI Models.
+Go to: https://ollama.com/download and download the right version for your software.
+Run the installation.
+
+Step 2: Download AI Models
+
+Start Ollama and pick the model you want, write a prompt to ollama using the model.
+Ollama will answer your prompt, and download the model. This will take a while.
+
+Step 3: Start app
+
+Start the Webscraper app! Now you can start scraping.
+
+Step 4: Scrape page
+
+Go to the ScraperPage and choose a page to scrape.
+A text should pop up when the scraping is finished.
+
+Step 5: Classification
+
+Go to the classification page. Pick the page you just scraped in the dropdown.
+Start the classification, this can take a while.
+A textbox will pop up when the classification is finished.
+
+Step 6: Result and Analysis
+
+Results:
+To read your classification results go to the ResultPage and pick your csv-file.
+Open the file to read more, click on the summary to read the full summary.
+
+Analysis:
+To see your classification results in a pie or bar chart, choose your csv-file
+and click on "show pie chart" to see pie chart or "show bar chart" to see bar chart.
+
+
+
+
+
+        
