@@ -64,7 +64,8 @@ def scrape_svd(max_articles=50):
             "Headline": headline,
             "Link": link if link else "No link",
             "Summary": summary,
-            "Scraped_Date": scraped_date
+            "Scraped_Date": scraped_date,
+            "Classified": False
         })
 
     df_new = pd.DataFrame(articles)
@@ -73,8 +74,10 @@ def scrape_svd(max_articles=50):
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
+        if "Classified" not in df_existing.columns:
+            df_existing["Classified"] = True
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-        df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
+        df_combined.drop_duplicates(subset="Link", keep="first", inplace=True)
     else:
         df_combined = df_new
 
@@ -82,4 +85,4 @@ def scrape_svd(max_articles=50):
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
-    scrape_svd()
+    scrape_svd(max_articles=50)

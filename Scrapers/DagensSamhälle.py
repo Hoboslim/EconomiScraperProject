@@ -22,7 +22,6 @@ def scrape_ds(max_articles=50):
     driver.get(url)
     time.sleep(5)
 
-
     html = driver.page_source
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/dagenssamhalle_debug.html", "w", encoding="utf-8") as f:
@@ -42,7 +41,6 @@ def scrape_ds(max_articles=50):
         if link and not link.startswith("http"):
             link = "https://www.dagenssamhalle.se" + link
 
-        
         summary_div = h2.find_next("div", class_="css-ky9fcu ej9i57d2")
         summary_p = summary_div.find("p", class_="css-u3rr24 e2uxtwg0") if summary_div else None
         summary = summary_p.get_text(strip=True) if summary_p else "No summary"
@@ -51,7 +49,8 @@ def scrape_ds(max_articles=50):
             "Headline": headline,
             "Link": link,
             "Summary": summary,
-            "Scraped_Date": scrape_date
+            "Scraped_Date": scrape_date,
+            "Classified": False
         })
 
     driver.quit()
@@ -62,8 +61,11 @@ def scrape_ds(max_articles=50):
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
+        
+        if "Classified" not in df_existing.columns:
+            df_existing["Classified"] = True
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-        df_combined.drop_duplicates(subset="Link", inplace=True)
+        df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
     else:
         df_combined = df_new
 

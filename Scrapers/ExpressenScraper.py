@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import os
 import time
 
-def scrape_expressen(max_articles=20):
+def scrape_expressen(max_articles=50):
     url = "https://www.expressen.se/ekonomi/"
     options = Options()
     options.add_argument("--headless=new")
@@ -59,7 +59,8 @@ def scrape_expressen(max_articles=20):
             "Headline": headline,
             "Link": link,
             "Summary": summary,
-            "Date": date
+            "Date": date,
+            "Classified": False
         })
 
         count += 1
@@ -71,6 +72,8 @@ def scrape_expressen(max_articles=20):
     
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
+        if "Classified" not in df_existing.columns:
+            df_existing["Classified"] = True
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
         df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
     else:
@@ -80,4 +83,4 @@ def scrape_expressen(max_articles=20):
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
-    scrape_expressen(max_articles=20)
+    scrape_expressen(max_articles=50)

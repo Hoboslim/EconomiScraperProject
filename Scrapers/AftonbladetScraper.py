@@ -97,6 +97,5 @@ def scrape_aftonbladet(max_articles=50):
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
-
 if __name__ == "__main__":
     scrape_aftonbladet(max_articles=50)

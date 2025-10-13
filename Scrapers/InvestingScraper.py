@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import time
 import os
+from datetime import datetime
 
 def scrape_investing(max_articles=50):
     url = "https://www.investing.com/news/"
@@ -20,29 +21,44 @@ def scrape_investing(max_articles=50):
 
     driver = webdriver.Chrome(options=options)
     driver.get(url)
-    time.sleep(5)
+    time.sleep(5)  
 
     soup = BeautifulSoup(driver.page_source, "html.parser")
     articles = []
 
-    headline_tags = soup.find_all("a", class_="title")
+    article_tags = soup.find_all("article", attrs={"data-test": "article-item"})
     count = 0
-    for tag in headline_tags:
+
+    for article in article_tags:
         if count >= max_articles:
             break
 
-        headline = tag.get_text(strip=True)
-        link = tag.get("href")
-        if not link.startswith("http"):
+       
+        a_tag = article.find("a", attrs={"data-test": "article-title-link"})
+        if not a_tag:
+            continue
+        headline = a_tag.get_text(strip=True)
+        link = a_tag.get("href")
+        if link and not link.startswith("http"):
             link = "https://www.investing.com" + link
 
-        date = time.strftime("%Y-%m-%d")
+        
+        summary_tag = article.find("div", class_="mb-1 mt-2.5 flex")
+        summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
+
+        
+        time_tag = article.find("time", attrs={"data-test": "article-publish-date"})
+        if time_tag and time_tag.has_attr("datetime"):
+            date = time_tag["datetime"].split(" ")[0]  
+        else:
+            date = datetime.now().strftime("%Y-%m-%d")
 
         articles.append({
             "Headline": headline,
             "Link": link,
-            "Summary": "No summary",
-            "Date": date
+            "Summary": summary,
+            "Date": date,
+            "Classified": False
         })
 
         count += 1
@@ -55,6 +71,8 @@ def scrape_investing(max_articles=50):
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
+        if "Classified" not in df_existing.columns:
+            df_existing["Classified"] = True
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
         df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
     else:

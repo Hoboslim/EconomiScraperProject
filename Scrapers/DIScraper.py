@@ -6,7 +6,7 @@ import os
 import time
 
 def scrape_di(max_articles=50):
-    url="https://www.di.se"
+    url = "https://www.di.se"
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -29,16 +29,16 @@ def scrape_di(max_articles=50):
     articles = []
 
     headline_tags = soup.find_all("a", href=True)
-    count= 0
+    count = 0
 
     for tag in headline_tags:
         if count >= max_articles:
             break
 
         link = tag.get("href")
-        if link and not link.startswith("/"):
+        if link and not link.startswith("http"):
             link = "https://www.di.se" + link
-            
+
         div_tag = tag.find("div", class_="teaser__content")
         if not div_tag:
             continue
@@ -52,18 +52,23 @@ def scrape_di(max_articles=50):
         articles.append({
             "Headline": headline,
             "Link": link,
-            "Summary": summary
+            "Summary": summary,
+            "Classified": False
         })
 
+        count += 1
+
     driver.quit()
+
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/di_articles.csv"
 
-    count += 1
-
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
+        
+        if "Classified" not in df_existing.columns:
+            df_existing["Classified"] = True
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
         df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
     else:
@@ -74,4 +79,3 @@ def scrape_di(max_articles=50):
 
 if __name__ == "__main__":
     scrape_di(max_articles=50)
-

@@ -22,7 +22,7 @@ def get_article_summary_and_date(url, driver):
         print(f"Error fetching summary for {url}: {e}")
         return "No summary", time.strftime("%Y-%m-%d")
 
-def scrape_cnbc(max_articles=20):
+def scrape_cnbc(max_articles=50):
     url = "https://www.cnbc.com/business/"
     options = Options()
     options.add_argument("--headless=new")
@@ -61,7 +61,8 @@ def scrape_cnbc(max_articles=20):
             "Headline": headline,
             "Link": link,
             "Summary": summary,
-            "Scraped_Date": date
+            "Scraped_Date": date,
+            "Classified": False
         })
 
         count += 1
@@ -74,6 +75,9 @@ def scrape_cnbc(max_articles=20):
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
+        
+        if "Classified" not in df_existing.columns:
+            df_existing["Classified"] = True
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
         df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
     else:
@@ -83,4 +87,4 @@ def scrape_cnbc(max_articles=20):
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 if __name__ == "__main__":
-    scrape_cnbc(max_articles=20)
+    scrape_cnbc(max_articles=50)

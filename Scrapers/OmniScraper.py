@@ -69,7 +69,8 @@ def scrape_omni(max_articles=50):
             "Headline": headline,
             "Link": full_link,
             "Summary": summary,
-            "Scraped_Date": scrape_date
+            "Scraped_Date": scrape_date,
+            "Classified": False
         })
 
         count += 1
@@ -80,6 +81,8 @@ def scrape_omni(max_articles=50):
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
+        if "Classified" not in df_existing.columns:
+            df_existing["Classified"] = True
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
         df_combined.drop_duplicates(subset="Link", keep="first", inplace=True)
     else:
