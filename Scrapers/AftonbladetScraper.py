@@ -9,7 +9,6 @@ from datetime import datetime
 def scrape_aftonbladet(max_articles=50):
     url = "https://www.aftonbladet.se/minekonomi/"
     
-    
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -24,7 +23,6 @@ def scrape_aftonbladet(max_articles=50):
     driver.get(url)
     time.sleep(5)
 
-   
     SCROLL_PAUSE_TIME = 2
     last_height = driver.execute_script("return document.body.scrollHeight")
     for _ in range(5):
@@ -38,12 +36,10 @@ def scrape_aftonbladet(max_articles=50):
     html = driver.page_source
     driver.quit()
 
-   
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/aftonbladet_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
 
-    
     soup = BeautifulSoup(html, "html.parser")
     articles = []
 
@@ -79,18 +75,20 @@ def scrape_aftonbladet(max_articles=50):
             "Headline": headline,
             "Link": full_link,
             "Summary": summary,
-            "Scraped_Date": scrape_date
+            "Scraped_Date": scrape_date,
+            "Classified": False  
         })
 
         count += 1
 
-    
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/aftonbladet_articles.csv"
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
+        if "Classified" not in df_existing.columns:
+            df_existing["Classified"] = True  
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
         df_combined.drop_duplicates(subset="Link", keep="first", inplace=True)
     else:
@@ -98,6 +96,7 @@ def scrape_aftonbladet(max_articles=50):
 
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
+
 
 if __name__ == "__main__":
     scrape_aftonbladet(max_articles=50)
