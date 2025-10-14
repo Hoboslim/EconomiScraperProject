@@ -5,7 +5,7 @@ class ReadMePage(ctk.CTkFrame):
         super().__init__(parent)
 
 
-        ctk.CTkLabel(self, text="Read Me Page", font=ctk.CTkFont(size=20, weight="bold")).pack(pady=10)
+        ctk.CTkLabel(self, text="Read Me Page", font=ctk.CTkFont(size=18, weight="bold")).pack(pady=20, padx=20)
         ctk.CTkButton(self, text="Read Instructions", command=self.show_instructions).pack(pady=10)
         self.textbox1 = ctk.CTkTextbox(self, width=600, height=300)
 

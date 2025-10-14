@@ -18,21 +18,20 @@ class App(ctk.CTk):
         self.geometry("600x500")
         self.minsize(600, 500)
 
-        menubar = Menu(self)
-        self.config(menu=menubar)
-        
-        pages_menu = Menu(menubar, tearoff=0)
-        menubar.add_cascade(label="Pages", menu=pages_menu)
-        
-        pages_menu.add_command(label="Start Page", command=lambda: self.show_frame("StartPage"))
-        pages_menu.add_command(label="Scraper Page", command=lambda: self.show_frame("ScraperPage"))
-        pages_menu.add_command(label="Classification Page", command=lambda: self.show_frame("ClassificationPage"))
-        pages_menu.add_command(label="Result Page", command=lambda: self.show_frame("ResultPage"))
-        pages_menu.add_command(label="Analysis Page", command=lambda: self.show_frame("AnalysisPage"))
-        pages_menu.add_command(label="Read Me Page", command=lambda: self.show_frame("ReadMePage"))
-        
+        self.sidebar = ctk.CTkFrame(self, width=100, corner_radius=0)
+        self.sidebar.pack(expand=False, side="left", fill="both", padx=10, pady=10)
+
+        ctk.CTkLabel(self.sidebar, text="Menu", font=ctk.CTkFont(weight="bold")).pack(pady=10, padx=10)
+
+        ctk.CTkButton(self.sidebar, text="Start Page",font=ctk.CTkFont(weight="bold"), fg_color="transparent", command=lambda: self.show_frame("StartPage")).pack(padx=10, pady=10)
+        ctk.CTkButton(self.sidebar, text="Scraper Page",font=ctk.CTkFont(weight="bold"), fg_color="transparent", command=lambda: self.show_frame("ScraperPage")).pack(padx=10, pady=10)
+        ctk.CTkButton(self.sidebar, text="Classification Page",font=ctk.CTkFont(weight="bold"), fg_color="transparent", command=lambda: self.show_frame("ClassificationPage")).pack(padx=10, pady=10)
+        ctk.CTkButton(self.sidebar, text="Result Page", font=ctk.CTkFont(weight="bold"), fg_color="transparent", command=lambda: self.show_frame("ResultPage")).pack(padx=10, pady=10)
+        ctk.CTkButton(self.sidebar, text="Analysis Page",font=ctk.CTkFont(weight="bold"), fg_color="transparent", command=lambda: self.show_frame("AnalysisPage")).pack(padx=10, pady=10)
+        ctk.CTkButton(self.sidebar, text="Read Me Page",font=ctk.CTkFont(weight="bold"), fg_color="transparent",  command=lambda: self.show_frame("ReadMePage")).pack(padx=10, pady=10)
+
         container = ctk.CTkFrame(self)
-        container.pack(side="top", fill="both", expand=True, padx=10, pady=10)
+        container.pack(side="right", fill="both", expand=True, padx=10, pady=10)
         container.grid_rowconfigure(0, weight=1)
         container.grid_columnconfigure(0, weight=1)
 
