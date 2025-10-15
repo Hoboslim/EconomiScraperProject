@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 
 def scrape_aftonbladet(max_articles=50):
-    url = "https://www.aftonbladet.se/minekonomi/"
+    url = "https://www.aftonbladet.se"
     
     options = Options()
     options.add_argument("--headless=new")

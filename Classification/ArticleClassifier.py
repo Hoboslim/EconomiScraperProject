@@ -20,7 +20,7 @@ def run_classification(file_path, model_name="gemma3:12b"):
     unclassified_df = df_articles[df_articles["Classified"] == False]
 
     if unclassified_df.empty:
-        print("✅ All articles are already classified!")
+        print("All articles are already classified!")
         return
 
     base_name = os.path.splitext(os.path.basename(file_path))[0]

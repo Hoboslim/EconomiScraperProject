@@ -8,6 +8,7 @@ from datetime import datetime
 
 def scrape_svt(max_articles=50):
     url = "https://www.svt.se/nyheter/ekonomi/"
+    
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -22,6 +23,8 @@ def scrape_svt(max_articles=50):
     time.sleep(5)
 
     html = driver.page_source
+    driver.quit()
+
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/svt_debug.html", "w", encoding="utf-8") as f:
         f.write(html)
@@ -29,22 +32,25 @@ def scrape_svt(max_articles=50):
     soup = BeautifulSoup(html, "html.parser")
     articles = []
 
-    headline_tags = soup.find_all("a", class_="FeedTeaser__link___Uqfnt")
+    headline_blocks = soup.find_all("div", class_="FeedTeaser__content___ADWwY")
+    print(f"Found {len(headline_blocks)} article blocks")
+    
     scraped_date = datetime.now().strftime("%Y-%m-%d")
     count = 0
 
-    for tag in headline_tags:
+    for block in headline_blocks:
         if count >= max_articles:
             break
 
-        link = tag.get("href")
-        if link and not link.startswith("/"):
-            link = "https://www.svt.se" + link
-
-        headline_tag = tag.find("h1")
+        headline_tag = block.find("h1")
         headline = headline_tag.get_text(strip=True) if headline_tag else "No Headline"
 
-        summary_tag = tag.find("div", class_="FeedTeaser__textContent___RLNUu")
+        link_tag = block.find_parent("a")
+        link = link_tag.get("href") if link_tag else None
+        if link and link.startswith("/"):
+            link = "https://www.svt.se" + link
+
+        summary_tag = block.find("div", class_="FeedTeaser__textContent___RLNUu")
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
         articles.append({
@@ -56,8 +62,6 @@ def scrape_svt(max_articles=50):
         })
 
         count += 1
-
-    driver.quit()
 
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
@@ -74,6 +78,7 @@ def scrape_svt(max_articles=50):
 
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
+
 
 if __name__ == "__main__":
     scrape_svt(max_articles=50)
