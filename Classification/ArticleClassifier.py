@@ -6,7 +6,7 @@ import json
 import re
 from datetime import datetime
 
-def run_classification(file_path):
+def run_classification(file_path, model_name="gemma3:12b"):
     try:
         df_articles = pd.read_csv(file_path)
         if "Classified" not in df_articles.columns:
@@ -20,7 +20,7 @@ def run_classification(file_path):
     unclassified_df = df_articles[df_articles["Classified"] == False]
 
     if unclassified_df.empty:
-        print("All articles are already classified!")
+        print("✅ All articles are already classified!")
         return
 
     base_name = os.path.splitext(os.path.basename(file_path))[0]
@@ -66,7 +66,7 @@ Return ONLY valid JSON.
         t0 = time.time()
         try:
             result = subprocess.run(
-                ["ollama", "run", "gemma3:12b", prompt],
+                ["ollama", "run", model_name, prompt],
                 capture_output=True,
                 text=True,
                 encoding="utf-8",
@@ -129,7 +129,7 @@ Return only plain text.
 
     try:
         result = subprocess.run(
-            ["ollama", "run", "gemma3:12b", overview_prompt],
+            ["ollama", "run", model_name, overview_prompt],
             capture_output=True,
             text=True,
             encoding="utf-8",
@@ -150,23 +150,14 @@ Return only plain text.
     })
 
     results_df = pd.DataFrame(rows)
-
-    
     if os.path.exists(output_file):
-        try:
-            existing_df = pd.read_csv(output_file)
-            combined_df = pd.concat([existing_df, results_df], ignore_index=True)
-            combined_df = combined_df.drop_duplicates(subset="Link", keep="first")
-        except Exception as e:
-            print(f"Could not read existing classification file, recreating: {e}")
-            combined_df = results_df
-    else:
-        combined_df = results_df
+        df_existing = pd.read_csv(output_file)
+        results_df = pd.concat([df_existing, results_df], ignore_index=True)
+        results_df = results_df.drop_duplicates(subset=["Headline", "Link"], keep="first")
+    results_df.to_csv(output_file, index=False, encoding="utf-8")
 
-    combined_df.to_csv(output_file, index=False, encoding="utf-8")
-    print(f"Appended results saved to {output_file}")
+    print(f"Results saved to {output_file}")
 
-    
     df_articles.to_csv(file_path, index=False, encoding="utf-8")
     print(f"Updated original CSV: {file_path}")
 
