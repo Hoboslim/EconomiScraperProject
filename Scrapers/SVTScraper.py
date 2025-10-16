@@ -6,7 +6,7 @@ import os
 import time
 from datetime import datetime
 
-def scrape_svt(max_articles=50):
+def scrape_svt(max_articles=50, stop_flag=lambda: False):
     url = "https://www.svt.se/nyheter/ekonomi/"
     
     options = Options()
@@ -30,15 +30,17 @@ def scrape_svt(max_articles=50):
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
-    articles = []
-
     headline_blocks = soup.find_all("div", class_="FeedTeaser__content___ADWwY")
     print(f"Found {len(headline_blocks)} article blocks")
     
     scraped_date = datetime.now().strftime("%Y-%m-%d")
+    articles = []
     count = 0
 
     for block in headline_blocks:
+        if stop_flag():
+            print("Stopping SVT scraper as requested")
+            break
         if count >= max_articles:
             break
 
@@ -80,5 +82,8 @@ def scrape_svt(max_articles=50):
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
 
+def run_scraper(stop_flag=lambda: False):
+    scrape_svt(max_articles=50, stop_flag=stop_flag)
+
 if __name__ == "__main__":
-    scrape_svt(max_articles=50)
+    run_scraper()

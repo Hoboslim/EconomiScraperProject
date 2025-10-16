@@ -3,7 +3,7 @@ import pandas as pd
 import os
 from datetime import datetime
 
-def scrape_yahoo_rss(max_articles=50):
+def scrape_yahoo_rss(max_articles=50, stop_flag=lambda: False):
     url = "https://finance.yahoo.com/rss/topstories"
     feed = feedparser.parse(url)
     articles = []
@@ -12,6 +12,9 @@ def scrape_yahoo_rss(max_articles=50):
     count = 0
 
     for entry in feed.entries:
+        if stop_flag():
+            print("Stopping Yahoo RSS scraper as requested")
+            break
         if count >= max_articles:
             break
 
@@ -35,7 +38,6 @@ def scrape_yahoo_rss(max_articles=50):
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
-        
         if "Classified" not in df_existing.columns:
             df_existing["Classified"] = True
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
@@ -46,5 +48,9 @@ def scrape_yahoo_rss(max_articles=50):
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {len(df_combined)} total articles to {csv_path}")
 
+
+def run_scraper(stop_flag=lambda: False):
+    scrape_yahoo_rss(max_articles=50, stop_flag=stop_flag)
+
 if __name__ == "__main__":
-    scrape_yahoo_rss(max_articles=50)
+    run_scraper()

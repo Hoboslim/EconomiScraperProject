@@ -6,7 +6,7 @@ import time
 import os
 from datetime import datetime
 
-def scrape_svd(max_articles=50):
+def scrape_svd(max_articles=50, stop_flag=lambda: False):
     url = "https://www.svd.se/naringsliv"
 
     options = Options()
@@ -26,6 +26,10 @@ def scrape_svd(max_articles=50):
     SCROLL_PAUSE_TIME = 2
     last_height = driver.execute_script("return document.body.scrollHeight")
     for _ in range(5):
+        if stop_flag():
+            print("Stopping SVD scraper as requested")
+            driver.quit()
+            return
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(SCROLL_PAUSE_TIME)
         new_height = driver.execute_script("return document.body.scrollHeight")
@@ -41,14 +45,20 @@ def scrape_svd(max_articles=50):
         f.write(html)
 
     soup = BeautifulSoup(html, "html.parser")
-    articles = []
-
     story_blocks = soup.find_all("div", class_="TeaserBody-www__sc-1maddnp-0")
     print(f"Found {len(story_blocks)} story blocks")
 
     scraped_date = datetime.now().strftime("%Y-%m-%d")
+    articles = []
+    count = 0
 
-    for block in story_blocks[:max_articles]:
+    for block in story_blocks:
+        if stop_flag():
+            print("Stopping SVD scraper as requested")
+            break
+        if count >= max_articles:
+            break
+
         headline_tag = block.find("h2")
         headline = headline_tag.get_text(strip=True) if headline_tag else "No headline"
 
@@ -68,6 +78,8 @@ def scrape_svd(max_articles=50):
             "Classified": False
         })
 
+        count += 1
+
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/svd_articles.csv"
@@ -84,5 +96,9 @@ def scrape_svd(max_articles=50):
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
+
+def run_scraper(stop_flag=lambda: False):
+    scrape_svd(max_articles=50, stop_flag=stop_flag)
+
 if __name__ == "__main__":
-    scrape_svd(max_articles=50)
+    run_scraper()

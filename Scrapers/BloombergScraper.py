@@ -7,9 +7,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 from datetime import datetime
 import os
+import time
 
-def scrape_bloomberg():
+def run_scraper(max_articles=60, stop_flag=lambda: False):
     url = "https://www.bloomberg.com/"
+
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -18,12 +20,21 @@ def scrape_bloomberg():
     driver = webdriver.Chrome(options=options)
     driver.get(url)
 
-    WebDriverWait(driver, 10).until(
-        EC.presence_of_all_elements_located((By.CSS_SELECTOR, "a.StoryBlock_storyLink__5nXw8"))
-    )
+    try:
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_all_elements_located((By.CSS_SELECTOR, "a.StoryBlock_storyLink__5nXw8"))
+        )
+    except Exception as e:
+        print(f"Error waiting for page elements: {e}")
+        driver.quit()
+        return
+
+    if stop_flag():
+        print("Scraper stopped before parsing.")
+        driver.quit()
+        return
 
     html = driver.page_source
-    driver.quit()
 
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/bloomberg_debug.html", "w", encoding="utf-8") as f:
@@ -36,7 +47,16 @@ def scrape_bloomberg():
     story_blocks = soup.find_all("a", class_="StoryBlock_storyLink__5nXw8")
     print(f"Found {len(story_blocks)} story blocks")
 
-    for block in story_blocks[:60]:
+    count = 0
+
+    for block in story_blocks:
+        if stop_flag():
+            print("Scraper stopped during article processing.")
+            break
+
+        if count >= max_articles:
+            break
+
         headline_tag = block.find("div", attrs={"data-component": "headline"})
         headline = headline_tag.get_text(strip=True) if headline_tag else "No headline"
 
@@ -59,6 +79,10 @@ def scrape_bloomberg():
             "Classified": False
         })
 
+        count += 1
+
+    driver.quit()
+
     df_new = pd.DataFrame(articles)
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/bloomberg_articles.csv"
@@ -75,5 +99,6 @@ def scrape_bloomberg():
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
+
 if __name__ == "__main__":
-    scrape_bloomberg()
+    run_scraper()

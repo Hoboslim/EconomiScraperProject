@@ -10,6 +10,7 @@ class ClassificationPage(ctk.CTkFrame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
+        self.stop_flag = False
 
         ctk.CTkLabel(self, text="Classification Page", font=ctk.CTkFont(size=20, weight="bold")).pack(pady=20)
 
@@ -27,8 +28,9 @@ class ClassificationPage(ctk.CTkFrame):
         self.model_dropdown.pack(pady=5)
 
         ctk.CTkButton(self, text="Run Classification", command=self.run_selected_classification).pack(pady=10)
+        ctk.CTkButton(self, text="Stop Program", fg_color="red", hover_color="#8b0000", command=self.stop_program).pack(pady=10)
         ctk.CTkButton(self, text="Refresh Articles", command=self.refresh_csv_dropdown).pack(pady=5)
-        ctk.CTkButton(self, text="Back To Home", command=lambda: controller.show_frame("StartPage")).pack(pady=10)
+        
 
         self.progress = ctk.CTkProgressBar(self, mode="indeterminate", width=250)
         self.progress.set(0)
@@ -66,7 +68,7 @@ class ClassificationPage(ctk.CTkFrame):
             return
 
         file_path = os.path.join(self.articles_folder, selected_csv)
-
+        self.stop_flag = False
         self.progress.start()
         threading.Thread(
             target=self._run_classification_task,
@@ -76,10 +78,17 @@ class ClassificationPage(ctk.CTkFrame):
 
     def _run_classification_task(self, file_path, model_name):
         try:
-            run_classification(file_path, model_name)
+            run_classification(file_path, model_name, stop_flag=lambda: self.stop_flag)
         except Exception as e:
             print(f"Error running classification {e}")
             messagebox.showerror("Error", f"Classification failed: {e}")
         finally:
             self.after(0, self.progress.stop)
-            self.after(0, lambda: messagebox.showinfo("Done", "Classification finished!"))
+            if not self.stop_flag:
+                self.after(0, lambda: messagebox.showinfo("Done", "Classification finished!"))
+            else:
+                self.after(0, lambda: messagebox.showinfo("Stopped", "Classification was stopped."))
+
+    def stop_program(self):
+        self.stop_flag = True
+        messagebox.showinfo("Stopping", "The program will stop after the current article.")

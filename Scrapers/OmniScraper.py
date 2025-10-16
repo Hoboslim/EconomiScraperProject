@@ -6,7 +6,7 @@ import time
 import os
 from datetime import datetime
 
-def scrape_omni(max_articles=50):
+def scrape_omni(max_articles=50, stop_flag=lambda: False):
     url = "https://omni.se/ekonomi"
 
     options = Options()
@@ -26,6 +26,10 @@ def scrape_omni(max_articles=50):
     SCROLL_PAUSE_TIME = 2
     last_height = driver.execute_script("return document.body.scrollHeight")
     for _ in range(3):
+        if stop_flag():
+            print("Stopping Omni scraper as requested")
+            driver.quit()
+            return
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(SCROLL_PAUSE_TIME)
         new_height = driver.execute_script("return document.body.scrollHeight")
@@ -49,6 +53,9 @@ def scrape_omni(max_articles=50):
     scrape_date = datetime.now().strftime("%Y-%m-%d")
 
     for tag in teaser_blocks:
+        if stop_flag():
+            print("Stopping Omni scraper as requested")
+            break
         if count >= max_articles:
             break
 
@@ -91,5 +98,9 @@ def scrape_omni(max_articles=50):
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
+
+def run_scraper(stop_flag=lambda: False):
+    scrape_omni(max_articles=50, stop_flag=stop_flag)
+
 if __name__ == "__main__":
-    scrape_omni(max_articles=50)
+    run_scraper()

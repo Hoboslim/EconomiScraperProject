@@ -6,7 +6,7 @@ import json
 import re
 from datetime import datetime
 
-def run_classification(file_path, model_name="gemma3:12b"):
+def run_classification(file_path, model_name="gemma3:12b", stop_flag=lambda: False):
     try:
         df_articles = pd.read_csv(file_path)
         if "Classified" not in df_articles.columns:
@@ -39,6 +39,10 @@ def run_classification(file_path, model_name="gemma3:12b"):
     print(f"Processing {total} new articles...\n")
 
     for idx, row in unclassified_df.iterrows():
+        if stop_flag():
+            print("Stop requested! Exiting classification...")
+            break
+
         text = row.get("Summary", "")
         if text == "No summary" or not str(text).strip():
             text = row.get("Headline", "")
@@ -63,21 +67,34 @@ Article:
 Return ONLY valid JSON.
 """
 
-        t0 = time.time()
+        # Use Popen for stoppable subprocess
         try:
-            result = subprocess.run(
+            process = subprocess.Popen(
                 ["ollama", "run", model_name, prompt],
-                capture_output=True,
-                text=True,
-                encoding="utf-8",
-                timeout=60
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
             )
-            response = result.stdout.strip()
+
+            while True:
+                if stop_flag():
+                    process.terminate()
+                    print("Subprocess terminated due to stop request.")
+                    raise KeyboardInterrupt("Classification stopped by user.")
+
+                retcode = process.poll()
+                if retcode is not None:
+                    response, _ = process.communicate()
+                    response = response.strip()
+                    break
+
+                time.sleep(0.1)
+
+        except KeyboardInterrupt:
+            response = '{"category": "STOPPED", "sentiment": "STOPPED", "summary": "Classification stopped"}'
         except Exception as e:
             print(f"Error processing article {idx+1}: {e}")
             response = '{"category": "ERROR", "sentiment": "ERROR", "summary": "Error occurred"}'
-
-        t1 = time.time()
 
         clean_response = response.strip()
         if clean_response.startswith("```json"):
@@ -105,15 +122,19 @@ Return ONLY valid JSON.
             "Model_Category": category,
             "Sentiment": sentiment,
             "Model_Summary": summary_with_date,
-            "Time (s)": round(t1 - t0, 2),
+            "Time (s)": 0,
             "Classified": True
         })
 
         df_articles.loc[idx, "Classified"] = True
 
-    all_summaries = [row["Model_Summary"] for row in rows if row.get("Model_Summary")]
+    if stop_flag():
+        print("Classification stopped by user before generating overview.")
 
-    overview_prompt = f"""
+    else:
+        all_summaries = [row["Model_Summary"] for row in rows if row.get("Model_Summary")]
+
+        overview_prompt = f"""
 You are an economic analyst. Based on the following article summaries,
 write a short overview (3–5 sentences) about the current economic situation:
 
@@ -127,27 +148,27 @@ Summaries:
 Return only plain text.
 """
 
-    try:
-        result = subprocess.run(
-            ["ollama", "run", model_name, overview_prompt],
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            timeout=120
-        )
-        economic_overview = result.stdout.strip()
-    except Exception as e:
-        economic_overview = f"Error generating overview: {e}"
+        try:
+            result = subprocess.run(
+                ["ollama", "run", model_name, overview_prompt],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                timeout=120
+            )
+            economic_overview = result.stdout.strip()
+        except Exception as e:
+            economic_overview = f"Error generating overview: {e}"
 
-    rows.append({
-        "Headline": "Economic Overview",
-        "Link": "",
-        "Model_Category": "Overview",
-        "Sentiment": "N/A",
-        "Model_Summary": economic_overview,
-        "Time (s)": 0,
-        "Classified": True
-    })
+        rows.append({
+            "Headline": "Economic Overview",
+            "Link": "",
+            "Model_Category": "Overview",
+            "Sentiment": "N/A",
+            "Model_Summary": economic_overview,
+            "Time (s)": 0,
+            "Classified": True
+        })
 
     results_df = pd.DataFrame(rows)
     if os.path.exists(output_file):

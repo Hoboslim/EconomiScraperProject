@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import os
 import time
 
-def scrape_di(max_articles=50):
+def run_scraper(max_articles=50, stop_flag=lambda: False):
     url = "https://www.di.se"
     options = Options()
     options.add_argument("--headless=new")
@@ -20,6 +20,11 @@ def scrape_di(max_articles=50):
     driver.get(url)
     time.sleep(5)
 
+    if stop_flag():
+        print("Scraper stopped before parsing main page.")
+        driver.quit()
+        return
+
     html = driver.page_source
     os.makedirs("Debug", exist_ok=True)
     with open("Debug/di_debug.html", "w", encoding="utf-8") as f:
@@ -32,6 +37,10 @@ def scrape_di(max_articles=50):
     count = 0
 
     for tag in headline_tags:
+        if stop_flag():
+            print("Scraper stopped during article processing.")
+            break
+
         if count >= max_articles:
             break
 
@@ -66,7 +75,6 @@ def scrape_di(max_articles=50):
 
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
-        
         if "Classified" not in df_existing.columns:
             df_existing["Classified"] = True
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
@@ -77,5 +85,6 @@ def scrape_di(max_articles=50):
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
+
 if __name__ == "__main__":
-    scrape_di(max_articles=50)
+    run_scraper(max_articles=50)

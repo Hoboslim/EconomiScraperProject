@@ -6,8 +6,10 @@ import time
 import os
 from datetime import datetime
 
-def scrape_bbc():
+def run_scraper(max_articles=30, stop_flag=lambda: False):
     url = "https://www.bbc.com/business"
+
+    
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
@@ -19,7 +21,13 @@ def scrape_bbc():
 
     driver = webdriver.Chrome(options=options)
     driver.get(url)
-    time.sleep(5)
+    time.sleep(5)  
+
+    if stop_flag():
+        print("Scraper stopped before parsing.")
+        driver.quit()
+        return
+
     html = driver.page_source
 
     os.makedirs("Debug", exist_ok=True)
@@ -33,7 +41,16 @@ def scrape_bbc():
     headline_tags = soup.find_all("div", attrs={"data-testid": "card-text-wrapper"})
     print(f"Found {len(headline_tags)} headline tags")
 
-    for tag in headline_tags[:30]:
+    count = 0
+
+    for tag in headline_tags:
+        if stop_flag():
+            print("Scraper stopped during article processing.")
+            break
+
+        if count >= max_articles:
+            break
+
         headline_tag = tag.find("h2", attrs={"data-testid": "card-headline"})
         headline = headline_tag.get_text(strip=True) if headline_tag else "No headline"
 
@@ -53,6 +70,8 @@ def scrape_bbc():
             "Classified": False
         })
 
+        count += 1
+
     driver.quit()
 
     df_new = pd.DataFrame(articles)
@@ -71,5 +90,6 @@ def scrape_bbc():
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
+
 if __name__ == "__main__":
-    scrape_bbc()
+    run_scraper()

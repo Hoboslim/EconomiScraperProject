@@ -6,29 +6,31 @@ import time
 import os
 from datetime import datetime
 
-def get_article_summary(url, driver):
-    """
-    Scrape the summary from a Business Insider article page.
-    Only grabs paragraphs inside the main article body.
-    """
+def get_article_summary(url, driver, stop_flag=lambda: False):
     try:
+        if stop_flag():
+            print(f"Scraper stopped before fetching summary for {url}")
+            return "Scraper stopped"
+
         driver.get(url)
         time.sleep(2)
-        soup = BeautifulSoup(driver.page_source, "html.parser")
+        if stop_flag():
+            print(f"Scraper stopped during fetching summary for {url}")
+            return "Scraper stopped"
 
-        
+        soup = BeautifulSoup(driver.page_source, "html.parser")
         article_body = soup.find("div", attrs={"data-testid": "post-body"})
         if article_body:
             paragraphs = article_body.find_all("p")
             summary = " ".join(p.get_text(strip=True) for p in paragraphs[:3])
             return summary if summary else "No summary"
-        
+
         return "No summary"
     except Exception as e:
         print(f"Error fetching summary for {url}: {e}")
         return "No summary"
 
-def scrape_business_insider(max_articles=30):
+def run_scraper(max_articles=30, stop_flag=lambda: False):
     url = "https://www.businessinsider.com/"
     options = Options()
     options.add_argument("--headless=new")
@@ -44,10 +46,14 @@ def scrape_business_insider(max_articles=30):
     driver.get(url)
     time.sleep(5)
 
-   
     SCROLL_PAUSE_TIME = 2
     last_height = driver.execute_script("return document.body.scrollHeight")
     for _ in range(3):
+        if stop_flag():
+            print("Scraper stopped during scrolling.")
+            driver.quit()
+            return
+
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(SCROLL_PAUSE_TIME)
         new_height = driver.execute_script("return document.body.scrollHeight")
@@ -64,12 +70,15 @@ def scrape_business_insider(max_articles=30):
     articles = []
     scrape_date = datetime.now().strftime("%Y-%m-%d")
 
-    
     headline_tags = soup.find_all(["h2", "h3"])
     print(f"Found {len(headline_tags)} headline tags")
 
     count = 0
     for tag in headline_tags:
+        if stop_flag():
+            print("Scraper stopped during article processing.")
+            break
+
         if count >= max_articles:
             break
 
@@ -84,9 +93,8 @@ def scrape_business_insider(max_articles=30):
         full_link = "https://www.businessinsider.com" + link
         headline = a_tag.get_text(strip=True)
 
-        summary = get_article_summary(full_link, driver)
+        summary = get_article_summary(full_link, driver, stop_flag=stop_flag)
 
-        
         classified = summary.startswith("Every time")
 
         articles.append({
@@ -105,16 +113,16 @@ def scrape_business_insider(max_articles=30):
     os.makedirs("Articles", exist_ok=True)
     csv_path = "Articles/business_insider_articles.csv"
 
-    
     if os.path.exists(csv_path):
         df_existing = pd.read_csv(csv_path)
         df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-        df_combined = df_combined.drop_duplicates(subset="Link", keep="first")
+        df_combined.drop_duplicates(subset="Link", keep="first", inplace=True)
     else:
         df_combined = df_new
 
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {csv_path} with {len(df_combined)} total articles")
 
+
 if __name__ == "__main__":
-    scrape_business_insider(max_articles=30)
+    run_scraper(max_articles=30)

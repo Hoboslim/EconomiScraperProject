@@ -3,13 +3,16 @@ import pandas as pd
 import os
 import time
 
-def scrape_marketwatch_rss(max_articles=50):
+def scrape_marketwatch_rss(max_articles=50, stop_flag=lambda: False):
     rss_url = "https://www.marketwatch.com/rss/topstories"
     feed = feedparser.parse(rss_url)
     articles = []
 
     count = 0
     for entry in feed.entries:
+        if stop_flag():  
+            print("Stopping MarketWatch scraper as requested")
+            break
         if count >= max_articles:
             break
 
@@ -52,5 +55,9 @@ def scrape_marketwatch_rss(max_articles=50):
     df_combined.to_csv(csv_path, index=False, encoding="utf-8")
     print(f"Saved {len(df_combined)} total articles to {csv_path}")
 
+
+def run_scraper(stop_flag=lambda: False):
+    scrape_marketwatch_rss(max_articles=50, stop_flag=stop_flag)
+
 if __name__ == "__main__":
-    scrape_marketwatch_rss(max_articles=50)
+    run_scraper()
