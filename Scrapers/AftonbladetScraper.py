@@ -80,10 +80,6 @@ def run_scraper(max_articles=50, stop_flag=lambda: False):
         summary_tag = tag.find("p")
         summary = summary_tag.get_text(strip=True) if summary_tag else "No summary"
 
-        
-        if "abplus" in summary.lower():
-            continue
-
         articles.append({
             "Headline": headline,
             "Link": full_link,
