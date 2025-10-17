@@ -28,7 +28,7 @@ class ClassificationPage(ctk.CTkFrame):
         self.model_dropdown.pack(pady=5)
 
         ctk.CTkButton(self, text="Run Classification", command=self.run_selected_classification).pack(pady=10)
-        ctk.CTkButton(self, text="Stop Program", fg_color="red", hover_color="#8b0000", command=self.stop_program).pack(pady=10)
+        ctk.CTkButton(self, text="Stop Program", fg_color="gray", hover_color="#400080", command=self.stop_program).pack(pady=10)
         ctk.CTkButton(self, text="Refresh Articles", command=self.refresh_csv_dropdown).pack(pady=5)
         
 

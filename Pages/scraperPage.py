@@ -32,7 +32,7 @@ class ScraperPage(ctk.CTkFrame):
         self.dropdown.pack(pady=10)
 
         ctk.CTkButton(self, text="Run Scraper", command=self.run_scraper).pack(pady=10)
-        ctk.CTkButton(self, text="Stop Scraper", fg_color="red", hover_color="#8b0000",
+        ctk.CTkButton(self, text="Stop Scraper", fg_color="gray", hover_color="#400080",
                       command=self.stop_scraper).pack(pady=10)
 
         self.progress = ctk.CTkProgressBar(self, mode="indeterminate", width=250)
