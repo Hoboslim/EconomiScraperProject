@@ -48,9 +48,6 @@ class ResultPage(ctk.CTkFrame):
         text_scroll = ttk.Scrollbar(text_frame, orient="vertical", command=self.text_box.yview)
         self.text_box.configure(yscrollcommand=text_scroll.set)
         text_scroll.pack(side="right", fill="y")
-
-        ctk.CTkButton(self, text="Back to Home", command=lambda: controller.show_frame("StartPage")).pack(pady=10)
-
        
         self.df = None
 

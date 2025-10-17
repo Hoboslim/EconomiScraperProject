@@ -27,8 +27,6 @@ class AnalysisPage(ctk.CTkFrame):
         self.canvas = None
         self.figure = None
 
-        ctk.CTkButton(self, text="Back to Home", command=lambda: controller.show_frame("StartPage")).pack(pady=20)
-
         self.df = None
         self.allowed_columns = ["Model_category", "Time", "Sentiment"]
         self.column_mapping = {

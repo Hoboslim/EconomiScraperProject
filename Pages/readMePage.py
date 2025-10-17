@@ -11,7 +11,6 @@ class ReadMePage(ctk.CTkFrame):
 
         ctk.CTkButton(self, text="Read ME", command=self.show_readme).pack(pady=10)
         self.textbox2 = ctk.CTkTextbox(self, width=600, height=200)
-        ctk.CTkButton(self, text="Back to Home", command=lambda: controller.show_frame("StartPage")).pack(side="bottom", pady=10)
 
     def show_instructions(self):
         self.textbox1.pack(pady=10)
