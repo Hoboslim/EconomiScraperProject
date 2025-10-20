@@ -14,14 +14,14 @@ class App(ctk.CTk):
         super().__init__()
         
         ctk.set_appearance_mode("dark")
-        ctk.set_default_color_theme("themes/theme.json")
+        ctk.set_default_color_theme("themes/scraper_theme.json")
         
         self.title("Webscraper")
         self.iconbitmap("Images/WebScraperLogo.ico")
         self.geometry("600x500")
         self.minsize(600, 500)
       
-        self.sidebar = ctk.CTkFrame(self, width=100)
+        self.sidebar = ctk.CTkFrame(self, width=100, corner_radius=0)
         self.sidebar.pack(expand=False, side="left", fill="both", padx=10, pady=10)
 
         ctk.CTkLabel(self.sidebar, text="Menu", font=ctk.CTkFont(weight="bold")).pack(pady=10, padx=10)
